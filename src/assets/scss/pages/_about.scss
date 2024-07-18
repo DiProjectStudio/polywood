@@ -1,0 +1,30 @@
+.about {
+  .seo-block {
+
+    .seo-block__text {
+
+
+      @include breakpoint(lg) {
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+    }
+    .seo-block__image {
+      height: 241px;
+
+      @include breakpoint(md) {
+        height: 362px;
+      }
+      @include breakpoint(lg) {
+        height: auto;
+      }
+
+      &:last-child {
+        @include breakpoint(lg) {
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+      }
+    }
+  }
+}

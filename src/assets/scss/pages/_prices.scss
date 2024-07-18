@@ -1,0 +1,84 @@
+.prices {
+
+  &.prices-page{
+    .table {
+
+      .table-row {
+        grid-template-columns: 40px 393px 130px 97px;
+
+        @include breakpoint(md) {
+          grid-template-columns: 40px 1fr 130px 97px;
+        }
+        @include breakpoint(lg) {
+          grid-template-columns: 60px 1fr repeat(2, 140px);
+        }
+
+        .cell {
+          &:nth-of-type(2) {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .prices__inner {
+    overflow-x: auto;
+
+    @include breakpointMax(md) {
+      margin-right: -10px;
+      padding-right: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $stroke;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $green-light;
+    }
+
+    &::-webkit-scrollbar {
+      width: 100%;
+      cursor: pointer;
+      height: 2px;
+    }
+
+
+    .table {
+
+      padding: 20px;
+      @include whiteRoundedBlock;
+
+
+      @include breakpointMax(md) {
+        margin-bottom: 20px;
+        width: max-content;
+      }
+
+
+      .table-row {
+        padding: 10px 0;
+
+        display: grid;
+
+        &.table-row--head {
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        .cell {
+          padding: 0 8px;
+          box-sizing: border-box;
+        }
+      }
+
+      .table-row ~ .table-row {
+        border-top: 1px solid $stroke;
+        .cell {
+        }
+
+      }
+    }
+  }
+}

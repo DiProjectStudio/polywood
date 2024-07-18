@@ -1,0 +1,284 @@
+.footer {
+
+  margin-top: auto;
+  padding: 30px 0 88px;
+  color: $white;
+  background-color: $black;
+  @include breakpoint(md) {
+    padding-top: 60px;
+  }
+  @include breakpoint(lg) {
+    padding-bottom: 20px;
+  }
+
+  .footer__inner {
+    display: grid;
+
+
+    @include breakpoint(lg) {
+      grid-template-columns: 65% 28%;
+      justify-content: space-between;
+    }
+
+    .footer__nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 10px;
+
+      @include breakpoint(md) {
+        column-gap: 20px;
+      }
+
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+
+      .nav-block__list {
+        margin-top: 16px;
+
+        .nav-list__item ~ .nav-list__item {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .footer__contacts {
+      padding: 30px 0 20px;
+      margin: 30px 0 20px;
+      border-top: 1px solid $gray-dark;
+      border-bottom: 1px solid $gray-dark;
+      @include breakpoint(lg) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+
+      .contacts-title {
+        color: $gray;
+      }
+
+      .contacts-items {
+        display: grid;
+        margin-top: 20px;
+
+        @include breakpoint(md) {
+          grid-template-columns: 30% 40% 28%;
+          justify-content: space-between;
+        }
+        @include breakpoint(lg) {
+          grid-template-columns:repeat(5, auto);
+          gap: 50px;
+
+        }
+      }
+
+      .footer__contact ~ .footer__contact {
+        @include breakpointMax(md) {
+          margin-top: 20px;
+        }
+      }
+
+      .footer__contact {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+
+        &.phone-mos {
+          @include breakpoint(md) {
+            order: 1;
+          }
+        }
+
+        &.phone-rus {
+          @include breakpoint(md) {
+            order: 4;
+          }
+          @include breakpoint(lg) {
+            order: 2;
+          }
+        }
+
+        &.email {
+          @include breakpoint(md) {
+            order: 2;
+          }
+        }
+
+        &.address {
+          @include breakpoint(md) {
+            order: 5;
+          }
+
+
+          @include breakpoint(lg) {
+            order: 3;
+          }
+
+
+          @include breakpoint(lg) {
+            order: 4;
+          }
+        }
+
+        &.socials {
+          @include breakpoint(md) {
+            order: 3;
+          }
+
+
+          @include breakpoint(lg) {
+            order: 5;
+          }
+
+          .social__items {
+            @include flexAlignCenter;
+            gap: 20px;
+          }
+
+
+        }
+
+        .image-wrapper {
+          min-width: 20px;
+          width: 20px;
+          height: 20px;
+
+          img {
+            object-fit: contain;
+          }
+        }
+
+        .text {
+          display: grid;
+          gap: 2px;
+
+          p {
+            line-height: 150%;
+          }
+
+          p:first-child {
+
+            @include breakpoint(xl) {
+              font-size: 20px;
+            }
+
+          }
+          p:last-child {
+
+            @include breakpointMax(xl) {
+              font-size: 14px;
+            }
+
+          }
+        }
+
+      }
+    }
+
+    .footer__payment {
+
+      display: grid;
+      gap: 20px;
+
+      @include breakpoint(md) {
+        display: flex;
+        gap: 40px;
+      }
+      @include breakpoint(lg) {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+
+      .payment-systems {
+        @include flexCenterBetween;
+
+        @include breakpoint(md) {
+          width: calc(100% / 12 * 5);
+        }
+
+        @include breakpoint(lg) {
+          width: unset;
+          gap: 40px;
+        }
+      }
+
+      .payment-types {
+        @include flexCenterBetween;
+
+        @include breakpoint(md) {
+          width: calc(100% / 12 * 7);
+        }
+        @include breakpoint(lg) {
+          width: unset;
+          gap: 40px;
+        }
+
+        .payment-type {
+
+          @include flexAlignCenter;
+          gap: 8px;
+          font-size: 12px;
+          font-weight: 700;
+
+          @include breakpoint(md) {
+            font-size: 14px;
+          }
+          @include breakpoint(lg) {
+            font-size: 16px;
+
+          }
+        }
+      }
+    }
+
+    .footer__bottom {
+      font-size: 14px;
+      color: $gray;
+
+      p {
+        line-height: 150%;
+      }
+
+      p ~ p {
+        @include breakpointMax(md) {
+          margin-top: 10px;
+        }
+      }
+
+      @include breakpoint(md) {
+        @include flexCenterBetween;
+      }
+
+      @include breakpointMax(lg) {
+        margin-top: 40px;
+      }
+
+      @include breakpoint(lg) {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        display: grid;
+        gap: 10px;
+        justify-self: end;
+      }
+    }
+
+    .footer__devs {
+      padding-top: 20px;
+      margin-top: 20px;
+      @include flexAlignCenter;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: $gray;
+      border-top: 1px solid $gray-dark;
+
+      @include breakpoint(lg) {
+      grid-column: 1/3;
+      }
+    }
+
+  }
+}

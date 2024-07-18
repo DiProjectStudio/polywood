@@ -1,0 +1,214 @@
+.docs__inner-docs-section ~ .docs__inner-docs-section {
+  margin-top: 40px;
+}
+
+.docs__inner-docs-section {
+
+  h3 + div {
+    margin-top: 30px;
+  }
+
+  h4 + div {
+    margin-top: 20px;
+  }
+
+  .docs__wrapper {
+    padding: 10px;
+    background-color: $white;
+    border-radius: 24px;
+    width: fit-content;
+
+    @include breakpoint(lg) {
+      padding: 20px;
+      border-radius: 30px;
+
+    }
+
+    .docs-group {
+      //display: inline-block;
+    }
+
+    .doc {
+      background-color: $bg;
+
+      width: calc(25% - 10px);
+
+      &:hover {
+        .doc-name {
+          color: $green-light;
+        }
+      }
+    }
+  }
+}
+
+.docs__wrapper ~ .docs__wrapper {
+  margin-top: 20px;
+}
+
+.docs-items {
+  display: grid;
+  gap: 10px;
+
+  @include breakpoint(md) {
+    display: flex;
+    flex-wrap: wrap;
+    //flex-shrink: 0;
+    //grid-template-columns: repeat(4, 1fr);
+  }
+  @include breakpoint(lg) {
+    gap: 20px;
+  }
+}
+
+.doc {
+  padding: 20px;
+  display: grid;
+  align-content: space-between;
+  height: 179px;
+  @include whiteRoundedBlock;
+
+  @include breakpoint(md) {
+    //width: calc(100% / 12* 3);
+  }
+
+  .doc-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .doc-info {
+    p ~ p {
+      margin-top: 10px;
+    }
+
+    .doc-name {
+      font-weight: 700;
+      line-height: 120%;
+      @include textLimit(2);
+      transition: $transition-style;
+    }
+
+    .doc-size {
+      font-size: 14px;
+    }
+  }
+}
+
+.licenses {
+
+  position: relative;
+
+  .yellow-sticker {
+    top: -70px;
+    right: 0;
+    transform: rotate(-21.619deg);
+
+    @include breakpoint(lg) {
+      top: -100px;
+      width: 140px;
+    }
+    @include breakpoint(xl) {
+      top: -140px;
+    }
+  }
+  .section-head {
+    @include breakpoint(lg) {
+      grid-template-columns: 100%;
+      width: 68%;
+    }
+  }
+
+  .general-items {
+    display: grid;
+    gap: 10px;
+    //grid-auto-rows: 493px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      //grid-auto-rows: 493px;
+    }
+    @include breakpoint(lg) {
+      gap: 20px;
+      //grid-auto-rows: 244px;
+    }
+
+    .general-item {
+      padding: 20px;
+      display: grid;
+      //grid-template-rows: auto auto auto 1fr;
+      gap: 20px;
+      border-radius: 30px;
+      background-color: $white;
+
+      &:hover {
+        .license-title {
+          color: $green-light;
+        }
+      }
+
+      @include breakpoint(lg) {
+        grid-template-columns: auto 1fr;
+
+      }
+
+      .item-image {
+        height: 204px;
+        width: fit-content;
+        margin: 0 auto;
+
+        img {
+          object-fit: contain;
+          border-radius: 20px;
+          border: 1px solid $stroke;
+        }
+
+        @include breakpoint(lg) {
+          grid-row: 1/4;
+          grid-column: 1/2;
+        }
+      }
+
+      .item-title {
+        font-weight: 700;
+        line-height: 120%;
+        font-size: 24px;
+
+        transition: $transition-style;
+      }
+
+      .item-description {
+        margin-top: -10px;
+      }
+
+      .item-zoom {
+        width: 40px;
+        height: 40px;
+        justify-self: flex-end;
+        align-self: flex-end;
+
+        border-radius: 50%;
+        background: $green-light url("../images/icon_zoom.svg") no-repeat center;
+        background-size: 20px;
+        transition: $transition-style;
+        cursor: pointer;
+
+        @include breakpoint(lg) {
+          grid-row: 3 / 4;
+        }
+
+        &:hover {
+          background-color: $green-dark;
+        }
+      }
+    }
+  }
+}
+
+.general-items + .section-head {
+  margin-top: 40px;
+
+  @include breakpoint(lg) {
+    margin-top: 60px;
+  }
+}

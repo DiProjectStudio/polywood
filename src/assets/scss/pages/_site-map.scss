@@ -1,0 +1,37 @@
+.site-map {
+  .site-map__inner {
+    @include breakpoint(md) {
+      column-count: 3;
+      column-gap: 10px;
+    }
+
+
+
+    @include breakpoint(lg) {
+      column-gap: 20px;
+    }
+
+    .nav-block__title {
+      font-weight: 700;
+    }
+
+    .site-map__nav-block {
+      break-inside: avoid;
+    }
+    .site-map__nav-block ~ .site-map__nav-block {
+      margin-top: 30px;
+
+      @include breakpoint(lg) {
+      margin-top: 40px;
+      }
+    }
+
+    .nav-block__list {
+      margin-top: 20px;
+
+      .nav-list__item ~ .nav-list__item {
+        margin-top: 10px;
+      }
+    }
+  }
+}

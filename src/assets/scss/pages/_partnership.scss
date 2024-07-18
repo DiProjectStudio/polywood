@@ -1,0 +1,95 @@
+.partnership {
+  position: relative;
+
+  .yellow-sticker {
+    top: -70px;
+    right: var(--container);
+    transform: rotate(-21.619deg);
+
+
+    @include breakpoint(lg) {
+      top: -120px;
+      width: 140px;
+    }
+
+  }
+
+
+
+  .general-benefits-wrapper {
+
+    &.benefits {
+
+      .general-benefits-wrapper__items {
+        @include breakpoint(md) {
+          grid-template-columns: calc(100% / 12 * 4 - 5px) calc(100% / 12 * 2 - 10px) calc(100% / 12 * 2 - 10px) calc(100% / 12 * 4 - 5px);
+        }
+        @include breakpoint(lg) {
+          grid-template-columns: calc(100% / 12 * 4 - 10px) calc(100% / 12 * 2 - 20px) calc(100% / 12 * 2 - 20px) calc(100% / 12 * 4 - 10px);
+        }
+
+        @include breakpoint(md) {
+          .item {
+            &:first-child, &:nth-child(3) {
+              grid-column: span 1;
+            }
+
+            &:nth-child(2) {
+              grid-column: span 2;
+            }
+
+            &:nth-child(4), &:nth-child(5), {
+              grid-column: span 2;
+              grid-row: 2/3;
+            }
+          }
+        }
+      }
+    }
+
+
+    &.help {
+      .general-benefits-wrapper__items {
+        @include breakpoint(md) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+
+  }
+}
+
+.general-benefits-wrapper ~ .general-benefits-wrapper {
+  margin-top: 60px;
+}
+
+.general-benefits-wrapper {
+
+  display: grid;
+  gap: 20px;
+
+  .general-benefits-wrapper__items {
+    display: grid;
+    gap: 10px;
+
+    @include breakpoint(lg) {
+      gap: 20px;
+    }
+  }
+
+  .item {
+    padding: 20px;
+    display: grid;
+    align-content: space-between;
+    @include whiteRoundedBlock;
+    gap: 20px;
+
+
+    .item-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+
+  }
+}

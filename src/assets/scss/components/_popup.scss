@@ -1,0 +1,207 @@
+.popup {
+  display: none;
+  gap: 20px;
+  height: 100%;
+  @include breakpoint(md) {
+    height: fit-content;
+  }
+
+  form {
+    order: 4;
+
+    textarea, input {
+      background-color: $bg;
+
+      &::placeholder {
+        color: $black;
+      }
+    }
+
+    .form-action {
+      margin-top: 20px;
+
+      @include breakpointCustom(650px) {
+        align-items: center;
+        grid-template-columns: 255px auto;
+      }
+
+      p {
+
+        @include breakpointCustom(650px) {
+          width: 80%;
+        }
+      }
+
+    }
+  }
+
+}
+
+form {
+
+  .form-row ~ .form-row {
+    margin-top: 10px;
+  }
+
+  .form-row {
+
+    &.upload-file {
+      padding: 14px 24px;
+      width: 100%;
+      font: 400 14px/150% $mainFont;
+      color: $black;
+      //outline: none;
+      border-radius: 100px;
+      background-color: $bg;
+      border: 1px dashed $stroke;
+      cursor: pointer;
+
+
+      label {
+        @include flexAlignCenter;
+        gap: 6px;
+        cursor: pointer;
+
+        .upload-icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        span.upload {
+          margin-left: 14px;
+          @include titleGeneral
+        }
+      }
+
+    }
+  }
+
+  input {
+    height: 70px;
+  }
+
+  textarea, input {
+    padding: 14px 24px;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  .form-action {
+    display: grid;
+    gap: 10px;
+
+    .btn {
+      padding: 16px 60px;
+      @include flexCenterCenter;
+      height: 70px;
+      width: 100%;
+
+      @include breakpointCustom(650px) {
+        grid-column: 1/2;
+      }
+
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+
+.popup {
+  padding: 30px 10px;
+  @include breakpointCustom(650px) {
+    width: 650px;
+    padding: 30px;
+    border-radius: 30px;
+  }
+}
+
+.popup-success {
+
+  .popup-image {
+    order: 2;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  .popup-title {
+    margin-top: 20px;
+  }
+
+  .popup-subtitle {
+    line-height: 150%;
+  }
+
+}
+
+
+.popup-title {
+  order: 2;
+  @include formTitle;
+}
+
+.popup-subtitle {
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
+  order: 3;
+}
+
+.fancybox__slide {
+  padding: 0;
+}
+
+.fancybox__content > .carousel__button.is-close {
+  position: static;
+  order: 1;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  align-self: end;
+  @include flexCenterCenter;
+  border-radius: 6px;
+  background-color: $green-light;
+
+  @include breakpoint(lg) {
+    top: 30px;
+    right: 30px;
+  }
+
+  &:hover {
+    background-color: $green-dark;
+  }
+}
+
+.carousel__button svg {
+  filter: none;
+}
+
+/*
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  //background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  //color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]{
+  &::placeholder {
+
+  }
+}
+
+input[type=file]::file-selector-button:hover {
+  //background: #0d45a5;
+}*/

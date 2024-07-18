@@ -1,0 +1,12 @@
+:root {
+  --font-family: 'Manrope', sans-serif;
+}
+
+$mainFont: var(--font-family);
+
+body {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}

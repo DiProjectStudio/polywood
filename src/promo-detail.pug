@@ -1,0 +1,169 @@
+---
+title: Polywood | Акция — детальная
+bodyClass:  promo-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Название акции', 'Информация', 'Акции', ['Название акции'])
+
+    section.promo-page.general-info-page
+        .container
+            .general-info-page__inner
+                .general-info-page__detail
+                    .detail-date 25.12.2023
+                    .detail-image
+                        .yellow-sticker
+                            +img('yellow-sticker.svg')
+                        +img('news-cover-1.jpg')
+                    .detail-description
+                        p Lorem ipsum dolor sit amet consectetur. Egestas fermentum euismod posuere nibh. Massa vitae ac etiam imperdiet nisi vulputate vitae. Elementum ullamcorper varius volutpat duis malesuada purus bibendum. Volutpat placerat integer augue venenatis tempor mauris consectetur erat. Ut eu at laoreet nunc tempor. Adipiscing etiam faucibus massa non lobortis egestas hendrerit. Adipiscing eget arcu senectus turpis nibh eget diam felis aenean. Mauris ac turpis nunc et tortor pharetra. Lacinia purus commodo massa massa interdum maecenas porttitor sed eget.
+                        p Placerat vestibulum commodo morbi dignissim risus quis. Euismod nam sed at mauris nunc enim. Imperdiet mi dui blandit amet faucibus ut. Facilisis odio id lacus bibendum urna mus et at. Nulla aliquam aliquam lacus egestas
+                            |parturient morbi accumsan. Facilisi mattis dui velit nunc. Etiam in consectetur convallis egestas convallis urna pharetra parturient nulla. Amet at vitae a convallis lectus maecenas. Erat vitae lectus diam nisi adipiscing
+                            |velit. Lobortis risus sodales sed justo viverra proin sem sit.
+                .general-info-page__extra
+                    .extra__head.section-head
+                        h3.extra__title Другие акции
+                        .swiper-nav
+                            .swiper-nav-arrow.swiper-nav-arrow--prev
+                                include assets/images/icon_chevron-right-gray.svg
+                            .swiper-nav-arrow.swiper-nav-arrow--next
+                                include assets/images/icon_chevron-right-gray.svg
+                    .extra__items.promos
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    a(href='javascript:void(0)').general-info-item
+                                        .item-date 14-21 марта
+
+                                        .item-image
+                                            +img('promo-2.jpg')
+                                        .item-text
+                                            h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+
+                                .swiper-slide
+                                    a(href='javascript:void(0)').general-info-item
+                                        .item-date 14-21 марта
+
+                                        .item-image
+                                            +img('promo-1.jpg')
+                                        .item-text
+                                            h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+
+                                .swiper-slide
+                                    a(href='javascript:void(0)').general-info-item
+                                        .item-date 14-21 марта
+
+                                        .item-image
+                                            +img('promo-1.jpg')
+                                        .item-text
+                                            h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+
+                            .swiper-pagination
+
+
+    section.general-form.form-ask-question
+        .container
+            .general-form__inner
+                h3.general-form__title Заказать консультацию
+                .general-form__subtitle Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.
+
+                form
+                    .form-action
+                        button.btn.btn--yellow(type="submit" data-src="#popup-ask-question" data-fancybox) Задать вопрос
+
+    section.products-list
+        .container
+            .products-list__inner
+                .products-list__inner-head.section-head
+                    h2.section-head__title Ознакомьтесь с нашей продукцией
+                .products-list__inner-items.general-cards-wrapper
+
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_timber.svg')
+                        h5.card-text Террасная доска из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_fence.svg')
+                        h5.card-text Заборы и ограждения
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_ladder.svg')
+                        h5.card-text Ступени из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_siding.svg')
+                        h5.card-text Сайдинг
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_pillar.svg')
+                        h5.card-text Регулируемые опоры
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_shed.svg')
+                        h5.card-text Навесы, перголы, беседки
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_rattan-furniture.svg')
+                        h5.card-text Мебель из искусственного ротанга
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_garden-bed.svg')
+                        h5.card-text Грядки из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_components.svg')
+                        //.card-arrow
+                            +img('icon_chevron-right-green.svg')
+                        h5.card-text Комплектующие
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_tree.svg')
+                        h5.card-text Террасная доска из дерева
+    section.calculate
+        .container
+            .calculate__inner
+                .general-form.form-calculate
+
+                    .general-form__inner
+                        h3.general-form__title Рассчитайте количество материалов для строительства террасы
+                        .general-form__subtitle С помощью калькулятора вы сможете выполнить предварительный расчет необходимого количества материалов для постройки террасы из любой террасной доски.
+
+                        form
+                            .form-action
+                                // ссылка на страницу с калькулятором
+                                button.btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Рассчитать
+
+                        .general-form__image
+                            +img('calculate-screen.png')
+                    .ticker
+                        .ticker__inner
+                            .ticker__item
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                .calculate__inner-options
+                    a(href='javascript:void(0)').option
+                        .option-image
+                            +img('calculate-option-1.jpg')
+                        h4.option-title Бесплатный проект по вашему эскизу
+                    a(href='javascript:void(0)').option
+                        .option-image
+                            +img('calculate-option-2.jpg')
+                        h4.option-title Заказать видеоконсультацию (Whatsapp/Telegram/Viber)

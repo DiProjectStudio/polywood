@@ -1,0 +1,108 @@
+.reviews {
+  .reviews__inner {
+
+    .reviews__content {
+      display: grid;
+      gap: 50px;
+      position: relative;
+      //height: fit-content;
+      @include breakpoint(lg) {
+        gap: 20px;
+        grid-template-columns: calc(100% / 12 * 8 - 10px) calc(100% / 12 * 4 - 10px);
+      }
+    }
+
+    .reviews__action {
+      padding: 20px;
+      @include flexColumn;
+      gap: 30px;
+      color: $white;
+      border-radius: 20px;
+      background-color: $green-light;
+      height: fit-content;
+
+      @include breakpoint(lg) {
+        position: sticky;
+        top: 212px;
+      }
+
+      @include breakpoint(lg) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+      .reviews__action-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .reviews__action-btn {
+        width: 100%;
+
+        .btn {
+          padding: 16px 60px;
+        }
+      }
+    }
+
+    .reviews__items {
+
+      display: grid;
+      gap: 10px;
+
+      .reviews__item {
+        padding: 20px;
+        @include whiteRoundedBlock;
+        display: grid;
+        gap: 20px;
+
+        @include breakpoint(md) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        .reviews__item-photo {
+          height: 209px;
+          border-radius: 20px;
+
+          @include breakpoint(md) {
+            height: 230px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+          }
+        }
+
+        .reviews__item-text {
+          @include breakpoint(md) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+          }
+        }
+
+        .reviews__item-client {
+          position: relative;
+          @include flexCenterBetween;
+          @include titleGeneral;
+          font-size: 20px;
+
+
+          @include breakpoint(md) {
+            grid-column: 2/3;
+            grid-row: 2/3;
+          }
+
+          &::after {
+            display: block;
+            content: '';
+            background: url("../images/icon_quotes.svg") center no-repeat;
+            background-size: contain;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

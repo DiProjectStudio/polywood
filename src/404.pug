@@ -1,0 +1,22 @@
+---
+title: Polywood | 404
+bodyClass: not-found-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', '404')
+    section.page404
+        .container
+            .page404__inner
+                .page404__inner-title 404
+                h3.page404__inner-subtitle Страница не найдена
+                .page404__inner-text Страница, которую вы запрашиваете, не существует. Возможно она устарела, была удалена или был введён неверный адрес в адресной строке
+                .page404__inner-actions
+                    a(href='javascript:void(0)').btn.btn--bordered
+                        include assets/images/icon_arrow-left.svg
+                        span Вернуться назад
+                    a(href='index.html').btn.btn--yellow
+                        span Перейти на главную

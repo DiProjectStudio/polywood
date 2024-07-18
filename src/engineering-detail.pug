@@ -1,0 +1,154 @@
+---
+title: Polywood | Инжиниринг детальная
+bodyClass: engineering-detail-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Инжиниринг детальная', 'Инжиниринг', 'Подкатегория', ['Инжиниринг детальная'])
+
+    section.seo-block.engineering-detailed-intro
+        .container
+            .seo-block__inner
+                .seo-block__image
+                    +img('engineering-detail-1.jpg')
+                .seo-block__text
+                    p Метод прямой экструзии - при помощи систем автоматического дозирования компоненты подаются в экструдер. Достаточно одной термообработки для получения изделия. В зону предварительного плавления подаются добавки и полимерный материал, а древесная мука загружается в расплавленную массу через отдельное отверстие. При такой технологии отсутствует необходимость предварительного смешивания, относительно невысокие затраты энергии, а на выходе получается профиль высочайшего качества.
+                    .table
+                        .table-wrapper
+                            .table-row
+                                .cell.cell-name Страна производитель
+                                .cell Россия
+                            .table-row
+                                .cell.cell-name Профиль
+                                .cell 145
+                            .table-row
+                                .cell.cell-name Ширина, мм
+                                .cell 2000
+                            .table-row
+                                .cell.cell-name Глубина, мм
+                                .cell 200
+                            .table-row
+                                .cell.cell-name Высота, мм
+                                .cell 600
+                            .table-row
+                                .cell.cell-name Расход на 1 кв. м, пог.м
+                                .cell 2.7
+                            .table-row
+                                .cell.cell-name Длина, метров
+                                .cell 6.67
+                    .actions
+
+                        .btn.btn--bordered(data-src="#popup-ask-question" data-fancybox) Получить консультацию
+                        .btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Узнать цену
+
+
+    section.category-products
+        .container
+            .category-products__inner
+                .category-products__head.section-head
+                    h2.extra__title Другие товары категории
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+
+            .category-products__items
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            a(href='javascript:void(0)').category-products__item
+                                .item-image
+                                    +img('category-products.png')
+                                .item-name Минеральные наполнители
+                                .item-actions
+                                    .btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Узнать цену
+                                    .btn.btn--gray(data-src="#popup-ask-question" data-fancybox) Консультация
+
+
+
+                        .swiper-slide
+                            a(href='javascript:void(0)').category-products__item
+                                .item-image
+                                    +img('category-products.png')
+                                .item-name Минеральные наполнители
+                                .item-actions
+                                    .btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Узнать цену
+                                    .btn.btn--gray(data-src="#popup-ask-question" data-fancybox) Консультация
+
+
+
+                        .swiper-slide
+                            a(href='javascript:void(0)').category-products__item
+                                .item-image
+                                    +img('category-products.png')
+                                .item-name Минеральные наполнители
+                                .item-actions
+                                    .btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Узнать цену
+                                    .btn.btn--gray(data-src="#popup-ask-question" data-fancybox) Консультация
+
+
+
+                        .swiper-slide
+                            a(href='javascript:void(0)').category-products__item
+                                .item-image
+                                    +img('category-products.png')
+                                .item-name Минеральные наполнители
+                                .item-actions
+                                    .btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Узнать цену
+                                    .btn.btn--gray(data-src="#popup-ask-question" data-fancybox) Консультация
+
+
+
+
+                    .swiper-pagination
+    section.general-form.form-shortcut
+        .container
+            .general-form__inner
+                h3.general-form__title Заказать консультацию
+                .general-form__subtitle Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.
+
+                form
+                    .form-action
+                        button.btn.btn--yellow(type="submit" data-src="#popup-ask-question" data-fancybox) Задать вопрос
+
+
+    section.seo-block.engineering-detailed-description
+        .container
+            .seo-block__head.sction-head
+                h2 Производство ДПК: характеристика методов и способов производства
+            .seo-block__inner
+
+                .seo-block__text
+                    p Метод прямой экструзии - при помощи систем автоматического дозирования компоненты подаются в экструдер. Достаточно одной термообработки для получения изделия. В зону предварительного плавления подаются добавки и полимерный материал, а древесная мука загружается в расплавленную массу через отдельное отверстие. При такой технологии отсутствует необходимость предварительного смешивания, относительно невысокие затраты энергии, а на выходе получается профиль высочайшего качества.
+                    p Двухстадийный способ производства характеризуется простотой технологии. В горяче-холодном миксере смешивают исходные компоненты, затем идет гранулирование полученной смеси. Гранулы при помощи экструдера размягчаются до однородной пластичной массы и продавливаются через фильеру. Такая технология производства ДПК позволяет перерабатывать древесную муку различного фракционного состава. На выходе получаются изделия с повышенным показателем водостойкости.
+                .seo-block__image
+                    +img('engineering-detail-1.jpg')
+                    .yellow-sticker
+                        +img('yellow-sticker.svg')
+
+            .seo-block__inner
+
+                .seo-block__text
+                    p Производство древесно-полимерного композита одностадийным способом отличается от предыдущего тем, что здесь отсутствует стадия грануляции. Это отражается на затратах энергии, они относительно невысокие. Технология аналогична предыдущему способу производства ДПК, но в экструдер загружается масса без гранулирования. На выходе получается профиль высокого качества.
+                    p Каскадная линия производства ДПК характеризуется высоким качеством смешивания, отсутствием стадии гранулирования, экономией затрат на электроэнергию до 40 % по сравнению с двухстадийным способом производства. Технологическая линия состоит из двух экструдеров.
+                .seo-block__image
+                    +img('engineering-detail-2.jpg')
+
+
+    section.general-form.form-shortcut
+        .container
+            .general-form__inner
+                h3.general-form__title Заказать консультацию
+                .general-form__subtitle Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.
+
+                form
+                    .form-action
+                        button.btn.btn--yellow(type="submit" data-src="#popup-ask-question" data-fancybox) Задать вопрос
+
+
+
+    include components/_products-faq-calculate

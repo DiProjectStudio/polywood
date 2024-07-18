@@ -1,0 +1,78 @@
+.order-success {
+  margin-top: 40px;
+  @include breakpoint(lg) {
+    margin-top: 60px;
+  }
+
+  .order-success__inner {
+    background-color: $white;
+    border-radius: 40px;
+    padding: 20px;
+    @include flexCenterCenter;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    margin: 0 auto;
+
+    @include breakpoint(md) {
+      padding: 30px;
+    }
+    @include breakpoint(lg) {
+
+      width: calc(100% / 12 * 8);
+    }
+    @include breakpoint(xl) {
+      width: calc(100% / 12 * 6);
+    }
+
+    .order-success__inner-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+
+    .order-success__inner-text {
+      .order-success__inner-title {
+        font-size: 30px;
+        color: $green-light;
+        font-weight: 700;
+        line-height: 120%;
+
+        @include breakpoint(md) {
+          font-size: 35px;
+        }
+        @include breakpoint(xl) {
+          font-size: 40px;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    }
+
+
+    .order-success__inner-actions {
+      @include flexColumn;
+      margin: 20px auto 0;
+      gap: 10px;
+      width: fit-content;
+
+      .btn {
+        width: 289px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @include breakpoint(md) {
+          width: 231px;
+        }
+      }
+
+      @include breakpoint(md) {
+        flex-direction: row;
+      }
+      @include breakpoint(lg) {
+        gap: 20px;
+      }
+    }
+  }
+}

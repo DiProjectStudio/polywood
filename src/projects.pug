@@ -1,0 +1,79 @@
+---
+title: Polywood | Наши проекты
+bodyClass: projects-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Наши проекты', 'Наши проекты')
+
+    section.projects
+        .container
+            .projects__inner
+                .projects-section
+                    .projects-section__inner
+                        .select.sorting-select(data-sort="sort-by")
+                            .selected-select
+                                span Открытые террасы
+                                include assets/images/icon_chevron-down.svg
+                            .select-options
+                                .general-tabs.tabs
+                                    a(href='javascript:void(0)').option.active Открытые террасы
+                                    a(href='javascript:void(0)').option Патио
+                                    a(href='javascript:void(0)').option Телепроекты и знаменитости
+                                    a(href='javascript:void(0)').option Террасы на крыше дома
+                                    a(href='javascript:void(0)').option Дорожки
+                                    a(href='javascript:void(0)').option Заборы и ограждения из ДПК
+                                    a(href='javascript:void(0)').option Заборы и ограждения из ДПК
+                                    a(href='javascript:void(0)').option Кафе и рестораны
+                                    a(href='javascript:void(0)').option Набережные
+                                    a(href='javascript:void(0)').option Отделка бассейнов
+                                    a(href='javascript:void(0)').option Пирсы и причалы
+                                    a(href='javascript:void(0)').option Фасады из ДПК
+                                    a(href='javascript:void(0)').option Сайдинг
+                                    a(href='javascript:void(0)').option Садовый паркет
+                                    a(href='javascript:void(0)').option Парковая мебель
+
+
+                        .projects-section__inner-content
+                            .projects__items.general-info-items
+                                a(href='projects-detail.html').general-info-item
+                                    .item-image
+                                        +img('promo-1.jpg')
+                                    .item-text
+                                        .item-name Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                                        .item-description Потрясающая прогулочная набережная с открытыми площадками для отдыха на берегу реки Медвенки в коттеджном поселке Лайт Хаус на Рублево-Успенском шоссе. Это отличное решение для тех, кто предпочитает много времени проводить на свежем воздухе, наслаждаясь природными пейзажами.
+
+                                a(href='javascript:void(0)').general-info-item
+                                    .item-image
+                                        +img('promo-2.jpg')
+                                    .item-text
+                                        .item-name Декоративный забор своими руками
+                                        .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+                                a(href='javascript:void(0)').general-info-item
+                                    .item-image
+                                        +img('promo-3.jpg')
+                                    .item-text
+                                        .item-name Декоративный забор своими руками
+                                        .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+                                a(href='javascript:void(0)').general-info-item
+                                    .item-image
+                                        +img('promo-1.jpg')
+                                    .item-text
+                                        .item-name Декоративный забор своими руками
+                                        .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+
+                            .projects__action.show-more
+                                .btn.btn--bordered
+                                    span Показать ещё
+                                    include assets/images/icon_arrow-left.svg
+
+
+
+
+    include components/_faq-products-calculate

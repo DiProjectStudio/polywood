@@ -1,0 +1,52 @@
+---
+title: Polywood | Стратегические партнёры
+bodyClass: partners-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Стратегические партнёры', 'О компании', ['Стратегические партнёры'])
+    section.partners
+        .container
+            .partners__inner
+
+                .partners__inner-head.section-head
+                    .section-head__text.single
+                        p Надежные партнеры - это один из главных ресурсов для успешной работы любой компании. Для компании «Поливуд» мнения и пожелания клиентов и партнеров никогда не останутся без внимания. В данном разделе представлены клиенты компании «Поливуд», с которыми сложились крепкие и доверительные отношения.
+                        p REHAU - ведущий поставщик систем и услуг для полимерных решений в строительстве, промышленности, а также в автомобилестроении. Объединив мощные возможности развития, высокий профессионализм и качество обслуживания,
+                            |компания на сегодняшний день является одним из ведущих поставщиков на рынке. Высочайший уровень профессионализма, является основой всемирного успеха компании REHAU.
+                        p Международный всемирно известный концерн The Deceuninck Group занимает лидирующие позиции на рынке, которые он успешно удерживает на протяжении многих лет. Он входит в тройку лучших мировых производителей ПВХ систем. The
+                            |Deceuninck Group уже более 70 лет радует клиентов продукцией высочайшего качества, за счет чего концерн заработал доверие и признание многих производителей, дистрибьюторов, установщиков окон и, конечно же, конечных потребителей окон из ПВХ.
+                        p Наша компания открыта к интересным предложениям и приглашает к сотрудничеству на взаимовыгодных условиях организации, которые работают в сфере реализации строительных материалов.
+
+                .partners__inner-wrapper
+                    a(href='javascript:void(0)').partner
+                        .partner-logo
+                            +img('partner-1.png')
+                        .partner-text
+                            .partner-name Twinson
+                            .partner-link
+                                span Перейти на сайт
+                                include assets/images/icon_arrow-left.svg
+
+                    a(href='javascript:void(0)').partner
+                        .partner-logo
+                            +img('partner-2.png')
+                        .partner-text
+                            .partner-name Polysholz
+                            .partner-link
+                                span Перейти на сайт
+                                include assets/images/icon_arrow-left.svg
+
+                    a(href='javascript:void(0)').partner
+                        .partner-logo
+                            +img('partner-3.png')
+                        .partner-text
+                            .partner-name Мегавуд
+                            .partner-link
+                                span Перейти на сайт
+                                include assets/images/icon_arrow-left.svg
+
+    include components/_faq-products-calculate

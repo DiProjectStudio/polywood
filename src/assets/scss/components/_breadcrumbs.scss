@@ -1,0 +1,71 @@
+.breadcrumbs {
+  padding: 20px var(--container) 0;
+
+  @include breakpoint(xl) {
+    padding-left: calc((100vw - 1400px) / 2);;
+    padding-right: calc((100vw - 1400px) / 2);;
+  }
+
+  //margin-bottom: 40px;
+  @include breakpoint(lg) {
+  //margin-bottom: 60px;
+  }
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.breadcrumbs-wrapper {
+  gap: 28px;
+  white-space: nowrap;
+  @include textLimit(1);
+  @include flexAlignCenter;
+  //max-width: 200px;
+}
+
+.breadcrumbs-item {
+  @include flexAlignCenter;
+  color: $gray-dark;
+  font-family: $mainFont;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  position: relative;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      background-image: url("../images/icon_chevron-right-gray.svg");
+      @include backgroundParams;
+      width: 12px;
+      height: 12px;
+      top: calc(50% - 6px);
+      right: -20px;
+    }
+  }
+}
+
+.head-title {
+  margin: 40px 0;
+
+  h1.main-title {
+    font-weight: 700;
+    line-height: 120%;
+    font-size: 35px;
+
+    @include breakpoint(md) {
+      font-size: 40px;
+    }
+    @include breakpoint(lg) {
+      font-size: 45px;
+    }
+    @include breakpoint(xl) {
+      font-size: 50px;
+    }
+  }
+}

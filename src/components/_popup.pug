@@ -1,0 +1,152 @@
+include ../includes/_mixins
+block popups
+
+    // ПОПАП "ЗАДАТЬ ВОПРОС"
+    #popup-ask-question.popup
+        .popup-title Задать вопрос
+        .popup-subtitle Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.
+
+        form
+            .form-row
+                input(type="text" name="popup-ask-question_name" placeholder="Имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-ask-question_phone" placeholder="Телефон*")
+            .form-row
+                input(type="email" name="popup-ask-question_email" placeholder="E-mail")
+            .form-row
+                input(type="text" name="popup-ask-question_product" placeholder="Интересующий товар/услуга*")
+            .form-row
+                textarea(placeholder="Комментарий к заказу")
+
+            .form-action
+                button.btn.btn--yellow(type="submit") Отправить
+                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    // ПОПАП "ЗАКАЗАТЬ РАСЧЕТ"
+    #popup-order-calc.popup
+        .popup-title Заявка на расчёт
+        .popup-subtitle Форма заявки на расчёт проекта
+
+        form
+            .form-row
+                input(type="text" name="popup-order-calc_name" placeholder="Имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-order-calc_phone" placeholder="Телефон*")
+            .form-row
+                input(type="email" name="popup-order-calc_email" placeholder="E-mail")
+            .form-row
+                textarea(placeholder="Комментарий к заказу")
+
+            .form-action
+                button.btn.btn--yellow(type="submit") Отправить
+                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    // ПОПАП "ЗАКАЗАТЬ РАСЧЕТ"
+    #popup-order-samples.popup
+        .popup-title Закажите бесплатные образцы террасной доски
+        form
+            .form-row
+                input(type="text" name="popup-order-samples_name" placeholder="Имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-order-samples_phone" placeholder="Телефон*")
+            .form-row
+                input(type="email" name="popup-order-samples_email" placeholder="E-mail")
+            .form-action
+                button.btn.btn--yellow(type="submit") Отправить
+                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    // ПОПАП "ЗАКАЗАТЬ ЗВОНОК"
+    #popup-order-call.popup
+        .popup-title Обратный звонок
+        .popup-subtitle Представьтесь, мы вам перезвоним
+        form
+            .form-row
+                input(type="text" name="popup-order-call_name" placeholder="Имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-order-call_phone" placeholder="Телефон*")
+            .form-action
+                button.btn.btn--yellow(type="submit") Отправить
+                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    // ПОПАП "ВЫЗВАТЬ СПЕЦИАЛИСТА"
+    #popup-call-spec.popup
+        .popup-title Вызвать специалиста на замер
+        .popup-subtitle Наш специалист привезет образцы ДПК, чтобы вы могли выбрать материал прямо у себя дома!
+        form
+            .form-row
+                input(type="text" name="popup-call-spec_name" placeholder="Имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-call-spec_phone" placeholder="Телефон*")
+            .form-row
+                input(type="email" name="popup-call-spec_email" placeholder="E-mail")
+            .form-action
+                button.btn.btn--yellow(type="submit") Отправить
+                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    // ПОПАП "ОТПРАВИТЬ РЕЗЮМЕ"
+    #popup-send-cv.popup
+        .popup-title Отправить резюме
+        form
+            .form-row
+                input(type="text" name="popup-send-cv_name" placeholder="Имя")
+            .form-row
+                input.phone-mask(type="tel" name="popup-send-cv_phone" placeholder="Телефон*")
+            .form-row
+                input(type="email" name="popup-send-cv_email" placeholder="E-mail")
+            .form-row
+                input(type="text" name="popup-send-cv_job" placeholder="Желаемая должность*")
+            .form-row
+                textarea(placeholder="Дополнительная информация")
+            .form-row.upload-file
+
+                input#upload-photo(type="file" name="file" class="inputfile")
+                label(for="upload-photo")
+                    .upload-icon
+                        +img('icon_paper-clip.svg')
+                    span.upload Загрузить резюме
+                    span.format pdf, doc, docx, txt
+            .form-action
+                button.btn.btn--yellow(type="submit" data-src="#popup-success-cv" data-fancybox) Отправить
+                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    // ПОПАП "ОТПРАВИТЬ ОТЗЫВ"
+    #popup-leave-review.popup
+        .popup-title Оставить отзыв
+        form
+            .form-row
+                input(type="text" name="popup-leave-review_name" placeholder="Имя")
+            .form-row
+                input(type="email" name="popup-leave-review_email" placeholder="E-mail")
+            .form-row
+                textarea(placeholder="Отзыв*")
+            .form-action
+                button.btn.btn--yellow(type="submit" data-src="#popup-success-review" data-fancybox) Отправить
+                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    // ПОПАП "УСПЕШНО"
+    #popup-success.popup.popup-success
+        .popup-image
+            +img('icon_star-shape.svg')
+        .popup-title Заявка успешно отправлена!
+        .popup-subtitle Спасибо, что оставили заявку, Мы свяжемся с вами в ближайшее время
+
+    // ПОПАП "УСПЕШНО ПОДПИСКА"
+    #popup-success-subscribe.popup.popup-success
+        .popup-image
+            +img('icon_star-shape.svg')
+        .popup-title Вы успешно подписались на обновления!
+        //.popup-subtitle Спасибо, что оставили заявку,
+
+    // ПОПАП "УСПЕШНО ОТЗЫВ"
+    #popup-success-review.popup.popup-success
+        .popup-image
+            +img('icon_star-shape.svg')
+        .popup-title Отзыв отправлен
+        .popup-subtitle Благодарим за ваш отклик. Ваше мнение помогает нам становиться лучше.
+
+    // ПОПАП "УСПЕШНО РЕЗЮМЕ"
+    #popup-success-cv.popup.popup-success
+        .popup-image
+            +img('icon_star-shape.svg')
+        .popup-title Резюме успешно отправлено
+        .popup-subtitle Спасибо за проявленный интерес к нашей вакансии. Мы рассмотрим вашу кандидатуру и свяжемся с вами для дальнейшего обсуждения.

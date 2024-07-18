@@ -1,0 +1,56 @@
+.news {
+  .news__inner {
+    .news__items.general-info-items {
+
+      @include breakpoint(xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .general-info-item {
+
+        .item-image {
+          @include ratio(340, 219);
+
+          @include breakpoint(md) {
+            @include ratio(345, 222);
+          }
+
+          @include breakpoint(lg) {
+            @include ratio(373, 240);
+          }
+
+          @include breakpoint(xl) {
+            @include ratio(335, 215);
+          }
+        }
+      }
+
+    }
+  }
+
+  .general-info-item {
+    //border-bottom-left-radius: 0;
+    //border-bottom-right-radius: 0;
+
+    .item-image {
+      border-radius: 20px;
+
+      img {
+        border-radius: inherit;
+      }
+    }
+
+    .item-text {
+      margin-top: 12px;
+    }
+
+    .item-date {
+      width: fit-content;
+      padding: 0 7px;
+      margin-top: 12px;
+      color: $white;
+      background-color: $green-light;
+      border-radius: 100px;
+    }
+  }
+}

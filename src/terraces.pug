@@ -1,0 +1,287 @@
+---
+title: Polywood | Террасы под ключ
+bodyClass: terraces-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Услуги', ['Террасы под ключ'])
+    section.hero.hero-terraces
+        .hero-bg
+            +img('hero-bg.jpg')
+        .container
+            .hero__inner
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+                .hero__inner-info
+                    h1.info-title
+                        p Террасы под ключ
+                        span Предлагаем комплексное обслуживание на выгодных условиях: от разработки проекта террас до их установки, технического обслуживания, а также демонтажа и временного хранения в сезон.
+
+                    .info-action
+                        .btn.btn--yellow Оставить заявку
+
+
+                .hero__inner-benefits
+                    .benefit
+                        +img('icon_benefit-cycle.svg')
+                        p Собственное производство
+                    .benefit
+                        +img('icon_benefit-key.svg')
+                        p Работы под ключ
+                    .benefit
+                        +img('icon_benefit-shield.svg')
+                        p Гарантия качества
+                    .benefit
+                        +img('icon_star-stroke.svg')
+                        p Многолетний опыт
+
+    section.terrace
+        .container
+            .terrace__inner
+                .terrace__inner-head.section-head
+                    h2.section-head__title Террасная доска. Производство и монтаж.
+                    .section-head__text
+                        p Предлагаем комплексное обслуживание на выгодных условиях: от разработки проекта террас до их установки, технического обслуживания, а также демонтажа и временного хранения в сезон.
+                .terrace__inner-items
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-1.jpg')
+                        h6.terrace-title Для дома и дачи
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-2.jpg')
+                        h6.terrace-title Для ресторана и кафе
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-3.jpg')
+                        h6.terrace-title На кровле и балконе
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-4.jpg')
+                        h6.terrace-title Пирсы и причалы
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-5.jpg')
+                        h6.terrace-title В парке
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-6.jpg')
+                        h6.terrace-title У бассейна
+
+
+    section.portfolio.slider-section
+        .container
+            .portfolio__inner.slider-section__inner
+
+                .section-head
+                    h2.section-head__title Портфолио
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.portfolio__inner-items
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-2.jpg')
+                                    h5.slide-item__title Дом в Дмитровском Городском округе
+
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+
+                        .swiper-pagination
+
+
+                .slider-section__inner-action
+                    a(href='javascript:void(0)').btn.btn--yellow Все проекты
+
+
+
+
+    section.faq
+        .container
+            .faq__inner
+                .faq__inner-head.section-head
+                    h2.section-head__title Ответы на часто задаваемые вопросы
+                .faq__items.accordion__items
+                    +accordionItem('Какой состав продукции «Polywood»?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Где применяет декинг?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Какого цвета бывает?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                .faq__inner-ask
+                    h3.ask-title Задайте вопрос специалисту
+                    .ask-text Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.
+                    .ask-action
+                        .btn.btn--yellow(data-src="#popup-ask-question" data-fancybox) Задать вопрос
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+
+
+    section.general-form.form-consult
+        .container
+            .general-form__inner
+                h3.general-form__title Остались вопросы или нужна консультация?
+                .general-form__subtitle Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.
+
+                form
+                    .form-row
+                        input(type="text" name="popup-order-consult_name" placeholder="Имя")
+                    .form-row
+                        input.phone-mask(type="tel" name="popup-order-consult_phone" placeholder="Телефон*")
+
+                    .form-row
+                        input(type="text" name="popup-order-consult_product" placeholder="Интересующий товар/услуга")
+                    .form-row
+                        textarea(placeholder="Сообщение*")
+                    .form-action
+                        button.btn.btn--yellow(type="submit") Отправить
+                        p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+                .general-form__image
+                    +img('form-consult-bg.svg')
+
+    section.prices.terraces-prices
+        .container
+            .prices__inner
+                .prices__inner-head.section-head
+                    h2.section-head__title Стоимость террасы под ключ
+                .table
+                    .table-row.table-row--head
+                        .cell Вид постройки
+                        .cell Цена ₽, без НДС
+                    .table-row
+                        .cell Открытая терраса
+                        .cell бесплатно
+                    .table-row
+                        .cell Терраса каркасная с утеплением 50мм
+                        .cell бесплатно
+                    .table-row
+                        .cell Терраса каркасная с утеплением 100мм
+                        .cell от 850
+                    .table-row
+                        .cell Терраса каркасная с утеплением 150мм
+                        .cell от 1000
+
+                .terraces-price__action.show-more
+                    .btn.btn--bordered
+                        span Показать ещё
+                        include assets/images/icon_arrow-left.svg
+
+
+
+    section.products-list
+        .container
+            .products-list__inner
+                .products-list__inner-head.section-head
+                    h2.section-head__title Ознакомьтесь с нашей продукцией
+                .products-list__inner-items.general-cards-wrapper
+
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_timber.svg')
+                        h5.card-text Террасная доска из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_fence.svg')
+                        h5.card-text Заборы и ограждения
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_ladder.svg')
+                        h5.card-text Ступени из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_siding.svg')
+                        h5.card-text Сайдинг
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_pillar.svg')
+                        h5.card-text Регулируемые опоры
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_shed.svg')
+                        h5.card-text Навесы, перголы, беседки
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_rattan-furniture.svg')
+                        h5.card-text Мебель из искусственного ротанга
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_garden-bed.svg')
+                        h5.card-text Грядки из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_components.svg')
+                        //.card-arrow
+                            +img('icon_chevron-right-green.svg')
+                        h5.card-text Комплектующие
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_tree.svg')
+                        h5.card-text Террасная доска из дерева
+    section.calculate
+        .container
+            .calculate__inner
+                .general-form.form-calculate
+
+                    .general-form__inner
+                        h3.general-form__title Рассчитайте количество материалов для строительства террасы
+                        .general-form__subtitle С помощью калькулятора вы сможете выполнить предварительный расчет необходимого количества материалов для постройки террасы из любой террасной доски.
+
+                        form
+                            .form-action
+                                // ссылка на страницу с калькулятором
+                                button.btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Рассчитать
+
+                        .general-form__image
+                            +img('calculate-screen.png')
+                    .ticker
+                        .ticker__inner
+                            .ticker__item
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                .calculate__inner-options
+                    a(href='javascript:void(0)').option
+                        .option-image
+                            +img('calculate-option-1.jpg')
+                        h6.option-title Бесплатный проект по вашему эскизу
+                    a(href='javascript:void(0)').option
+                        .option-image
+                            +img('calculate-option-2.jpg')
+                        h6.option-title Заказать видеоконсультацию (Whatsapp/Telegram/Viber)
+
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__text
+                    h2 Для СЕО
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                .seo-block__image
+                    +img('hero-bg.jpg')

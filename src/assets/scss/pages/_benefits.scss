@@ -1,0 +1,115 @@
+.products-benefits-page {
+  .main-title {
+    width: calc(100% / 12 * 7);
+  }
+}
+
+.products-benefits__inner-head.section-head {
+  @include breakpoint(lg) {
+    width: calc(100% / 12 * 7);
+  }
+
+  @include breakpoint(xl) {
+    grid-template-columns: 100%;
+    width: 45%;
+  }
+}
+
+.products-benefits {
+  .general-benefits-wrapper {
+    &.ten-benefits, &.difference {
+      .general-benefits-wrapper__items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .item {
+        @include breakpointMax(md) {
+          padding: 12px;
+        }
+      }
+    }
+
+    &.difference {
+      position: relative;
+
+      .general-benefits-wrapper__items {
+        @include breakpoint(lg) {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      .yellow-sticker {
+        transform: rotate(25deg);
+        top: -20px;
+        right: 0;
+
+        @include breakpoint(lg) {
+          top: 0;
+        }
+        @include breakpointCustom(1530px) {
+          top: 25px;
+          right: -55px;
+        }
+      }
+
+    }
+
+    &.ten-benefits-extra {
+      .general-benefits-wrapper__items {
+        @include breakpoint(md) {
+          grid-template-columns: repeat(2, 1fr);
+
+        }
+
+
+      }
+
+      .item {
+
+        .item-icon {
+          background-color: $green-light;
+          border-radius: 50%;
+          color: $white;
+          @include flexCenterCenter;
+        }
+      }
+    }
+
+    .general-benefits-wrapper__description {
+      margin-top: 20px;
+
+      p ~ p {
+        margin-top: 10px;
+      }
+
+      @include breakpoint(md) {
+        width: calc(100% / 12 * 10);
+      }
+      @include breakpoint(lg) {
+        width: 50%;
+      }
+    }
+
+  }
+
+  .seo-block {
+    margin-top: 60px;
+
+    .seo-block__inner {
+      @include breakpoint(lg) {
+        grid-template-columns: calc(100% / 12 * 7 - 10px) calc(100% / 12 * 5 - 10px);
+      }
+    }
+
+    .yellow-sticker {
+      transform: rotate(25deg);
+      bottom: -50px;
+      right: 40px;
+
+      @include breakpointCustom(1530px) {
+        right: -55px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+---
+title: Polywood | Сотрудничество
+bodyClass: partnership-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Сотрудничество', 'О компании', ['Сотрудничество'])
+    section.partnership
+        .container
+            .partnership__inner
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+
+                .partnership__inner-head.section-head
+                    .section-head__text.single
+                        p Компания «Поливуд» развивает партнерскую сеть, предлагая комфортные условия сотрудничества для региональных архитектурных бюро, торговых и строительно-монтажных организаций.
+                        p Мы предлагаем востребованную на отечественном рынке продукцию – террасную доску, сайдинг из ДПК, мебель из искусственного ротанга.
+
+                .general-benefits-wrapper.benefits
+                    h3.general-benefits-wrapper__title Преимущества сотрудничества
+                    .general-benefits-wrapper__items
+                        .item
+                            .item-icon
+                                +img('icon_price-tag.svg')
+                            .item-description Низкие цены
+                        .item
+                            .item-icon
+                                +img('icon_popular.svg')
+                            .item-description Узнаваемость и популярность марки POLYWOOD™.
+                        .item
+                            .item-icon
+                                +img('icon_assortment.svg')
+                            .item-description Большой ассортимент продукции в наличии. При необходимости можем самостоятельно изготовить конструкции практически любых размеров.
+                        .item
+                            .item-icon
+                                +img('icon_diamond.svg')
+                            .item-description Высокое качество товаров. «Поливуд» успешно конкурирует со многими импортными брендами, так как при изготовлении продукции специалисты ориентируются на европейские стандарты качества.
+                        .item
+                            .item-icon
+                                +img('icon_palette.svg')
+                            .item-description Широкий спектр применения изделий из ДПК. Древесно-полимерный композит становится все более популярным материалом. Рынок расширяется, но пока полностью не занят, так как из ДПК можно строить не только террасы, но и садовые дорожки, различные уличные объекты, то есть возможности для применения продукции становятся более разнообразными.
+
+                .general-benefits-wrapper.help
+                    h3.general-benefits-wrapper__title Мы помогаем нашим партнерам
+                    .general-benefits-wrapper__items
+                        .item
+                            .item-icon
+                                +img('icon_samples.svg')
+                            .item-description Доставляем образцы продукции для ознакомления.
+                        .item
+                            .item-icon
+                                +img('icon_document.svg')
+                            .item-description Составляем индивидуальное коммерческое предложение и персональный план работы.
+                        .item
+                            .item-icon
+                                +img('icon_support-ticket.svg')
+                            .item-description Если Партнер компании самостоятельно осуществляет монтаж, то предварительно организовываем инструктаж и консультирование со специалистами монтажного отдела.
+                        .item
+                            .item-icon
+                                +img('icon_idea-2.svg')
+                            .item-description Обеспечиваем оперативной информационной поддержкой: предоставляем технические консультации; организовываем обучение для сотрудников компании Партнера; оказываем помощь в проведении выставок, иных мероприятий; предоставляем графические материалы, необходимые для проведения рекламных акций.
+
+
+    include components/_faq-products-calculate

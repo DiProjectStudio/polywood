@@ -1,0 +1,172 @@
+// SERVICE DETAIL
+.hero.hero-service {
+  .hero__inner {
+
+    .hero-bg img {
+      object-position: right;
+    }
+
+    .info-title {
+      font-size: 35px;
+
+      @include breakpoint(md) {
+        font-size: 40px;
+      }
+      @include breakpoint(lg) {
+        font-size: 45px;
+      }
+      @include breakpoint(xl) {
+        font-size: 50px;
+      }
+
+      span {
+        font-size: 16px;
+
+        @include breakpoint(md) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.prices {
+  &.service-prices {
+
+    .prices__inner-head.section-head {
+      @include breakpoint(md) {
+        width: calc(100% / 12 * 8);
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: 100%;
+        width: calc(100% / 12 * 5);
+      }
+    }
+
+    .table {
+      .table-row {
+        grid-template-columns: 303px 157px 180px;
+        @include breakpoint(md) {
+          grid-template-columns: 1fr calc(100% / 12 * 2) calc(100% / 12 * 3);
+        }
+        @include breakpoint(lg) {
+          gap: 40px;
+        }
+
+
+        .cell {
+
+          &:nth-of-type(1) {
+            font-weight: 700;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.seo-block {
+
+  &.services {
+    .seo-block__inner {
+
+      @include breakpoint(xl) {
+        grid-template-columns: calc(100% / 12 * 5 - 10px) calc(100% / 12 * 6 - 10px);
+      }
+    }
+  }
+
+  &.service-detailed-description {
+    position: relative;
+
+    .seo-block__inner ~ .seo-block__inner {
+      margin-top: 60px;
+
+      @include breakpoint(lg) {
+        margin-top: 80px;
+      }
+    }
+
+    .seo-block__text {
+
+      @include breakpoint(xl) {
+      width: 90%;
+      }
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    .seo-block__inner {
+      align-items: center;
+
+      @include breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      }
+
+      &:first-child {
+        .seo-block__image {
+          height: 218px;
+          position: relative;
+
+          @include breakpoint(md) {
+            height: 395px;
+          }
+        }
+
+        .yellow-sticker {
+          display: block;
+          top: 10px;
+          left: 0;
+          transform: rotate(18.91deg);
+
+          @include breakpoint(md) {
+            top: 20px;
+            left: 0;
+          }
+          @include breakpoint(lg) {
+            top: -50px;
+            left: -50px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .seo-block__image {
+          height: 238px;
+
+          @include breakpoint(md) {
+            height: 455px;
+            order: 1;
+          }
+        }
+
+        .seo-block__text {
+          @include breakpoint(md) {
+            order: 2;
+          }
+          @include breakpoint(lg) {
+            justify-self: flex-end;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .seo-block__image {
+          height: 277px;
+
+          @include breakpoint(md) {
+            height: 618px;
+          }
+        }
+      }
+
+
+
+      @include breakpoint(xl) {
+        //grid-template-columns: calc(100% / 12 * 5 - 10px) calc(100% / 12 * 6 - 10px);
+      }
+    }
+  }
+
+
+}

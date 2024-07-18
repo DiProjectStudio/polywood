@@ -1,0 +1,164 @@
+---
+title: Polywood | Реквизиты
+bodyClass: requisites-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Реквизиты', 'О компании',['Реквизиты'])
+    section.requisites
+        .container
+            .requisites__inner
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+                .requisites__inner-table.table--rus
+                    .table-title Реквизиты компании
+                    .table-wrapper
+                        .table-row
+                            .cell.cell-name Полное наименование
+                            .cell Общество с ограниченной ответственностью «ПоливудТорг»
+                        .table-row
+                            .cell.cell-name Сокращенное наименование
+                            .cell ООО «ПоливудТорг»
+                        .table-row
+                            .cell.cell-name ОГРН и дата регистрации
+                            .cell 1167746087585 от 25.01.2016 г.
+                        .table-row
+                            .cell.cell-name Юридический адрес
+                            .cell 123592, г. Москва, ул. Кулакова, д. 20,строение 1А, эт. 5, пом. XVII, комн. 37,74,75,76
+                        .table-row
+                            .cell.cell-name ИНН/КПП
+                            .cell 7733266999/773401001
+                        .table-row
+                            .cell.cell-name Фактический адрес
+                            .cell 123592, г. Москва, ул. Кулакова, д. 20 стр. 1А
+                        .table-row
+                            .cell.cell-name Банковские реквизиты
+                            .cell р/с 40702810940000076353в ПАО «СБЕРБАНК»к/с 30101810400000000225БИК 044525225
+                        .table-row
+                            .cell.cell-name ОКВЭД
+                            .cell 51.47.14
+                        .table-row
+                            .cell.cell-name Генеральный директор
+                            .cell Токовой Сергей Александрович
+                        .table-row
+                            .cell.cell-name Телефон/факс
+                            .cell 8 (495) 638-52-09
+                        .table-row.table-row--file
+                            .file-icon
+                                +img('icon_doc.svg')
+
+                            .file-name Террасная доска из ДПК Polywood - технический альбом (инструкция)
+                            .file-size 10 Мбайт
+
+                .requisites__inner-table.table--eng
+                    .table-title Bank details
+                    .table-wrapper
+                        .table-row
+                            .cell.cell-name Full name
+                            .cell Limited Liability Company «PolywoodTrade»
+                        .table-row
+                            .cell.cell-name Short Name
+                            .cell LLC «PolywoodTrade»
+                        .table-row
+                            .cell.cell-name Address
+                            .cell Moscow, Russia, Kulakova street, 20, build 1A, 123592
+                        .table-row
+                            .cell.cell-name Post adress
+                            .cell Moscow, Russia, Kulakova street, 20, build 1A
+                        .table-row
+                            .cell.cell-name INN (Taxpayer ID)
+                            .cell 7733266999
+
+                        .table-row
+                            .cell.cell-name (KPP) Code defining the grounds for registrat ion
+                            .cell 773401001
+
+                        .table-row
+                            .cell.cell-name Bank
+                            .cell SBERBANK Public Joint-Stock CompanyMoscow, Russia, SWIFT PRMSRUMM
+                        .table-row
+                            .cell.cell-name RCBIC (Russian Central Bank Identifier Code)
+                            .cell 044525225
+
+                        .table-row
+                            .cell.cell-name Correspondent account
+                            .cell 30101810400000000225
+                        .table-row
+                            .cell.cell-name Current account
+                            .cell 40702810940000076353
+                        .table-row
+                            .cell.cell-name Director
+                            .cell Tokovoy Sergey
+                        .table-row
+                            .cell.cell-name Telephone/fax
+                            .cell +7 (495) 638-52-09
+                        .table-row.table-row--file
+                            .file-icon
+                                +img('icon_doc.svg')
+
+                            .file-name Bank details Polywood
+                            .file-size 10 MB
+
+
+
+    section.contacts-section.contacts--general
+        .container
+            .contacts-section__inner
+                .contacts-section__inner-head.section-head
+                    h4.section-head__title Компания Поливуд
+                    .section-head__text
+                        p Компания Поливуд является ведущим производителем ДПК на рынке России. Компания ведёт прогрессивную деятельность в разработке инновационных технологий, поэтому всегда может предложить вам самые передовые решения!
+                        .text-exclamation
+                            +img('icon_exclamation.svg')
+                            p Перед визитом в офис обязательно согласовывайте время визита с нашим менеджером по телефону!
+
+                .contacts-section__inner-content
+                    .content__info
+                        .content__info-item
+                            .item-icon
+                                +img('icon_pin.svg')
+
+                            .item-title Офис
+                            .item-text 123592, Россия, г. Москва, ул. Кулакова, д. 20, строение 1А, эт 5, пом. XVII, ком. 37.74.75,76
+
+                        .content__info-item
+                            .item-icon
+                                +img('icon_home-green.svg')
+                            .item-title Склад
+                            .item-text г. Химки, мкр. Сходня, ул. Некрасова д. 2
+
+                        .content__info-item
+                            .item-icon
+                                +img('icon_phone.svg')
+                            .item-title Телефон
+                            .item-text.text--phone
+                                .phone.phone-mos
+                                    a(href='tel:74951095209').link.link--black +7 495 109-52-09
+                                    span Москва
+                                .phone.phone-rus
+                                    a(href='tel:88005055209').link.link--black 8 800 505-52-09
+                                    span Бесплатно по России
+
+                        .content__info-item
+                            .item-icon
+                                +img('icon_email.svg')
+                            .item-title Email
+                            .item-text market@polywood.ru
+
+
+                    .content__map
+                        script.
+                          let placemarks = [{
+                            coordinates: [55.80556953618359, 37.39196049999992],
+                          },]
+                          let centerPoint = [55.80556953618359, 37.39196049999992]
+                        .map__wrapper
+                            #map(style="width:100%; height:100%; border-radius: 20px;")
+
+
+
+    include components/_faq-products-calculate

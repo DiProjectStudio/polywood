@@ -1,0 +1,185 @@
+.projects {
+
+  .projects-section__inner-content {
+    margin-top: 40px;
+  }
+
+  .projects__items.general-info-items {
+
+    @include breakpoint(xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.projects, .projects-slider {
+  .general-info-item {
+    background-color: $white;
+
+
+    .item-image {
+      border-radius: 20px 20px 0 0;
+
+      @include ratio(340, 222);
+
+      @include breakpoint(md) {
+        @include ratio(345, 225);
+      }
+
+      @include breakpoint(lg) {
+        @include ratio(373, 243);
+      }
+
+      @include breakpoint(xl) {
+        @include ratio(453, 295);
+      }
+
+    }
+
+    .item-text {
+      padding: 12px;
+
+      @include breakpoint(xl) {
+        padding: 20px;
+      }
+
+
+      .item-description {
+        margin-top: 10px;
+        @include textLimit(5);
+
+        @include breakpoint(xl) {
+          @include textLimit(7);
+        }
+      }
+    }
+
+
+  }
+}
+
+
+// PROJECT DETAIL
+
+.project-detail {
+  margin-top: 40px;
+
+  @include breakpoint(lg) {
+    margin-top: 60px;
+  }
+
+  .seo-block .seo-block__inner {
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, calc(50% - 10px));
+    }
+
+    .seo-block__image {
+      height: unset;
+    }
+  }
+
+
+  .swiper {
+    height: auto;
+
+    .swiper-slide {
+      border-radius: 20px;
+
+      @include breakpoint(md) {
+        border-radius: 40px;
+      }
+
+      & > * {
+        border-radius: inherit;
+      }
+    }
+
+    .slider-image {
+
+      height: 256px;
+
+      @include breakpoint(md) {
+        height: 526px;
+      }
+
+      @include breakpoint(lg) {
+        height: 428px;
+      }
+
+      @include breakpoint(xl) {
+        height: 518px;
+      }
+    }
+
+    .swiper-nav {
+      position: absolute;
+      justify-content: space-between;
+      top: 50%;
+      left: 9px;
+      width: 97%;
+
+      .swiper-nav-arrow {
+        background-color: $white;
+
+        svg path {
+          stroke: $green-light;
+        }
+      }
+
+    }
+
+    .swiper-pagination {
+      //display: block;
+
+      @include breakpoint(md) {
+      display: flex;
+      }
+    }
+  }
+
+  .project-detail__inner {
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, calc(50% - 10px));
+    }
+
+    .project-detail__inner-text {
+
+    }
+
+  }
+}
+
+.projects-slider {
+
+  .swiper {
+    .swiper-slide {
+      height: auto;
+
+      .general-info-item {
+        height: 100%;
+      }
+    }
+  }
+
+
+  .general-info-items {
+    display: block;
+  }
+
+  .general-info-item {
+    .item-text {
+
+      .item-name {
+        @include breakpoint(xl) {
+          font-size: 24px;
+        }
+      }
+      .item-description {
+        line-clamp: unset;
+        -webkit-line-clamp: unset;
+      }
+    }
+  }
+}

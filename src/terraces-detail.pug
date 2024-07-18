@@ -1,0 +1,218 @@
+---
+title: Polywood | Террасы под ключ детальная
+bodyClass: main-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Услуги', 'Террасы под ключ', ['Террасы под ключ детальная'])
+    section.hero.hero-terraces-detail
+        .hero-bg
+            +img('hero-bg.jpg')
+        .container
+            .hero__inner
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+                .hero__inner-info
+                    h1.info-title
+                        p Строительство террасы для дома и дачи под ключ
+
+                    .info-action
+                        .btn.btn--yellow(data-src="#popup-order-call" data-fancybox) Оставить заявку
+
+
+                .hero__inner-benefits
+                    .benefit
+                        +img('icon_benefit-cycle.svg')
+                        p Собственное производство
+                    .benefit
+                        +img('icon_benefit-key.svg')
+                        p Работы под ключ
+                    .benefit
+                        +img('icon_benefit-shield.svg')
+                        p Гарантия качества
+                    .benefit
+                        +img('icon_star-stroke.svg')
+                        p Многолетний опыт
+
+
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__text
+                    h2 Комфортный отдых на природе без забот
+                    p Если вы мечтаете о семейных завтраках на свежем воздухе под пение лесных птиц или о шумных дружеских пикниках на террасе, то вам стоит подумать о строительстве такой конструкции.
+                    p Если вы хотите реализовать свою мечту об отдыхе за городом, но не знаете, с чего начать и как правильно выбрать материал для террасы, то обратите внимание на вариант из ДПК. Этот материал устойчив к воде, грибку, насекомым, не подвержен коррозии, имеет привлекательный внешний вид и позволяет создать комфортную зону отдыха для владельцев дома. Для того чтобы воплотить вашу мечту в реальность, достаточно просто связаться с нами, и в скором времени вы сможете наслаждаться отдыхом на собственной уютной террасе.
+                    p Если вы хотите, чтобы ваша терраса была красивой, качественной и служила вам долгие годы, обращайтесь в компанию «Поливуд». Наши специалисты помогут вам реализовать ваши идеи. Мы предлагаем широкий выбор и демократичные цены.
+                .seo-block__image
+                    +img('hero-bg.jpg')
+
+
+    section.portfolio.slider-section
+        .container
+            .portfolio__inner.slider-section__inner
+
+                .section-head
+                    h2.section-head__title Портфолио
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.portfolio__inner-items
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-2.jpg')
+                                    h5.slide-item__title Дом в Дмитровском Городском округе
+
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+
+                        .swiper-pagination
+
+
+                .slider-section__inner-action
+                    a(href='javascript:void(0)').btn.btn--yellow Все проекты
+
+
+
+
+
+
+    section.prices.terraces-prices
+        .container
+            .prices__inner
+                .prices__inner-head.section-head
+                    h2.section-head__title Стоимость террасы под ключ
+                .table
+                    .table-row.table-row--head
+                        .cell Вид постройки
+                        .cell Цена ₽, без НДС
+                    .table-row
+                        .cell Открытая терраса
+                        .cell бесплатно
+                    .table-row
+                        .cell Терраса каркасная с утеплением 50мм
+                        .cell бесплатно
+                    .table-row
+                        .cell Терраса каркасная с утеплением 100мм
+                        .cell от 850
+                    .table-row
+                        .cell Терраса каркасная с утеплением 150мм
+                        .cell от 1000
+
+
+    section.general-form.form-shortcut.calculate
+        .container
+            .general-form__inner
+                h3.general-form__title Рассчитать стоимость террасы
+                .general-form__subtitle Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства террасы Вашей мечты.
+
+                form
+                    .form-action
+                        button.btn.btn--yellow(type="submit" data-src="#popup-order-calc" data-fancybox) Рассчитать
+
+    section.steps
+        .container
+            .steps__inner
+                .steps__inner-head.section-head
+                    h2.section-head__title Этапы работы
+                .steps__inner-items
+                    .step
+                        .step-number 1
+                        h3.step-name Оставить заявку
+                        .step-description Мы расскажем о новейших материалах для террас, технологиях монтажа террасной доски (декинга), поможем с выбором по вашим пожеланиям и бюджету.
+                    .step
+                        .step-number 2
+                        h3.step-name Замер площадки
+                        .step-description Специалисты «Террадек» проведут точный расчет материалов для вашей террасы. Бесплатно для объектов более 50 квадратных метров.
+                    .step
+                        .step-number 3
+                        h3.step-name Проект террасы
+                        .step-description При заказе террасной доски в «Террадек», вы получите полноценный проект террасы с полной спецификацией материалов бесплатно!
+                    .step
+                        .step-number 4
+                        h3.step-name Договор и оплата
+                        .step-description Оплатить товары и услуги «Террадек» очень просто. Мы предлагаем три самых популярных варианта: Банковский перевод, наличными, картой, онлайн-оплата
+                    .step
+                        .step-number 5
+                        h3.step-name Доставка
+                        .step-description Оплатить товары и услуги «Террадек» очень просто. Мы предлагаем три самых популярных варианта: Банковский перевод, наличными, картой, онлайн-оплата
+                    .step
+                        .step-number 6
+                        h3.step-name Монтаж и шеф-монтаж
+                        .step-description Проверенные штатные бригады «Террадек» строго соблюдают технологии монтажа террасной доски и гарантируют отсутствие монтажных дефектов.
+
+                .general-form.form-measure
+                    .general-form__inner
+                        h3.general-form__title Вызвать специалиста на замер
+                        .general-form__subtitle Наш специалист привезет образцы ДПК, чтобы вы могли выбрать материал прямо у себя дома!
+
+                        form
+                            .form-row
+                                input(type="text" name="popup-order-calc_name" placeholder="Имя")
+                            .form-row
+                                input(type="email" name="popup-order-calc_email" placeholder="E-mail")
+                            .form-action
+                                button.btn.btn--yellow(type="submit" data-src="#popup-success" data-fancybox) Оставить заявку
+                                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+                        .general-form__image
+                            +img('form-measure-bg.svg')
+
+    section.benefits
+        .container
+            .benefits__inner
+                .benefits__inner-head.section-head
+                    h2.section-head__title Террасная доска Polywood
+                .benefits__items
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-1.jpg')
+                        .item-text
+                            h5.item-title Можно босиком!
+                            .item-description Поверхность террасной доски Поливуд устойчива к образованию сколов и <span>не представляет опасности получения заноз</span>. Это делает покрытие абсолютно безопасным, в том числе для активных игр детей.
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-2.jpg')
+                        .item-text
+                            h5.item-title Остаётся как новая спустя много лет
+                            .item-description Качество террасной доски Поливуд, позволяет продлить срок эксплуатации до 25 лет <span>без лишних трат на обслуживание</span>
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-3.jpg')
+                        .item-text
+                            h5.item-title И в дождь и в снег
+                            .item-description Покрытие террасной доски Поливуд отлично переносит погодные катаклизмы. <span>Поверхность не скользит, даже если влажная</span>, и не гниёт от сырости
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-4.jpg')
+                        .item-text
+                            h5.item-title Экологично и практично
+                            .item-description Продукция Поливуд <span>не содержит опасных веществ</span>, легко монтируется и не выгорает на солнце.
+
+
+
+    include components/_products-faq-calculate
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__text
+                    h2 Для СЕО
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                .seo-block__image
+                    +img('hero-bg.jpg')

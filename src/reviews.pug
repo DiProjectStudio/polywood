@@ -1,0 +1,43 @@
+---
+title: Polywood | Отзывы
+bodyClass: reviews-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Отзывы', 'Отзывы')
+    section.reviews
+        .container
+            .reviews__inner
+                .reviews__content
+                    .reviews__action
+                        .reviews__action-icon
+                            +img('icon_favorite-white.svg')
+                        .reviews__action-text Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе.
+                        .reviews__action-btn
+                            .btn.btn--yellow#leave-review(data-src="#popup-leave-review" data-fancybox) Оставить свой отзыв
+                    .reviews__items
+                        .reviews__item
+                            .reviews__item-photo
+                                +img('review-1.jpg')
+                            .reviews__item-text Обратились в компанию «Поливуд» по совету друзей. Искали террасную доску для возведения террасы на даче. Нужен был недорогой, но хороший вариант настила. Как раз повезло и попали на акцию, поэтому
+                                | получилось здорово сэкономить, а еще получили дополнительную скидку, потому что приобретая материал сразу заключили договор на монтаж. Очень довольны!
+
+                            .reviews__item-client Ирина
+                        .reviews__item
+                            .reviews__item-photo
+                                +img('review-2.jpg')
+                            .reviews__item-text Покупали у вас сайдинг для загородного дома, монтажом занимался муж. Прошло два года и могу с уверенностью сказать, я не пожалела, что обратилась именно в вашу компанию. Материал прочный, смотрится дорого и красиво. Были сильные ветра, град, сайдинг не потрескался и не сломался. Свою функцию защиты от осадков он выполняет. Не покоробился от перепада температур. Буду советовать вашу компанию своим знакомым.
+                            .reviews__item-client Елена Семёнова
+                        .reviews__item
+                            .reviews__item-photo
+                                +img('review-3.jpg')
+                            .reviews__item-text Уже не первый раз к вам обращаемся и как всегда довольны результатом. В прошлый раз приобретали доску для террасы, а в этот материал для ступеней с монтажом. У вас получилось воплотить в реальность мои задумки и даже скажу больше, в результате получилось намного лучше, чем я представляла. Большое спасибо за вашу работу, у вас трудятся настоящие профессионалы своего дела!
+                            .reviews__item-client Марина
+
+                .reviews__inner-action.show-more
+                    .btn.btn--bordered
+                        span Показать ещё
+                        include assets/images/icon_arrow-left.svg

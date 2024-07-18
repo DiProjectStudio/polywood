@@ -1,0 +1,68 @@
+.partners {
+
+  .partners__inner {
+    .section-head {
+      .section-head__text {
+        width: 100%;
+      }
+    }
+
+    .partners__inner-wrapper {
+      display: grid;
+      gap: 10px;
+
+      @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+      }
+      @include breakpoint(lg) {
+        gap: 20px;
+      }
+
+      .partner {
+        padding: 14px 12px 30px;
+        text-align: center;
+        display: grid;
+        align-items: center;
+        @include whiteRoundedBlock;
+
+        .partner-logo {
+          height: 100px;
+          @include flexCenterCenter;
+          img {
+            object-fit: scale-down;
+          }
+        }
+
+        .partner-text {
+          margin-top: 12px;
+          display: grid;
+          gap: 10px;
+
+          .partner-name {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 120%;
+
+            @include breakpoint(lg) {
+              font-size: 24px;
+            }
+          }
+
+          .partner-link {
+            color: $green-light;
+
+            @include flexCenterCenter;
+            gap: 10px;
+
+            svg {
+              transform: rotate(180deg);
+              path {
+                stroke: $green-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

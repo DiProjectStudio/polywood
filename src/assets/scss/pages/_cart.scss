@@ -1,0 +1,417 @@
+.cart {
+
+  .cart__inner-content {
+    display: grid;
+    grid-template-columns: 100%;
+
+
+    @include breakpoint(md) {
+      justify-content: space-between;
+    }
+    @include breakpointMax(md) {
+      row-gap: 30px;
+    }
+    @include breakpoint(lg) {
+      grid-template-columns: calc(100% / 12 * 8 - 5px) calc(100% / 12 * 4 - 5px);
+      //grid-template-rows: auto 1fr;
+    }
+
+    @include breakpoint(xl) {
+      grid-template-columns: calc(100% / 12 * 7 - 5px) calc(100% / 12 * 4 - 5px);
+    }
+
+    .cart__inner-head {
+      @include flexCenterBetween;
+      margin-bottom: 20px;
+
+      & > div {
+        cursor: pointer;
+      }
+
+      .print {
+        @include flexAlignCenter;
+        gap: 7px;
+
+      }
+
+      .clear {
+        width: 40px;
+        height: 40px;
+        @include flexCenterCenter;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid $stroke;
+      }
+
+      @include breakpoint(md) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+    }
+
+    .cart__inner-products {
+      @include breakpoint(lg) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+
+      .product ~ .product {
+        margin-top: 10px;
+
+        @include breakpoint(lg) {
+          margin-top: 20px;
+        }
+      }
+
+      .product {
+        @include whiteRoundedBlock;
+        padding: 12px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 14px;
+
+        @include breakpoint(md) {
+          padding: 20px;
+          grid-template-columns: repeat(3, auto);
+        }
+
+        @include breakpoint(lg) {
+          gap: 20px;
+        }
+
+        .product-delete {
+          width: fit-content;
+          height: 24px;
+          justify-self: flex-end;
+          grid-column: 2/3;
+          grid-row: 1/2;
+          border-radius: 7px;
+          background: $bg;
+          cursor: pointer;
+          position: relative;
+          z-index: 2;
+
+          svg path {
+            stroke: $green-light
+          }
+
+          @include breakpoint(md) {
+            grid-column: 3/4;
+            grid-row: 1/2;
+          }
+        }
+
+
+        .product-info {
+          grid-column: 1/3;
+          grid-row: 2/3;
+
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto auto 1fr;
+          gap: 4px 10px;
+
+          padding-bottom: 10px;
+          border-bottom: 1px solid var(--color-stroke);
+
+          @include breakpoint(md) {
+            grid-column: 1/4;
+            grid-row: 1/2;
+          }
+
+          @include breakpoint(lg) {
+            gap: 10px 20px;
+            grid-template-rows: 1fr auto auto;
+          }
+
+          .product-image {
+            width: 114px;
+            height: 114px;
+            border-radius: 20px;
+            background-color: $white;
+
+            grid-column: 1/2;
+            grid-row: 1/4;
+
+            img {
+              object-fit: contain;
+            }
+          }
+
+          .product-name {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            @include titleGeneral;
+            align-self: flex-end;
+
+            @include breakpoint(md) {
+              font-size: 20px;
+            }
+          }
+
+          .product-color {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            line-height: normal;
+
+            @include breakpointMax(md) {
+              margin-top: 6px;
+            }
+          }
+        }
+
+        .product-price {
+          grid-column: 1/2;
+          grid-row: 3/4;
+          @include flexColumn;
+          justify-content: space-between;
+          gap: 4px;
+
+          @include breakpoint(md) {
+            justify-content: unset;
+            gap: 10px;
+          }
+
+          .title {
+            @include titleGeneral;
+          }
+
+          .price-block {
+            @include breakpointMax(md) {
+              flex-direction: column;
+              align-items: unset;
+              gap: 4px;
+            }
+          }
+
+
+        }
+
+        .product-quantity {
+          grid-column: 2/3;
+          grid-row: 3/4;
+
+          @include breakpoint(md) {
+            align-items: center;
+          }
+
+          @include flexColumn;
+          gap: 4px;
+
+          span:first-child {
+            @include titleGeneral;
+          }
+
+          .counter {
+            width: 113px;
+            position: relative;
+
+
+            .btn-count {
+              position: absolute;
+              z-index: 2;
+              top: calc(50% - 15px);
+              background-color: $green-light;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              @include flexCenterCenter;
+              cursor: pointer;
+
+              &.btn-subtract {
+                left: 0;
+              }
+
+              &.btn-add {
+                right: 0;
+              }
+            }
+
+            input {
+              text-align: center;
+              padding: 8px 12px;
+              height: 38px;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .product-total {
+          grid-column: 1/3;
+          grid-row: 4/5;
+
+          @include flexAlignCenter;
+          gap: 8px;
+          @include breakpointMax(ms) {
+            margin-top: 10px;
+          }
+          @include breakpoint(md) {
+            grid-column: 3/4;
+            grid-row: 3/4;
+            align-items: unset;
+            flex-direction: column;
+          }
+
+          span {
+            @include titleGeneral;
+          }
+
+          .price-block {
+            .price-new {
+              @include titleGeneral;
+            }
+          }
+
+
+        }
+
+        span {
+          color: $gray-dark;
+        }
+      }
+    }
+  }
+
+  .cart__inner-total {
+    height: fit-content;
+    padding: 20px 12px;
+    border-radius: 10px;
+
+    @include whiteRoundedBlock;
+
+    @include breakpoint(md) {
+      padding: 20px;
+    }
+
+    @include breakpointMax(lg) {
+      margin-top: 30px;
+    }
+
+    @include breakpoint(lg) {
+      grid-column: 2/3;
+      grid-row: 2/4;
+    }
+
+
+    .total-sum {
+      display: grid;
+      row-gap: 30px;
+      //font-size: 16px;
+    }
+
+
+    .total-sum-row {
+      @include flexCenterBetween;
+
+      @include breakpointMax(lg) {
+        //font-size: 14px;
+      }
+
+      &.total {
+        @include titleGeneral;
+        font-size: 20px;
+        //margin-bottom: 30px;
+
+        .value {
+          color: $black;
+        }
+      }
+
+      &:last-child {
+        margin-top: 10px;
+      }
+
+      &.total-discount {
+        .value {
+          margin-left: auto;
+        }
+
+        .label {
+          margin-left: 10px;
+        }
+      }
+
+      span.title {
+        @include titleGeneral;
+        color: $gray-dark;
+      }
+    }
+
+    .total-sum-promo {
+      position: relative;
+
+      input {
+        height: 48px;
+        background-color: transparent;
+        border: 1px solid $stroke;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      @include breakpoint(lg) {
+        @include flexAlignCenter;
+        gap: 12px;
+      }
+
+
+      svg {
+        position: absolute;
+        top: calc(50% - 11px);
+        right: 16px;
+        width: 22px;
+        height: 22px;
+        transform: rotate(180deg);
+
+        path {
+          stroke: $green-light;
+          stroke-width: 2;
+
+        }
+      }
+
+      .btn {
+        height: 54px;
+
+        @include breakpointMax(lg) {
+          display: none;
+        }
+      }
+    }
+
+    .total-order {
+      margin-top: -10px;
+
+      &.btn {
+        width: 100%;
+        height: 54px;
+        padding: 16px;
+      }
+    }
+
+    span.bx-price-old {
+      text-decoration: line-through;
+    }
+  }
+
+}
+
+#bx-soa-total .bx-soa-cart-total-line {
+  align-items: flex-start;
+}
+
+
+.price-block {
+  @include flexAlignCenter;
+  gap: 12px;
+  font-size: 16px;
+
+  .price-old {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: $gray-dark;
+  }
+}

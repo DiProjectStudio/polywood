@@ -1,0 +1,351 @@
+.faq {
+
+  .faq__inner {
+    @include breakpoint(lg) {
+      display: grid;
+      grid-template-columns: 41% 58%;
+      justify-content: space-between;
+      column-gap: 10px;
+    }
+    @include breakpoint(xl) {
+      grid-template-columns: 32% 58%;
+    }
+  }
+
+  .faq__inner-head {
+    @include breakpoint(lg) {
+      grid-column: 1/3;
+    }
+
+    .section-head__title {
+      @include breakpoint(lg) {
+        width: 49%;
+      }
+      @include breakpoint(xl) {
+        width: unset;
+      }
+    }
+  }
+
+  .faq__inner-ask {
+
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    @include whiteRoundedBlock;
+
+    @include breakpoint(md) {
+      grid-template-columns: calc(100% / 12 * 8) 1fr;
+      column-gap: 30px;
+    }
+
+    @include breakpoint(lg) {
+      grid-template-columns: unset;
+      grid-column: 1/2;
+      grid-row: 2/3;
+      height: fit-content;
+    }
+
+    @include breakpointMax(lg) {
+      margin-top: 30px;
+    }
+    .ask-title {
+      @include titleGeneral;
+      font-size: 25px;
+    }
+
+    .ask-text {
+      @include breakpoint(md) {
+        grid-row: 2/3;
+      }
+
+      @include breakpoint(lg) {
+        grid-row: unset;
+      }
+    }
+
+    .ask-action {
+      margin-top: 20px;
+      width: 100%;
+
+      @include breakpoint(md) {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        margin-top: 0;
+      }
+
+      @include breakpoint(lg) {
+        margin-top: 20px;
+        grid-row: unset;
+        grid-column: unset;
+      }
+
+      .btn {
+        padding: 16px;
+        height: 70px;
+      }
+
+
+    }
+  }
+
+  .faq__items {
+    @include breakpoint(lg) {
+      grid-column: 2/3;
+      grid-row: 2/4;
+    }
+  }
+
+  .yellow-sticker {
+    position: static;
+    width: 140px;
+    height: 140px;
+    transform: rotate(-18.91deg);
+    align-self: flex-end;
+    margin-top: 40px;
+
+  }
+}
+
+.products-list {
+
+  .products-list__inner-head {
+    .section-head__title {
+      grid-column: 1/3;
+    }
+  }
+
+
+  .products-list__inner-items {
+    grid-auto-rows: 160px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint(md) {
+      grid-auto-rows: 175px;
+    }
+    @include breakpoint(lg) {
+      grid-auto-rows: 218px;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+.calculate {
+  position: relative;
+  overflow: hidden;
+
+
+  .form-calculate {
+    .general-form__inner {
+      overflow: hidden;
+
+      @include breakpoint(md) {
+        grid-template-columns: 59% auto;
+        grid-template-rows: repeat(2, auto) 1fr;
+        justify-content: space-between;
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: 57% calc(100% / 12 * 3);
+        column-gap: 120px;
+        justify-content: unset;
+      }
+      @include breakpoint(xl) {
+        //grid-template-columns: 60% calc(100%/12*3);
+      }
+
+      .general-form__title, .general-form__subtitle {
+        grid-column: 1/3;
+
+        @include breakpoint(md) {
+          grid-column: 1/2;
+          width: unset;
+        }
+      }
+
+      .general-form__subtitle {
+        line-height: 150%;
+      }
+
+      form {
+        grid-column: 1/2;
+        grid-row: 3/4;
+
+
+      }
+
+      .form-action {
+        margin-top: 20px;
+
+
+        .btn {
+          width: 167px;
+
+          @include breakpoint(md) {
+            //width: fit-content;
+            width: 230px;
+          }
+        }
+
+      }
+
+      .general-form__image {
+        width: 122px;
+        height: auto;
+        margin-bottom: -85px;
+        position: relative;
+        z-index: 1;
+        grid-column: 2/3;
+        justify-self: flex-end;
+
+        @include breakpoint(md) {
+          grid-row: 1/4;
+          width: 224px;
+          margin-bottom: -105px;
+          margin-right: -20px;
+          margin-top: 40px;
+        }
+        @include breakpoint(lg) {
+          width: 270px;
+          margin-bottom: -120px;
+          margin-right: 0;
+          margin-top: 20px;
+        }
+        @include breakpoint(xl) {
+          margin-bottom: -120px;
+          margin-top: 0;
+        }
+
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .calculate__inner-options {
+    display: grid;
+    gap: 10px;
+    margin-top: -20px;
+    grid-auto-rows: 160px;
+
+    @include breakpoint(md) {
+      grid-auto-rows: 248px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(lg) {
+      gap: 20px;
+    }
+    @include breakpoint(xl) {
+      grid-auto-rows: 300px;
+    }
+
+    .option {
+      border-radius: 20px;
+      position: relative;
+      padding: 18px;
+      height: 100%;
+      display: flex;
+
+      & * {
+        border-radius: inherit;
+      }
+
+      @include breakpoint(md) {
+        padding: 20px;
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-radius: inherit;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+        z-index: -1;
+      }
+
+      &:hover {
+        .option-image img {
+          transform: scale(1.1);
+        }
+      }
+
+      .option-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        overflow: hidden;
+
+        img {
+          transition: $transition-cubic-bezier;
+        }
+      }
+
+      .option-title {
+        align-self: flex-end;
+        @include titleGeneral;
+        color: $white;
+        @include breakpoint(lg) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.ticker {
+  position: relative;
+  z-index: 0;
+  height: 44px;
+  bottom: 60px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.20);
+  color: $white;
+  padding: 10px;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 20px;
+  overflow: hidden;
+
+  @include breakpoint(md) {
+    bottom: 70px;
+  }
+
+  .ticker__inner {
+    //width: 100%;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .ticker__item {
+    @include flexAlignCenter;
+    gap: 10px;
+    //animation: 15s linear infinite running ticker;
+
+
+    .ticker__item-text {
+      //width: 220px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

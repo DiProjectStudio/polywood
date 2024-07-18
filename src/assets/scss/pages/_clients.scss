@@ -1,0 +1,70 @@
+.clients {
+
+  .clients__inner {
+display: grid;
+    gap: 20px;
+
+    .clients__inner-wrapper {
+      display: grid;
+      gap: 10px;
+
+      grid-template-columns: repeat(2, 1fr);
+      @include breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include breakpoint(lg) {
+        gap: 20px;
+      }
+
+      .client {
+
+        padding: 20px 12px;
+        text-align: center;
+        display: grid;
+        align-items: center;
+        gap: 12px;
+        @include whiteRoundedBlock;
+
+        @include breakpoint(md) {
+          padding: 30px 20px;
+          gap: 20px;
+        }
+
+        .client-logo {
+
+          height: 49px;
+          @include flexCenterCenter;
+          @include breakpoint(md) {
+            height: 100px;
+          }
+
+
+          img {
+            object-fit: scale-down;
+          }
+        }
+
+        .client-name {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 120%;
+
+          //padding: 12px 0 20px;
+
+          @include breakpoint(md) {
+            font-size: 20px;
+          }
+          @include breakpoint(lg) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .clients__inner-text {
+      p~p {
+        margin-top: 10px;
+      }
+    }
+  }
+}

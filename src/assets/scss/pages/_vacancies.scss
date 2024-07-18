@@ -1,0 +1,89 @@
+.vacancies {
+
+  .vacancies__inner {
+    position: relative;
+    .yellow-sticker {
+      top: -100px;
+      right: 0;
+      transform: rotate(-21.619deg);
+
+      @include breakpoint(lg) {
+        top: -120px;
+        width: 140px;
+      }
+      @include breakpoint(xl) {
+        top: -130px;
+      }
+    }
+
+    .vacancies__inner-block {
+
+
+      .block-title + .block-items {
+        margin-top: 20px;
+      }
+
+      .accordion__item {
+        border-radius: 20px;
+
+        .accordion__visible {
+          .accordion__visible-text {
+            //width: 95%;
+            p ~ p {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .accordion__hidden {
+          ul {
+            padding-left: 20px;
+
+            @include breakpoint(md) {
+              padding-left: calc(var(--container) + 10px);
+            }
+            @include breakpoint(xl) {
+              padding-left: 30px;
+            }
+
+            li {
+              list-style: disc;
+            }
+
+          }
+
+          p + ul {
+            margin-top: 10px;
+          }
+
+          .job-description-block ~ .job-description-block {
+            margin-top: 10px;
+          }
+
+          .job-description-action {
+            margin-top: 20px;
+
+            .btn {
+              width: 100%;
+              padding: 16px ;
+
+              @include breakpoint(md) {
+                width: 231px;
+              }
+
+              img {
+                transform: rotate(-180deg);
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .vacancies__inner-block ~ .vacancies__inner-block {
+      margin-top: 40px;
+    }
+  }
+}

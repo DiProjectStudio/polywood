@@ -1,0 +1,44 @@
+---
+title: Polywood | Инжиниринг
+bodyClass: engineering-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Инжиниринг', 'Инжиниринг')
+    section.engineering-section
+        .container
+            .engineering-section__inner
+                .engineering-section__inner-head.section-head
+                    .section-head__text.single
+                        p Компания Поливуд предлагает промышленному потребителю комплекс инженерных мероприятий по освоению новых разработок и технологий в сфере переработки древесно-полимерных композитов и производства изделий промышленного и коммерческого назначения.
+
+                .engineering-section__inner-items.general-cards-wrapper
+                    a(href='engineering-subcategory.html').general-card
+                        .card-icon
+                            +img('icon_eng-1.svg')
+                        h5.card-text Технологическое сопровождение
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_eng-2.svg')
+                        h5.card-text Разбор рекламаций
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_eng-3.svg')
+                        h5.card-text Инновационные технологии
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_eng-4.svg')
+                        h5.card-text Оборудования для производства ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_eng-5.svg')
+                        h5.card-text Сырьё для производства ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_eng-6.svg')
+                        h5.card-text Коммерческий консалтинг
+
+    include components/_faq-products-calculate

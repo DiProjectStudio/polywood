@@ -1,0 +1,60 @@
+---
+title: Polywood | Наши клиенты
+bodyClass: clients-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Наши клиенты', 'О компании', ['Наши клиенты'])
+    section.clients
+        .container
+            .clients__inner
+
+                .clients__inner-wrapper
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-1.jpg')
+                        .client-name Элит Парк
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-2.jpg')
+                        .client-name Экоделье
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-3.jpg')
+                        .client-name Фазенда
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-4.jpg')
+                        .client-name Стройартель
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-5.jpg')
+                        .client-name Росатом
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-1.jpg')
+                        .client-name Элит Парк
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-2.jpg')
+                        .client-name Экоделье
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-3.jpg')
+                        .client-name Фазенда
+                    a(href='javascript:void(0)').client
+                        .client-logo
+                            +img('client-4.jpg')
+                        .client-name Стройартель
+
+
+                .clients__inner-text
+                    p Компания «Поливуд» является ведущим российским производителем высококачественных конструкций из ДПК. Строительные материалы POLYWOOD™ активно применяются при возведении различных объектов. Например, «Элит Парк» и «Экодолье» выбирают террасную доску именно от «Поливуд», так как конструкции отличаются прочностью, экологичностью и доступной ценой.
+                    p В рамках популярного телепроекта «Фазенда» неоднократно использовались строительные материалы компании, так как они лучшим образом подходят для украшения приусадебной территории.
+                    p Московская торгово-промышленная палата, Росатом и Мосгражданпроект курируют реализацию масштабных строительных проектов, для которых отбор материалов особенно строгий. Продукция «Поливуд» оптимально подходит для оформления фасадов зданий, создания крупных уличных конструкций и их последующей долгосрочной эксплуатации, поэтому строительные материалы POLYWOOD™ без труда проходят данный отбор.
+                    p Среди клиентов компании множество других именитых организаций: КСК-групп, архитектурная студия «Новый Дом», Линия 8, Art production group, Build it green, Sawatsky и другие.
+
+    include components/_faq-products-calculate

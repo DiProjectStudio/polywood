@@ -1,0 +1,90 @@
+// SERVICE DETAIL
+.hero.hero-terraces {
+  .hero__inner {
+
+    @include breakpoint(md) {
+      grid-template-columns: 60% 25%;
+    }
+    @include breakpoint(lg) {
+      grid-template-columns: 36% 1fr;
+    }
+    @include breakpoint(xl) {
+      column-gap: 20px;
+      grid-template-columns: 43% 1fr;
+    }
+
+    .hero-bg img {
+      //object-position: right;
+    }
+
+    .info-title {
+      font-size: 35px;
+
+      @include breakpoint(md) {
+        font-size: 40px;
+      }
+      @include breakpoint(lg) {
+        font-size: 45px;
+      }
+      @include breakpoint(xl) {
+        font-size: 50px;
+      }
+
+      span {
+
+        letter-spacing: unset;
+        //line-height: 150%;
+
+        font-size: 16px;
+
+        @include breakpoint(xl) {
+          font-size: 20px;
+        }
+
+
+      }
+    }
+  }
+}
+
+.prices {
+  &.terraces-prices {
+
+    .prices__inner-head.section-head {
+      @include breakpoint(md) {
+        //width: calc(100% / 12 * 8);
+      }
+      @include breakpoint(lg) {
+        grid-template-columns: 100%;
+        width: calc(100% / 12 * 5);
+      }
+    }
+
+    .table {
+      .table-row {
+        grid-template-columns: 413px 180px;
+        @include breakpoint(md) {
+          grid-template-columns: 1fr 268px;
+        }
+        @include breakpoint(lg) {
+          gap: 40px;
+          grid-template-columns: 1fr calc(100% / 12 * 2);
+        }
+
+
+        .cell {
+
+          &:nth-of-type(1) {
+            font-weight: 700;
+          }
+
+        }
+      }
+    }
+
+    .show-more .btn {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

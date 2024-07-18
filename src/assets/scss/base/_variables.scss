@@ -1,0 +1,33 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-stroke: #E0E0E0;
+    --color-bg: #F4F4F4;
+    --color-gray-light: #ECECEC;
+    --color-gray-dark: #494949;
+    --color-gray: #909090;
+    --color-black: #292929;
+
+    --color-green-light: #599A39;
+    --color-green-dark: #4E8632;
+    --color-yellow-light: #FBCF58;
+    --color-yellow-dark: #F9C332;
+
+    --transition-style: all .3s ease;
+    --transition-cubic-bezier: all .3s cubic-bezier(.6,0,.4,1);
+
+}
+
+$white: var(--color-white);
+$stroke: var(--color-stroke);
+$bg: var(--color-bg);
+$gray-light: var(--color-gray-light);
+$gray-dark: var(--color-gray-dark);
+$gray: var(--color-gray);
+$black: var(--color-black);
+$green-light: var(--color-green-light);
+$green-dark: var(--color-green-dark);
+$yellow-light: var(--color-yellow-light);
+$yellow-dark: var(--color-yellow-dark);
+
+$transition-style: var(--transition-style);
+$transition-cubic-bezier: var(--transition-cubic-bezier);

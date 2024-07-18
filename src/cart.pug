@@ -1,0 +1,99 @@
+---
+title: Polywood | Корзина
+bodyClass: cart-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Корзина', ['Корзина'])
+
+    section.cart
+        .container
+            .cart__inner
+                .cart__inner-content
+                    .cart__inner-head
+                        .print
+                            include assets/images/icon_download.svg
+                            span Распечатать заказ
+                        .clear
+                            include assets/images/icon_trash.svg
+                    .cart__inner-products
+                        .product
+                            .product-delete
+                                include assets/images/icon_close.svg
+                            .product-info
+                                .product-image
+                                    +img('category-products.png')
+                                .product-name Террасная доска из ДПК POLYWOOD™  3 метра
+                                .product-color Цвет: <span id="color">графит шлифованный</span>
+                                .product-size Размер: <span id="size">4</span>&nbsp;м
+                            .product-price
+                                span.title Цена
+                                .price-block
+                                    .price-new 1 000 000 ₽
+                                    .price-old 2 000 000 ₽
+                            .product-quantity
+                                span Кол-во
+                                .counter
+                                    .btn-count.btn-subtract
+                                        include assets/images/icon_minus.svg
+                                    input.counter(type='text' data-default='1' data-min='0' data-max='100' value='1')
+                                    .btn-count.btn-add
+                                        include assets/images/icon_plus.svg
+                                span пог.м
+                            .product-total
+                                span Сумма
+                                .price-block
+                                    .price-new 1 000 000 ₽
+                                    .price-old 2 000 000 ₽
+                        .product
+                            .product-delete
+                                include assets/images/icon_close.svg
+                            .product-info
+                                .product-image
+                                    +img('category-products.png')
+                                .product-name Террасная доска из ДПК POLYWOOD™  3 метра
+                                .product-color Цвет: <span id="color">графит шлифованный</span>
+                                .product-size Размер: <span id="size">4</span>&nbsp;м
+                            .product-price
+                                span.title Цена
+                                .price-block
+                                    .price-new 1 000 000 ₽
+                                    .price-old 2 000 000 ₽
+                            .product-quantity
+                                span Кол-во
+                                .counter
+                                    .btn-count.btn-subtract
+                                        include assets/images/icon_minus.svg
+                                    input.counter(type='text' data-default='1' data-min='0' data-max='100' value='1')
+                                    .btn-count.btn-add
+                                        include assets/images/icon_plus.svg
+                                span пог.м
+                            .product-total
+                                span Сумма
+                                .price-block
+                                    .price-new 1 000 000 ₽
+                                    .price-old 2 000 000 ₽
+
+                    .cart__inner-total(data-entity='basket-total-block')
+                        .total-sum
+                            .total-sum-rows
+                                .total-sum-row.total-products
+                                    span.title Товары (<span>2</span>) на
+                                    span.value 2 000 000 ₽
+                                .total-sum-row.total-discount
+                                    span.title Cкидка
+                                    span.value -200 ₽
+                                    span.label.label-green -10%
+
+                            .total-sum-promo
+                                input(type="text" placeholder="Промокод")
+                                include assets/images/icon_arrow-left.svg
+
+                            .total-sum-row.total
+                                span.title Итого
+                                span.value 4 000 000 ₽
+
+                            a(href='create-order.html').btn.btn--yellow.total-order Перейти к оформлению

@@ -1,0 +1,136 @@
+---
+title: Polywood | Контакты
+bodyClass: contacts-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Контакты в Москве', 'Контакты')
+    section.contacts
+        .container
+            .contacts__inner
+                .contacts-section.contacts--general
+                    .contacts-section__inner
+                        .yellow-sticker
+                            +img('yellow-sticker.svg')
+
+                        .select.sorting-select(data-sort="sort-by")
+                            .selected-select
+                                span Москва
+                                include assets/images/icon_chevron-down.svg
+                            .select-options
+                                .general-tabs.tabs
+                                    a(href='javascript:void(0)').option.active Москва
+                                    a(href='javascript:void(0)').option Челябинск
+                                    a(href='javascript:void(0)').option Екатеринбург
+                                    a(href='javascript:void(0)').option Самара
+                                    a(href='javascript:void(0)').option Крым
+                                    a(href='javascript:void(0)').option Краснодар
+                                    a(href='javascript:void(0)').option Курск
+
+                        .contacts-section__inner-head.section-head
+                            h4.section-head__title Компания Поливуд
+                            .section-head__text
+                                p Компания Поливуд является ведущим производителем ДПК на рынке России. Компания ведёт прогрессивную деятельность в разработке инновационных технологий, поэтому всегда может предложить вам самые передовые решения!
+                                .text-exclamation
+                                    +img('icon_exclamation.svg')
+                                    p Перед визитом в офис обязательно согласовывайте время визита с нашим менеджером по телефону!
+
+                        .contacts-section__inner-content
+                            .content__info
+                                .content__info-item
+                                    .item-icon
+                                        +img('icon_pin.svg')
+
+                                    .item-title Офис
+                                    .item-text 123592, Россия, г. Москва, ул. Кулакова, д. 20, строение 1А, эт 5, пом. XVII, ком. 37.74.75,76
+
+                                .content__info-item
+                                    .item-icon
+                                        +img('icon_home-green.svg')
+                                    .item-title Склад
+                                    .item-text г. Химки, мкр. Сходня, ул. Некрасова д. 2
+
+                                .content__info-item
+                                    .item-icon
+                                        +img('icon_phone.svg')
+                                    .item-title Телефон
+                                    .item-text.text--phone
+                                        .phone.phone-mos
+                                            a(href='tel:74951095209').link.link--black +7 495 109-52-09
+                                            span Москва
+                                        .phone.phone-rus
+                                            a(href='tel:88005055209').link.link--black 8 800 505-52-09
+                                            span Бесплатно по России
+
+                                .content__info-item
+                                    .item-icon
+                                        +img('icon_email.svg')
+                                    .item-title Email
+                                    .item-text market@polywood.ru
+
+
+                            .content__map
+                                script.
+                                  let placemarks = [{
+                                    coordinates: [55.80556953618359, 37.39196049999992],
+                                  },]
+                                  let centerPoint = [55.80556953618359, 37.39196049999992]
+                                .map__wrapper
+                                    #map(style="width:100%; height:100%; border-radius: 20px;")
+
+
+
+    section.location-map
+        .container
+            .location-map__inner
+                .location-map__inner-head.section-head
+                    h3.section-head__title Схема проезда
+                .location-map__inner-addresses
+                    .address.address-office
+
+                        .address-icon
+                            +img('icon_pin.svg')
+
+                        .address-title Офис
+                        .address-text 123592, Россия, г. Москва, ул. Кулакова, д. 20, строение 1А, эт 5, пом. XVII, ком. 37.74.75,76
+                        .address-image
+                            +img('location-map-1.png')
+
+
+                    .address.address-storage
+                        .address-icon
+                            +img('icon_home-green.svg')
+
+                        .address-title Склад
+                        .address-text г. Химки, мкр. Сходня, ул. Некрасова д. 2
+                        .address-image
+                            +img('location-map-1.png')
+
+    section.general-form.form-consult
+        .container
+            .general-form__inner
+                h3.general-form__title Остались вопросы или нужна консультация?
+                .general-form__subtitle Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.
+
+                form
+                    .form-row
+                        input(type="text" name="popup-order-consult_name" placeholder="Имя")
+                    .form-row
+                        input.phone-mask(type="tel" name="popup-order-consult_phone" placeholder="Телефон*")
+
+                    .form-row
+                        input(type="text" name="popup-order-consult_product" placeholder="Интересующий товар/услуга")
+                    .form-row
+                        textarea(placeholder="Сообщение*")
+                    .form-action
+                        button.btn.btn--yellow(type="submit") Отправить
+                        p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+                .general-form__image
+                    +img('form-consult-bg.svg')
+
+    include components/_faq-products-calculate

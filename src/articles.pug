@@ -1,0 +1,52 @@
+---
+title: Polywood | Статьи
+bodyClass: articles-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Статьи', 'Информация', ['Статьи'])
+
+    section.articles
+        .container
+
+            .articles__inner
+                .articles__items.general-info-items
+                    a(href='article-detail.html').general-info-item
+                        .item-image
+                            +img('promo-1.jpg')
+                        .item-text
+                            .item-name Декоративный забор своими руками
+                            .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+                    a(href='javascript:void(0)').general-info-item
+                        .item-image
+                            +img('promo-2.jpg')
+                        .item-text
+                            .item-name Декоративный забор своими руками
+                            .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+                    a(href='javascript:void(0)').general-info-item
+                        .item-image
+                            +img('promo-3.jpg')
+                        .item-text
+                            .item-name Декоративный забор своими руками
+                            .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+                    a(href='javascript:void(0)').general-info-item
+                        .item-image
+                            +img('promo-1.jpg')
+                        .item-text
+                            .item-name Декоративный забор своими руками
+                            .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+
+                .articles__action.show-more
+                    .btn.btn--bordered
+                        span Показать ещё
+                        include assets/images/icon_arrow-left.svg
+
+
+    include components/_faq-products-calculate

@@ -1,0 +1,25 @@
+---
+title: Polywood | Заказ оформлен!
+bodyClass: order-success-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Корзина', 'Оформление заказа', ['Заказ оформлен'])
+    section.order-success
+        .container
+            .order-success__inner
+                .order-success__inner-icon
+                    +img('tick-sticker.svg')
+
+                .order-success__inner-text
+                    .order-success__inner-title Заказ сформирован
+                    p.bold Ваш заказ №<span id="order-number">1234С</span> от 27.07.2019 15:41:31 успешно оформлен.
+                    p Благодарим за выбор нашей компании. В ближайшее время наши менеджеры свяжутся с вами для дальнейшего оформления заказа.
+                .order-success__inner-actions
+                    a(href='catalog.html').btn.btn--yellow
+                        span В каталог
+                    a(href='index.html').btn.btn--bordered
+                        span На главную

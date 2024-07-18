@@ -1,0 +1,454 @@
+---
+title: Polywood | Главная
+bodyClass: main-page
+---
+
+extends includes/_page
+
+block main
+    section.hero.hero-main
+        .hero-bg
+            +img('hero-bg.jpg')
+        .container
+            .hero__inner
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+                .hero__inner-info
+                    h1.info-title
+                        span Мир композитов
+                        p Polywood
+
+                    .info-action
+                        a(href='javascript:void(0)').btn.btn--yellow В каталог
+
+
+                .hero__inner-benefits
+                    .benefit
+                        +img('icon_benefit-cycle.svg')
+                        p Собственное производство
+                    .benefit
+                        +img('icon_benefit-key.svg')
+                        p Работы под ключ
+                    .benefit
+                        +img('icon_benefit-shield.svg')
+                        p Гарантия качества
+                    .benefit
+                        +img('icon_star-stroke.svg')
+                        p Многолетний опыт
+
+    section.terrace
+        .container
+            .terrace__inner
+                .terrace__inner-head.section-head
+                    h2.section-head__title Террасная доска. Производство и монтаж.
+                    .section-head__text
+                        p Предлагаем комплексное обслуживание на выгодных условиях: от разработки проекта террас до их установки, технического обслуживания, а также демонтажа и временного хранения в сезон.
+                .terrace__inner-items
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-1.jpg')
+                        h6.terrace-title Для дома и дачи
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-2.jpg')
+                        h6.terrace-title Для ресторана и кафе
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-3.jpg')
+                        h6.terrace-title На кровле и балконе
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-4.jpg')
+                        h6.terrace-title Пирсы и причалы
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-5.jpg')
+                        h6.terrace-title В парке
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-6.jpg')
+                        h6.terrace-title У бассейна
+
+    section.actions
+        .container
+            .actions__inner
+                .text-sticker
+                    +img('text-sticker.svg')
+                .actions__inner-items.general-cards-wrapper
+                    a(href='javascript:void(0)' data-src="#popup-order-samples" data-fancybox).general-card
+                        .card-icon
+                            +img('icon_timber.svg')
+                        h5.card-text Закажите <span>бесплатные образцы</span> террасной доски
+                    a(href='javascript:void(0)' data-src="#popup-order-calc" data-fancybox).general-card
+                        .card-icon
+                            +img('icon_calculator.svg')
+                        h5.card-text <span>Бесплатный расчёт </span> террасы<br> по вашему эскизу
+
+                    a(href='promos.html').general-card
+                        .card-icon
+                            +img('icon_percent.svg')
+                        h5.card-text
+                            span Акции <br>
+                            | и выгодные предложения
+    section.categories
+        .container
+            .categories__inner
+                .categories__inner-head.section-head
+                    h2.section-head__title Каталог продукции
+                    .section-head__text
+                        p Строительные и отделочные материалы из древесно-полимерного композита – современное решение проблем обустройства комфортабельного дома и прилегающего к нему участка.
+
+                .categories__items.categories-cards
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Террасная доска из ДПК
+                        .card-image
+                            +img('catalog-1.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Заборы и ограждения
+                        .card-image
+                            +img('catalog-2.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Ступени из ДПК
+                        .card-image
+                            +img('catalog-3.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Сайдинг
+                        .card-image
+                            +img('catalog-4.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Регулируемые опоры
+                        .card-image
+                            +img('catalog-5.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Навесы, перголы, беседки
+                        .card-image
+                            +img('catalog-6.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Мебель из искусственного ротанга
+                        .card-image
+                            +img('catalog-7.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Грядки из ДПК
+                        .card-image
+                            +img('catalog-8.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Комплектующие
+                        .card-image
+                            +img('catalog-9.png')
+                    a(href='javascript:void(0)').category-card
+                        h6.card-title Террасная доска из дерева
+                        .card-image
+                            +img('catalog-10.png')
+
+
+    section.general-form.form-subscribe
+        .container
+            .general-form__inner
+                h3.general-form__title Получите скидку
+                .general-form__subtitle Подпишитесь на нашу рассылку и получите скидку 10% на все товары, не участвующие в акции
+
+                form
+                    .form-row
+                        input(type="text" name="popup-order-calc_name" placeholder="Имя")
+                    .form-row
+                        input(type="email" name="popup-order-calc_email" placeholder="E-mail")
+                    .form-action
+                        button.btn.btn--yellow(type="submit" data-src="#popup-success-subscribe" data-fancybox) Подписаться
+                        p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+                .general-form__image
+                    +img('form-subscribe-bg.svg')
+
+
+    section.services-section
+        .container
+            .services-section__inner
+                .text-sticker
+                    +img('text-sticker.svg')
+                .services-sectio__inner-head.section-head
+                    h2.section-head__title Услуги
+                .services-section__inner-items.general-cards-wrapper
+
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-measure.svg')
+                        h5.card-text Замер и расчёт
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-design.svg')
+                        h5.card-text Дизайн и проектирование
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-brick.svg')
+                        h5.card-text Строительные и монтажные работы
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-storage.svg')
+                        h5.card-text Сезонное хранение материалов
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-guarantee.svg')
+                        h5.card-text Гарантийное обслуживание
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-delivery.svg')
+                        h5.card-text Доставка
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-assembly.svg')
+                        h5.card-text Монтаж террасной доски
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-production.svg')
+                        h5.card-text Производство террасной доски
+
+    section.portfolio.slider-section
+        .container
+            .portfolio__inner.slider-section__inner
+
+                .section-head
+                    h2.section-head__title Портфолио
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.portfolio__inner-items
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-2.jpg')
+                                    h5.slide-item__title Дом в Дмитровском Городском округе
+
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+
+                        .swiper-pagination
+
+
+                .slider-section__inner-action
+                    a(href='javascript:void(0)').btn.btn--yellow Все проекты
+
+
+
+    section.video-section
+        .container
+            .video-section__inner
+                .video-section__item(data-src='video', data-fancybox)
+                    .item-text
+
+                        p Построим террасу
+                        p
+                            span вашей мечты
+                            +img('icon_heart.svg')
+                    .item-cover
+                        +img('portfolio-1.jpg')
+                    .item-icon
+                        +img('icon_play.svg')
+                    .yellow-sticker
+                        +img('yellow-sticker.svg')
+
+
+    section.steps
+        .container
+            .steps__inner
+                .steps__inner-head.section-head
+                    h2.section-head__title Этапы работы
+                .steps__inner-items
+                    .step
+                        .step-number 1
+                        h3.step-name Оставить заявку
+                        .step-description Мы расскажем о новейших материалах для террас, технологиях монтажа террасной доски (декинга), поможем с выбором по вашим пожеланиям и бюджету.
+                    .step
+                        .step-number 2
+                        h3.step-name Замер площадки
+                        .step-description Специалисты «Террадек» проведут точный расчет материалов для вашей террасы. Бесплатно для объектов более 50 квадратных метров.
+                    .step
+                        .step-number 3
+                        h3.step-name Проект террасы
+                        .step-description При заказе террасной доски в «Террадек», вы получите полноценный проект террасы с полной спецификацией материалов бесплатно!
+                    .step
+                        .step-number 4
+                        h3.step-name Договор и оплата
+                        .step-description Оплатить товары и услуги «Террадек» очень просто. Мы предлагаем три самых популярных варианта: Банковский перевод, наличными, картой, онлайн-оплата
+                    .step
+                        .step-number 5
+                        h3.step-name Доставка
+                        .step-description Оплатить товары и услуги «Террадек» очень просто. Мы предлагаем три самых популярных варианта: Банковский перевод, наличными, картой, онлайн-оплата
+                    .step
+                        .step-number 6
+                        h3.step-name Монтаж и шеф-монтаж
+                        .step-description Проверенные штатные бригады «Террадек» строго соблюдают технологии монтажа террасной доски и гарантируют отсутствие монтажных дефектов.
+
+                .general-form.form-measure
+                    .general-form__inner
+                        h3.general-form__title Вызвать специалиста на замер
+                        .general-form__subtitle Наш специалист привезет образцы ДПК, чтобы вы могли выбрать материал прямо у себя дома!
+
+                        form
+                            .form-row
+                                input(type="text" name="popup-order-calc_name" placeholder="Имя")
+                            .form-row
+                                input(type="email" name="popup-order-calc_email" placeholder="E-mail")
+                            .form-action
+                                button.btn.btn--yellow(type="submit" data-src="#popup-success" data-fancybox) Оставить заявку
+                                p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+                        .general-form__image
+                            +img('form-measure-bg.svg')
+
+    section.benefits
+        .container
+            .benefits__inner
+                .benefits__inner-head.section-head
+                    h2.section-head__title Террасная доска Polywood
+                .benefits__items
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-1.jpg')
+                        .item-text
+                            h5.item-title Можно босиком!
+                            .item-description Поверхность террасной доски Поливуд устойчива к образованию сколов и <span>не представляет опасности получения заноз</span>. Это делает покрытие абсолютно безопасным, в том числе для активных игр детей.
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-2.jpg')
+                        .item-text
+                            h5.item-title Остаётся как новая спустя много лет
+                            .item-description Качество террасной доски Поливуд, позволяет продлить срок эксплуатации до 25 лет <span>без лишних трат на обслуживание</span>
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-3.jpg')
+                        .item-text
+                            h5.item-title И в дождь и в снег
+                            .item-description Покрытие террасной доски Поливуд отлично переносит погодные катаклизмы. <span>Поверхность не скользит, даже если влажная</span>, и не гниёт от сырости
+                    .benefits__item
+                        .item-image
+                            +img('terrace-board-4.jpg')
+                        .item-text
+                            h5.item-title Экологично и практично
+                            .item-description Продукция Поливуд <span>не содержит опасных веществ</span>, легко монтируется и не выгорает на солнце.
+
+
+    section.about
+        .container
+            .about__inner
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+                .about__inner-info
+                    .info-company
+                        h2.info-title О компании
+                        .info-description Компания «Поливуд» оказывает полный комплекс услуг в сфере производства и монтажа товаров из древесно-полимерного композита: изготовление террасной доски, сайдинга и ограждений, комплектующих для монтажа
+                            | террас, поставка химического сырья для производства ДПК, дизайн и проектирование, строительные и монтажные работы.
+                        .info-benefits
+                            .info-benefit
+                                h6.benefit-title Собственное производство
+                                .benefit-description Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis
+                            .info-benefit
+                                h6.benefit-title Работы под ключ
+                                .benefit-description Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis
+                            .info-benefit
+                                h6.benefit-title Гарантия качества
+                                .benefit-description Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis
+                            .info-benefit
+                                h6.benefit-title Многолетний опыт
+                                .benefit-description Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis
+                    .info-image
+                        +img('hero-bg.jpg')
+
+
+                .about__inner-blocks
+                    .about__inner-block
+                        h3.block-title Инжиниринг
+                        .block-description Компания Поливуд предлагает инженерные услуги для промышленных клиентов, включая разработку и внедрение новых технологий в области древесно-полимерных композитов и производства промышленных изделий.
+                        .block-action
+                            a(href='engineering.html').btn.btn--yellow Узнать больше
+                    .about__inner-block
+                        h3.block-title Cырьё для производства ДПК
+                        .block-action
+                            a(href='javascript:void(0)').btn.btn--yellow Узнать больше
+                    .about__inner-block
+                        h3.block-title Оборудование для производства ДПК
+                        .block-action
+                            a(href='javascript:void(0)').btn.btn--yellow Узнать больше
+                    .about__inner-block
+                        h3.block-title Лицензии и сертификаты
+                        .block-action
+                            a(href='licenses.html').btn.btn--yellow Узнать больше
+                    .about__inner-block
+                        h3.block-title Гарантия качества
+                        .block-action
+                            a(href='javascript:void(0)').btn.btn--yellow Узнать больше
+
+
+
+    section.news.slider-section
+        .container
+            .news__inner.slider-section__inner
+                .news__inner-head.section-head
+                    h2.section-head__title Новости
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .news__inner-items.slider-section__inner-items
+                    .swiper
+                        .swiper-wrapper
+
+                            .swiper-slide
+                                .general-info-item
+                                    .item-image
+                                        +img('news-cover-1.jpg')
+                                    .item-text
+                                        .item-name Компания «Поливуд» поздравляет всех граждан нашей страны с Днём народного единства!
+                                    .item-date 25.12.2023
+                            .swiper-slide
+                                .general-info-item
+                                    .item-image
+                                        +img('news-cover-1.jpg')
+                                    .item-text
+                                        .item-name Компания «Поливуд» поздравляет всех граждан нашей страны с Днём народного единства!
+                                    .item-date 25.12.2023
+
+                        .swiper-pagination
+                .slider-section__inner-action
+                    a(href='javascript:void(0)').btn.btn--yellow Все новости
+
+
+    section.faq
+        .container
+            .faq__inner
+                .faq__inner-head.section-head
+                    h2.section-head__title Ответы на часто задаваемые вопросы
+                .faq__items.accordion__items
+                    +accordionItem('Какой состав продукции «Polywood»?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Где применяет декинг?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Какого цвета бывает?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                .faq__inner-ask
+                    h3.ask-title Задайте вопрос специалисту
+                    .ask-text Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.
+                    .ask-action
+                        .btn.btn--yellow(data-src="#popup-ask-question" data-fancybox) Задать вопрос
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+
+
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__text
+                    h2 Для СЕО
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                .seo-block__image
+                    +img('hero-bg.jpg')

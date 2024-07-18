@@ -1,0 +1,88 @@
+.page404 {
+
+  margin-top: 40px;
+  @include breakpoint(lg) {
+    margin-top: 60px;
+  }
+
+  .page404__inner {
+    background-color: $white;
+    border-radius: 40px;
+    padding: 20px;
+    @include flexCenterCenter;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    margin: 0 auto;
+
+    @include breakpoint(md) {
+      padding: 30px;
+    }
+    @include breakpoint(lg) {
+      width: calc(100% / 12 * 8);
+    }
+    @include breakpoint(xl) {
+      width: calc(100% / 12 * 6);
+    }
+
+    .page404__inner-title {
+      font-size: 120px;
+      color: $green-light;
+      font-weight: 700;
+      line-height: 120%;
+
+      @include breakpoint(md) {
+        font-size: 160px;
+      }
+      @include breakpoint(lg) {
+        font-size: 180px;
+      }
+      @include breakpoint(xl) {
+        font-size: 200px;
+      }
+    }
+
+    .page404__inner-subtitle {
+      margin-top: -10px;
+    }
+
+    .page404__inner-actions {
+      @include flexColumn;
+      margin: 20px auto 0;
+      gap: 10px;
+      width: fit-content;
+
+      .btn {
+        width: 289px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @include breakpoint(md) {
+          width: 231px;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+          transform: translate(0);
+          transition: $transition-style;
+        }
+
+          &:hover {
+            img {
+              transform: translateX(-10px);
+            }
+          }
+
+
+
+      }
+
+      @include breakpoint(md) {
+        flex-direction: row;
+      }
+      @include breakpoint(lg) {
+        gap: 20px;
+      }
+    }
+  }
+}

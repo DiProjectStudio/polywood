@@ -1,0 +1,70 @@
+---
+title: Polywood | Акции
+bodyClass: promos-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Акции', 'Информация', ['Акции'])
+
+    section.promos
+        .container
+            .promos__inner
+                .promos__items.general-info-items
+                    a(href='promo-detail.html').general-info-item
+                        .item-date 14-21 марта
+
+                        .item-image
+                            +img('promo-1.jpg')
+                            .item-sticker
+                                +img('star-sticker.svg')
+                                span Акция
+                        .item-text
+                            h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                            .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+                    a(href='javascript:void(0)').general-info-item
+                        .item-date 14-21 марта
+
+                        .item-image
+                            +img('promo-2.jpg')
+                            .item-sticker
+                                +img('star-sticker.svg')
+                                span Акция
+                        .item-text
+                            h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                            .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+                    a(href='javascript:void(0)').general-info-item
+                        .item-date 14-21 марта
+
+                        .item-image
+                            +img('promo-3.jpg')
+                            .item-sticker
+                                +img('star-sticker.svg')
+                                span Акция
+                        .item-text
+                            h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                            .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+                    a(href='javascript:void(0)').general-info-item
+                        .item-date 14-21 марта
+
+                        .item-image
+                            +img('promo-1.jpg')
+                            .item-sticker
+                                +img('star-sticker.svg')
+                                span Акция
+                        .item-text
+                            h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                            .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+                .promos__action.show-more
+                    .btn.btn--bordered
+                        span Показать ещё
+                        include assets/images/icon_arrow-left.svg
+
+
+    include components/_faq-products-calculate

@@ -1,0 +1,108 @@
+.info {
+  .info__inner {
+
+    .info__inner-content.seo-block {
+      .seo-block__inner {
+        @include breakpoint(lg) {
+          grid-template-columns: calc(100% / 12 * 5 - 10px) calc(100% / 12 * 7 - 10px);
+        }
+      }
+
+
+      .seo-block__text {
+        display: grid;
+        gap: 30px;
+
+        @include breakpoint(lg) {
+          order: 2;
+        }
+
+        p {
+          margin-top: 0;
+        }
+
+        .text-items {
+          display: grid;
+          gap: 16px;
+          grid-template-rows: repeat(2, auto) 1fr;
+
+
+          .text-item {
+            display: flex;
+            gap: 20px;
+
+            .item-icon {
+              width: 40px;
+              min-width: 40px;
+              height: 40px;
+              @include flexCenterCenter;
+
+              img {
+                object-fit: contain;
+              }
+            }
+          }
+
+          .text-item ~ .text-item {
+            //margin-top: 16px;
+          }
+        }
+      }
+
+      .seo-block__image {
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+
+        @include breakpoint(lg) {
+          order: 1;
+        }
+      }
+
+    }
+  }
+}
+
+// INFO PAGES
+
+.instructions__inner-content {
+  margin-top: 40px;
+}
+
+
+.payment-section {
+  .payment-section__inner {
+    .payment-section__inner-items {
+      gap: 20px;
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+
+      .general-card {
+        row-gap: 10px;
+        border-radius: 30px;
+
+        @include breakpoint(md) {
+          padding: 30px;
+        }
+        @include breakpoint(lg) {
+          grid-template-rows: repeat(2, auto) 1fr;
+          align-content: unset;
+        }
+
+        &::after {
+          display: none;
+        }
+
+        .card-text {
+          margin-top: 10px;
+
+          @include breakpoint(md) {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

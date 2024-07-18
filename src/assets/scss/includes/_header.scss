@@ -1,0 +1,690 @@
+.header {
+  z-index: 15;
+  position: sticky;
+  top: 0;
+  //padding: 8px 0;
+  border-radius: 0 0 25px 25px;
+  background-color: $white;
+
+  @include breakpoint(md) {
+    //padding: 15px 0;
+  }
+
+  .header__inner {
+    padding: 8px;
+
+    @include breakpoint(md) {
+      padding: 15px;
+    }
+
+    //justify-content: space-between;
+
+    @include breakpoint(lg) {
+      display: grid;
+      grid-template-columns: 1fr 268px;
+      gap: 20px;
+    }
+
+    .header__content {
+      display: grid;
+      grid-template-columns: 109px 1fr;
+      justify-content: space-between;
+      gap: 8px;
+
+      @include breakpoint(md) {
+        grid-template-columns: 224px calc(100% / 12 * 3) 1fr;
+        column-gap: 14px;
+      }
+
+      @include breakpoint(lg) {
+        grid-template-columns: 224px 148px auto auto 49px;
+        grid-column: span 2;
+        column-gap: 0;
+      }
+
+      .header__logo {
+        width: 100%;
+
+        img {
+          object-fit: contain;
+        }
+
+      }
+
+      .header__location {
+        @include flexAlignCenter;
+        gap: 8px;
+        grid-column: 2/3;
+        font-size: 14px;
+        justify-self: end;
+
+        @include breakpoint(md) {
+          grid-column: 3/4;
+          grid-row: 1/3;
+        }
+        @include breakpoint(md) {
+          grid-row: 1/2;
+        }
+
+        &:hover {
+          span {
+            color: $green-light;
+          }
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+        }
+      }
+
+      .header__slogan {
+        @include breakpointMax(md) {
+          display: none;
+        }
+
+        @include breakpoint(md) {
+
+          grid-column: 2/3;
+          grid-row: 1/3;
+
+          font-size: 9px;
+          font-weight: 600;
+          line-height: normal;
+          color: $gray-dark;
+
+          @include flexAlignCenter;
+
+        }
+      }
+
+      .header__service {
+        @include flexCenterBetween;
+        gap: 3px;
+
+        @include breakpointMax(md) {
+          padding-top: 8px;
+          border-top: 1px solid $stroke;
+          grid-column: 1/3;
+        }
+
+        @include breakpoint(lg) {
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+
+        span {
+          width: fit-content;
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: 10px;
+          line-height: normal;
+
+          @include breakpoint(md) {
+            font-size: 8px;
+          }
+        }
+      }
+
+      .header__contacts {
+        grid-column: 1/3;
+        @include flexCenterBetween;
+
+        @include breakpoint(md) {
+          grid-column: 1/4;
+        }
+
+        @include breakpointMax(lg) {
+          border-top: 1px solid $stroke;
+          padding-top: 8px;
+        }
+
+        @include breakpoint(lg) {
+          grid-column: 4/5;
+          grid-row: 1/2;
+          gap: 16px;
+        }
+
+
+        .header-contact {
+          font-size: 15px;
+          font-weight: 700;
+
+          &.mos {
+            @include flexAlignCenter;
+            gap: 4px;
+
+            &::after {
+              display: block;
+              content: "";
+              //background: url("../images/icon_chevron-down.svg") center no-repeat;
+              background-size: contain;
+              width: 16px;
+              height: 16px;
+              @include breakpoint(md) {
+                display: none;
+              }
+            }
+          }
+
+          &.rus {
+            @include breakpointMax(md) {
+              display: none;
+            }
+
+          }
+
+          &.order-call {
+            font-weight: 800;
+            color: $green-light;
+            border-bottom: 1px solid $green-light;
+          }
+
+          &.dealers {
+            font-size: 14px;
+            @include breakpointMax(md) {
+              display: none;
+            }
+            @include breakpoint(md) {
+              @include flexAlignCenter;
+              gap: 4px;
+            }
+
+
+            &:hover {
+              span {
+                color: $green-light;
+              }
+
+              svg path {
+                stroke: $green-light;
+              }
+            }
+          }
+        }
+      }
+
+      .header__cart {
+        @include breakpointMax(lg) {
+          display: none;
+        }
+        position: relative;
+        grid-row: 1/2;
+        grid-column: 5/6;
+        @include flexAlignCenter;
+
+        .cart-wrapper {
+          background-color: $green-light;
+          border-radius: 50%;
+          width: 44px;
+          height: 44px;
+          @include flexCenterCenter;
+
+          svg path {
+            stroke: $white;
+          }
+        }
+
+        .cart-count {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          font-size: 12px;
+          font-weight: 800;
+          color: $black;
+          text-align: center;
+          background-color: $yellow-light;
+          border-radius: 50%;
+          bottom: 7px;
+          right: 0;
+        }
+      }
+    }
+
+
+    .header__bar {
+      @include flexCenterBetween;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      background: $white;
+      box-shadow: 0 -2px 11px 0 rgba(0, 0, 0, 0.07);
+
+      @include breakpoint(md) {
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .header__bar-item {
+        width: 63px;
+
+        a {
+          @include flexCenterCenter;
+          flex-direction: column;
+        }
+
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+
+        span {
+          color: $black;
+          font-size: 12px;
+        }
+      }
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+
+    .header__search {
+      @include breakpointMax(lg) {
+        display: none;
+      }
+      order: 3;
+
+      .header__search-input {
+        position: relative;
+
+        svg {
+          position: absolute;
+          top: calc(50% - 12px);
+          right: 16px;
+          path {
+            stroke: $green-light;
+          }
+        }
+
+        form {
+          //margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.header__menu, .header__catalog-secondary, .header__category {
+  &.active {
+    .header-wrapper {
+      left: 0;
+    }
+  }
+
+}
+
+.header__bg {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, .5);
+  opacity: 0;
+  animation: fadeOut ease-out .2s forwards;
+  z-index: 10;
+
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+.wrapper {
+  @include breakpoint(lg) {
+    //display: grid;
+    //z-index: 99;
+    //gap: 30px;
+    //grid-template-columns: 25% 1fr;
+  }
+}
+
+.common-wrapper {
+  overflow-y: auto;
+  max-height: calc(100vh - 170px);
+
+  @include breakpointMax(lg) {
+    position: relative;
+    #menu {
+      //order: 1;
+    }
+    #catalog {
+      //order: 2;
+    }
+    #category {
+      //order: 3;
+    }
+  }
+
+  @include breakpoint(lg) {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: -150%;
+    transition: all .6s ease-out;
+
+    padding: 20px 30px;
+    border-radius: 0 0 20px 20px;
+    background: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+
+    .header__catalog-secondary {
+
+      .menu-nav__catalog .menu-nav__list {
+        flex-direction: column;
+        align-items: unset;
+        padding: 0;
+        border-bottom: none;
+        border-top: none;
+
+        .list-item {
+          padding: 15px 0;
+          position: relative;
+
+          a, .link {
+            text-decoration: none;
+
+            @include breakpoint(lg) {
+              img {
+                display: none;
+              }
+            }
+          }
+
+
+          a img {
+            display: flex;
+          }
+
+          &::after {
+            width: 16px;
+            height: 16px;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: calc(50% - 8px);
+            content: '';
+            //background-image: url("../images/icon_sidebar-arrow.svg");
+            @include backgroundParams;
+            transform: rotate(0);
+            transition: transform .3s ease;
+            z-index: 0;
+          }
+
+          &.active {
+            &::after {
+              filter: brightness(0) saturate(100%) invert(60%) sepia(93%) saturate(5631%) hue-rotate(321deg) brightness(104%) contrast(96%);
+              transform: rotate(-180deg);
+            }
+          }
+        }
+
+        .list-item ~ .list-item {
+          border-top: 1px solid $stroke;
+        }
+
+
+      }
+
+      .header-wrapper {
+        width: 100%;
+      }
+
+      .header__menu-nav {
+        width: 100%;
+      }
+
+
+    }
+
+    .header__category {
+
+      .header-wrapper {
+        display: block;
+        width: 100%;
+      }
+
+      .header__menu-nav .menu-nav__list {
+        display: block;
+        border: 0;
+        column-count: 3;
+        gap: 40px;
+
+        .list-item ~ .list-item {
+          margin-top: 40px;
+          break-inside: avoid;
+        }
+
+        .item-subcategories {
+          border-top: 0;
+        }
+      }
+    }
+  }
+
+
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  background-color: white;
+
+  @include breakpoint(md) {
+    width: calc(100% / 12 * 7);
+  }
+
+  @include breakpointMax(lg) {
+    overflow-y: scroll;
+    flex-direction: column;
+    padding: 20px var(--container) 10px;
+    z-index: 25;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    transition: all .7s ease;
+    //background-color: $gray-5;
+  }
+
+  &.header__menu-wrapper {
+    @include breakpoint(lg) {
+      order: 1;
+      width: 100%;
+      @include flexCenterBetween;
+    }
+
+    .header__menu-close {
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+
+  }
+
+  &.header__catalog-wrapper, &.header__category-wrapper {
+    gap: 20px;
+
+    .header__menu-title {
+      order: 2;
+      font-size: 20px;
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+
+    .menu-nav__catalog {
+      order: 3;
+    }
+
+    .list-item {
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .item-subcategories {
+        padding-top: 15px;
+        border-top: 1px solid $stroke;
+      }
+
+      .subcategory ~ .subcategory {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &.header__category-wrapper {
+
+    .list-item {
+      @include breakpointMax(lg) {
+        display: grid;
+        gap: 15px;
+      }
+
+    }
+
+  }
+
+  .header__menu-actions {
+    order: 1;
+
+    @include flexCenterBetween;
+    @include breakpoint(lg) {
+      display: none;
+    }
+
+    .header__menu-close {
+      width: 40px;
+      height: 40px;
+      @include flexCenterCenter;
+      border-radius: 6px;
+      background-color: $green-light;
+
+      &:hover {
+        background-color: $green-dark;
+      }
+    }
+
+    .header__menu-back {
+      background-color: $white;
+
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+}
+
+
+.menu-nav__catalog {
+  order: 2;
+  @include breakpointMax(lg) {
+    margin-top: 20px;
+  }
+
+  .menu-nav__list {
+
+    @include breakpoint(lg) {
+      @include flexCenterBetween;
+    }
+
+    .list-item {
+      position: relative;
+      @include flexCenterBetween;
+      padding: 12px 0;
+      font-weight: 700;
+
+      @include breakpointMax(lg) {
+        border-bottom: 1px solid $stroke;
+
+        &:first-child {
+          border-top: 1px solid $stroke;
+        }
+      }
+
+      @include breakpoint(lg) {
+        font-size: 15px;
+      }
+
+      &.catalog {
+
+        &.btn {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        a {
+
+          @include breakpointMax(lg) {
+            svg {
+              &:first-child {
+                display: block;
+              }
+
+              &:nth-child(2) {
+                display: none;
+              }
+            }
+          }
+          @include breakpoint(lg) {
+            svg {
+              &:first-child {
+                display: none;
+              }
+
+              &:nth-child(2) {
+                display: block;
+                path {
+                  stroke: $black;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        background: url("../images/icon_chevron-right-green.svg") center no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        @include breakpoint(lg) {
+          display: none;
+        }
+      }
+
+
+      a {
+        @include flexAlignCenter;
+        gap: 10px;
+
+        svg path {
+          stroke: $green-light;
+        }
+      }
+    }
+  }
+}
+
+// ANIMATIONS
+@keyframes fadeOut {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}

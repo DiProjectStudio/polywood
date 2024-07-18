@@ -1,0 +1,103 @@
+---
+title: Polywood | Проект
+bodyClass: projects-detail-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Наши проекты', ['Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша'])
+
+
+    section.project-detail
+        .container
+            .project-detail__inner
+                .seo-block
+                    .seo-block__inner
+                        .seo-block__text
+                            h1 Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                            p Для создания комфортной и безопасной зоны отдыха детей мы осуществили монтаж террасной доски POLYWOOD NEO в беседках, расположенных в одном из частных детских садов Москвы.
+                            p Одной из главных проблем, с которыми сталкиваются родители и руководители детских садов, является поддержание внешнего вида и функциональности площадок и беседок, особенно подверженных атмосферным воздействиям и интенсивному использованию. Традиционные материалы, такие как дерево или обычный пластик, требуют регулярного обслуживания, исправления повреждений и обновления.
+
+                        .seo-block__image
+                            //+img('about-1.jpg')
+                            .swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .slider-image
+                                            +img('about-1.jpg')
+                                    .swiper-slide
+                                        .slider-image
+                                            +img('about-1.jpg')
+                                    .swiper-slide
+                                        .slider-image
+                                            +img('about-1.jpg')
+                                .swiper-nav
+                                    .swiper-nav-arrow.swiper-nav-arrow--prev
+                                        include assets/images/icon_chevron-right-gray.svg
+                                    .swiper-nav-arrow.swiper-nav-arrow--next
+                                        include assets/images/icon_chevron-right-gray.svg
+                                .swiper-pagination
+
+    section.general-form.form-shortcut
+        .container
+            .general-form__inner
+                h3.general-form__title Заказать проект
+                .general-form__subtitle Менеджеры компании с радостью ответят на ваши вопросы, произведут расчет стоимости услуг и подготовят коммерческое предложение.
+
+                form
+                    .form-action
+                        button.btn.btn--yellow(type="submit" data-src="#popup-order-call" data-fancybox) Задать вопрос
+
+
+    section.projects-slider
+        .container
+            .projects-slider__inner
+                .projects-slider__head.section-head
+                    h3.extra__title Другие проекты
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+
+            .projects-slider__items.general-info-items
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            a(href='projects-detail.html').general-info-item
+                                .item-image
+                                    +img('promo-1.jpg')
+                                .item-text
+                                    .item-name Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                                    .item-description Потрясающая прогулочная набережная с открытыми площадками для отдыха на берегу реки Медвенки в коттеджном поселке Лайт Хаус на Рублево-Успенском шоссе. Это отличное решение для тех, кто предпочитает много времени проводить на свежем воздухе, наслаждаясь природными пейзажами.
+
+                        .swiper-slide
+                            a(href='javascript:void(0)').general-info-item
+                                .item-image
+                                    +img('promo-2.jpg')
+                                .item-text
+                                    .item-name Декоративный забор своими руками
+                                    .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+                        .swiper-slide
+                            a(href='javascript:void(0)').general-info-item
+                                .item-image
+                                    +img('promo-3.jpg')
+                                .item-text
+                                    .item-name Декоративный забор своими руками
+                                    .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+                        .swiper-slide
+                            a(href='javascript:void(0)').general-info-item
+                                .item-image
+                                    +img('promo-1.jpg')
+                                .item-text
+                                    .item-name Декоративный забор своими руками
+                                    .item-description Дача, загородный дом или коттедж это мечта многих людей сегодня. И если раньше услуги дизайнера считались роскошью и зачастую исключались, то сейчас представители этой профессии, наконец, начали оцениваться по достоинству. Ведь грамотный специалист п.
+
+
+
+                    .swiper-pagination
+    include components/_faq-products-calculate

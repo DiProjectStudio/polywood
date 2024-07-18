@@ -1,0 +1,64 @@
+.search {
+  .search__inner{
+
+
+    .search__inner-form {
+      form {
+        display: flex;
+        gap: 10px;
+        @include breakpointMax(md) {
+          flex-direction: column;
+        }
+
+        .btn {
+          padding: 16px 60px;
+          height: 60px;
+        }
+      }
+
+      @include breakpoint(lg) {
+      width: calc(100%/12*10);
+      }
+    }
+
+    .search__inner-items {
+      margin-top: 40px;
+
+      display: grid;
+      gap: 10px;
+
+      .search__inner-item {
+        padding: 20px;
+        display: grid;
+        gap: 10px;
+        @include whiteRoundedBlock;
+        .item-title {
+          font-weight: 700;
+        }
+        .item-path {
+          &.breadcrumbs {
+            padding: 0;
+            .breadcrumbs-item {
+              font-size: 14px;
+              font-weight: 400;
+              color: $black;
+
+              &:not(:last-child) {
+                &::after {
+                  background-image: url("../images/icon_chevron-right-thin.svg");
+                }
+              }
+            }
+
+          }
+        }
+
+        .item-preview {
+          max-width: 100%;
+          @include textLimit(1);
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.articles {
+  .articles__inner {
+    .articles__items.general-info-items {
+
+      @include breakpoint(xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .general-info-item {
+        background-color: $white;
+
+        .item-image {
+            @include ratio(340, 204);
+
+            @include breakpoint(md) {
+              @include ratio(345, 207);
+            }
+
+            @include breakpoint(lg) {
+              @include ratio(373, 223);
+            }
+
+            @include breakpoint(xl) {
+              @include ratio(335, 200);
+            }
+
+        }
+
+        .item-text {
+          padding: 20px 12px;
+
+          .item-name {
+            @include textLimit(1);
+            @include breakpoint(xl) {
+              @include textLimit(2)
+            }
+          }
+
+          .item-description {
+            margin-top: 12px;
+            @include textLimit(5)
+          }
+        }
+
+
+      }
+
+    }
+  }
+
+  .general-info-item {
+    background-color: $white;
+
+    .item-image {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .item-text {
+      padding: 20px 12px;
+
+      .item-name {
+        @include textLimit(1);
+        @include breakpoint(xl) {
+          @include textLimit(2)
+        }
+      }
+
+      .item-description {
+        margin-top: 12px;
+        @include textLimit(5)
+      }
+    }
+  }
+}

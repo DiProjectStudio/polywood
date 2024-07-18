@@ -1,0 +1,49 @@
+---
+title: Polywood | Новости
+bodyClass: news-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Новости', 'Информация', ['Новости'])
+
+    section.news
+        .container
+
+            .news__inner
+                .news__items.general-info-items
+                    a(href='news-detail.html').general-info-item
+                        .item-image
+                            +img('promo-1.jpg')
+                        .item-text
+                            .item-name Компания «Поливуд» поздравляет всех граждан нашей страны с Днём народного единства!
+                        .item-date 25.12.2023
+                    a(href='javascript:void(0)').general-info-item
+                        .item-image
+                            +img('promo-2.jpg')
+                        .item-text
+                            .item-name Компания «Поливуд» поздравляет всех граждан нашей страны с Днём народного единства!
+                        .item-date 25.12.2023
+                    a(href='javascript:void(0)').general-info-item
+                        .item-image
+                            +img('promo-3.jpg')
+                        .item-text
+                            .item-name Компания «Поливуд» поздравляет всех граждан нашей страны с Днём народного единства!
+                        .item-date 25.12.2023
+                    a(href='javascript:void(0)').general-info-item
+                        .item-image
+                            +img('promo-1.jpg')
+                        .item-text
+                            .item-name Компания «Поливуд» поздравляет всех граждан нашей страны с Днём народного единства!
+                        .item-date 25.12.2023
+
+
+                .news__action.show-more
+                    .btn.btn--bordered
+                        span Показать ещё
+                        include assets/images/icon_arrow-left.svg
+
+
+    include components/_faq-products-calculate
