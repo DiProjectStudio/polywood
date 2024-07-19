@@ -48,6 +48,6 @@ jobs:
 
     - name: Copy files via SCP
       run: |
-        scp -r ./dist cg35166@185.114.247.198:/home/c/cg35166
+        scp -o StrictHostKeyChecking=no -r ./dist cg35166@185.114.247.198:/home/c/cg35166
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
