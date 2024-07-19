@@ -22,15 +22,15 @@ jobs:
       run: npm install
 
     - name: Run Gulp build
-      run: npm run gulp build
+      run: gulp
 
     - name: Push to Deploy branch
       run: |
         git config --global user.email "di.project.moscow@gmail.com"
         git config --global user.name "Di-project"
         git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
-        git checkout -b Deploy
-        git add -f path/to/your/build
+        git checkout deploy
+        git add -f .
         git commit -m "Deploy from master"
         git push origin Deploy --force
   
