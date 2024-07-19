@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Run Gulp build
-      run: gulp
+      run: gulp build
 
     - name: Push to Deploy branch
       run: |
