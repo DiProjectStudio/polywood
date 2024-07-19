@@ -58,8 +58,6 @@ section.products-list
                 a(href='javascript:void(0)').general-card
                     .card-icon
                         +img('icon_components.svg')
-                    //.card-arrow
-                        +img('icon_chevron-right-green.svg')
                     h5.card-text Комплектующие
                 a(href='javascript:void(0)').general-card
                     .card-icon
@@ -76,8 +74,7 @@ section.calculate
 
                     form
                         .form-action
-                            // ссылка на страницу с калькулятором
-                            button.btn.btn--yellow(data-src="#popup-order-calc" data-fancybox) Рассчитать
+                            a(href='calculator.html').btn.btn--yellow Рассчитать
 
                     .general-form__image
                         +img('calculate-screen.png')

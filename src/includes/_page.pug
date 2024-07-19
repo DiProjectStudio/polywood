@@ -9,13 +9,13 @@ html(lang="ru")
 
         title= title || 'Page name'
 
-        // Styles::Start
-        include _loadCss
-        // Styles::End
-
         // Fonts::Start
         include _loadFonts
         // Fonts::End
+
+        // Styles::Start
+        include _loadCss
+        // Styles::End
 
         // Yandex Map
         if yandexMap == true

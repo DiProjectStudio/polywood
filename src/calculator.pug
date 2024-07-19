@@ -1,0 +1,154 @@
+---
+title: Polywood | Калькулятор
+bodyClass: calculator-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Расчет материалов для строительства террас', 'Расчет материалов для строительства террас')
+    section
+
+    section.calculate-step.parameters
+        .container
+            .calculate-step__inner
+                h2.calculate-step__title
+                    span#step 1/3
+                    span Выберите подходящие параметры
+                .calculate-step__wrapper
+                    .step-section
+                        h3 Конфигурация террасы
+                        form
+                            .form-row.form-checkbox
+                                .checkbox-style
+                                    input#form-type(type="checkbox" style="display:none" checked)
+                                    label(for="agreement")
+                            .form-row.form-checkbox
+                                .checkbox-style
+                                    input#agreement(type="checkbox" style="display:none" checked)
+                                    label(for="agreement")
+                            .form-row
+                                label.text Длина, мм
+                                input(type="number" name="config-length" placeholder="")
+                            .form-row
+                                label.text Ширина, мм
+                                input(type="number" name="config-width" placeholder="")
+
+                            .form-row.select.sorting-select
+                                .selected-select
+                                    span
+                                    include assets/images/icon_chevron-down.svg
+                                .select-options
+                                    .options-wrapper
+                                        a(href='javascript:void(0)').option.active Бетон с уровнем пола до 80 мм
+                                        a(href='javascript:void(0)').option Бетон с уровнем пола до 100 мм
+                                        a(href='javascript:void(0)').option Бетон с уровнем пола до 120 мм
+                                        a(href='javascript:void(0)').option Бетон с уровнем пола до 140 мм
+
+                            .form-row.radiobuttons
+                                .radiobutton
+                                    input(type="radio" checked)
+                                    label Поворот слева
+                                .radiobutton
+                                    input(type="radio")
+                                    label Поворот справа
+
+                            .form-row
+                                label.text Длина поворота
+                                input(type="number" name="config-turning-length" placeholder="")
+                            .form-row
+                                label.text Ширина поворота
+                                input(type="number" name="config-turning-width" placeholder="")
+
+
+
+
+    section.products-list
+        .container
+            .products-list__inner
+                .products-list__inner-head.section-head
+                    h2.section-head__title Ознакомьтесь с нашей продукцией
+                .products-list__inner-items.general-cards-wrapper
+
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_timber.svg')
+                        h5.card-text Террасная доска из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_fence.svg')
+                        h5.card-text Заборы и ограждения
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_ladder.svg')
+                        h5.card-text Ступени из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_siding.svg')
+                        h5.card-text Сайдинг
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_pillar.svg')
+                        h5.card-text Регулируемые опоры
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_shed.svg')
+                        h5.card-text Навесы, перголы, беседки
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_rattan-furniture.svg')
+                        h5.card-text Мебель из искусственного ротанга
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_garden-bed.svg')
+                        h5.card-text Грядки из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_components.svg')
+                        h5.card-text Комплектующие
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_tree.svg')
+                        h5.card-text Террасная доска из дерева
+
+
+    section.calculate.only-options
+        .container
+            .calculate__inner
+                .calculate__inner-options
+                    a(href='javascript:void(0)').option
+                        .option-image
+                            +img('calculate-option-1.jpg')
+                        h6.option-title Бесплатный проект по вашему эскизу
+                    a(href='javascript:void(0)').option
+                        .option-image
+                            +img('calculate-option-2.jpg')
+                        h6.option-title Заказать видеоконсультацию (Whatsapp/Telegram/Viber)
+    section.faq
+        .container
+            .faq__inner
+                .faq__inner-head.section-head
+                    h2.section-head__title Ответы на часто задаваемые вопросы
+                .faq__items.accordion__items
+                    +accordionItem('Какой состав продукции «Polywood»?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Где применяет декинг?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Какого цвета бывает?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                .faq__inner-ask
+                    .ask-title Задайте вопрос специалисту
+                    .ask-text Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.
+                    .ask-action
+                        .btn.btn--yellow(data-src="#popup-ask-question" data-fancybox) Задать вопрос
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+
+
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__text
+                    h2 Для СЕО
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                .seo-block__image
+                    +img('hero-bg.jpg')

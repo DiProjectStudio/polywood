@@ -24,14 +24,18 @@
 
     }
 
-    .docs-group {
-      //display: inline-block;
-    }
-
     .doc {
       background-color: $bg;
 
-      width: calc(25% - 10px);
+      @include breakpoint(md) {
+        width: 162px;
+      }
+      @include breakpoint(lg) {
+        width: 265px;
+      }
+      @include breakpoint(xl) {
+        width: 325px;
+      }
 
       &:hover {
         .doc-name {
@@ -47,15 +51,15 @@
 }
 
 .docs-items {
-  display: grid;
+  display: flex;
   gap: 10px;
+  width: fit-content;
+  flex-wrap: wrap;
 
-  @include breakpoint(md) {
-    display: flex;
-    flex-wrap: wrap;
-    //flex-shrink: 0;
-    //grid-template-columns: repeat(4, 1fr);
+  @include breakpointMax(md) {
+    flex-direction: column;
   }
+
   @include breakpoint(lg) {
     gap: 20px;
   }
@@ -67,10 +71,6 @@
   align-content: space-between;
   height: 179px;
   @include whiteRoundedBlock;
-
-  @include breakpoint(md) {
-    //width: calc(100% / 12* 3);
-  }
 
   .doc-icon {
     width: 40px;
@@ -112,6 +112,7 @@
       top: -140px;
     }
   }
+
   .section-head {
     @include breakpoint(lg) {
       grid-template-columns: 100%;
@@ -122,21 +123,18 @@
   .general-items {
     display: grid;
     gap: 10px;
-    //grid-auto-rows: 493px;
 
     @include breakpoint(md) {
       grid-template-columns: repeat(2, 1fr);
-      //grid-auto-rows: 493px;
     }
+
     @include breakpoint(lg) {
       gap: 20px;
-      //grid-auto-rows: 244px;
     }
 
     .general-item {
       padding: 20px;
       display: grid;
-      //grid-template-rows: auto auto auto 1fr;
       gap: 20px;
       border-radius: 30px;
       background-color: $white;

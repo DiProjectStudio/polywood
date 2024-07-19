@@ -112,7 +112,7 @@ li {
 /// INPUTS
 /////////////////////
 
-input {
+input:not([]) {
   width: 100%;
   font: 400 14px/150% $mainFont;
   color: $black;
