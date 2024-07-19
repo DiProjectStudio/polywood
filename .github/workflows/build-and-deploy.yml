@@ -24,15 +24,12 @@ jobs:
     - name: Run Gulp build
       run: gulp build
 
-    - name: Push to Deploy branch
-      run: |
-        git config --global user.email "di.project.moscow@gmail.com"
-        git config --global user.name "Di-project"
-        git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
-        git checkout deploy
-        git add -f .
-        git commit -m "Deploy from master"
-        git push origin Deploy --force
+    - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: deploy
   
   deploy:
     runs-on: ubuntu-latest
@@ -42,7 +39,7 @@ jobs:
     - name: Checkout Deploy branch
       uses: actions/checkout@v2
       with:
-        ref: Deploy
+        ref: deploy
 
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.5.3
