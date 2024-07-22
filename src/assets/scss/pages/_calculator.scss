@@ -311,6 +311,16 @@
           .total-row ~ .total-row {
             margin-top: 10px;
           }
+
+          .total-row {
+            @include flexAlignCenter;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            span.value {
+              font-weight: 700;
+            }
+          }
         }
 
       }
@@ -321,7 +331,6 @@
 
         .btn {
           height: 52px;
-
         }
       }
     }

@@ -148,23 +148,30 @@ block main
                         .total-title Итого
                         .total-rows
                             .total-row
-                                p Площадь террасы: <span>60 м2</span>
+                                span Площадь террасы:
+                                span.value 60 м2
                             .total-row
-                                p Полных рядов доски: <span>39</span>
+                                span Полных рядов доски:
+                                span.value <span id="value">39</span>
                             .total-row
-                                p Количество досок: <span>134 штуки длиной 3 метра</span>
+                                span Количество досок:
+                                span <span class="value">134</span> штуки длиной 3 метра
                             .total-row
-                                p Алюминиевые лаги: <span>228 м</span>
+                                span Алюминиевые лаги:
+                                span.value 228 м
                             .total-row
-                                p Клемма начальная: <span>30 штук</span>
+                                span Клемма начальная:
+                                span.value 30 штук
                             .total-row
-                                p Клемма основная: <span>40 штук</span>
+                                span Клемма основная:
+                                span.value 40 штук
                             .total-row
-                                p Клемма конечная: <span>50 шт</span>
+                                span Клемма конечная:
+                                span.value 50 штук
                     .step-action
-                        a(href='javascript:void(0)').btn.btn--bordered
-                            .btn-icon
-                                +img('icon_download-calc.svg')
+                        a(href='javascript:void(0)' download target="_blank").btn.btn--bordered
+                            //.btn-icon
+                            include assets/images/icon_download-calc.svg
                             span Скачать в PDF
 
     section.products-list
