@@ -8,13 +8,14 @@ block header
                 .header__content
 
                     a(href="/").header__logo
-                        +img('logo.png')
+                        +img('logo.svg')
+                        .header__slogan
+                            p Производитель террасной доски и сайдинга с 2017 года!
+
                     .header__location
                         +img('icon_pin.svg')
                         span Санкт-Петербург
 
-                    .header__slogan
-                        p Производитель террасной доски и сайдинга с 2017 года!
 
                     .header__service
                         span производство
@@ -23,7 +24,7 @@ block header
                     .header__contacts
                         a(href="tel:74951095209").header-contact.mos +7 495 109-52-09
                         a(href="tel:88005055209").header-contact.rus 8 800 505-52-09
-                        .header-contact.order-call(data-src="#popup-request", data-fancybox) Заказать звонок
+                        .header-contact.order-call(data-src="#popup-order-call", data-fancybox) Заказать звонок
                         .header-contact.dealers
                             include ../assets/images/icon_user.svg
                             span Для дилеров

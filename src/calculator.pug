@@ -8,61 +8,164 @@ extends includes/_page
 block main
     include components/_breadcrumbs
     +breadcrumbs('Расчет материалов для строительства террас', 'Расчет материалов для строительства террас')
-    section
+    section.calculator
+        .container
+            .calculator__inner
+                .calculator__inner-head.section-head
+                    .section-head__text.single
+                        p С помощью данного калькулятора вы сможете выполнить предварительный расчет необходимого количества материалов для постройки террасы из любой террасной доски.
+
 
     section.calculate-step.parameters
         .container
             .calculate-step__inner
-                h2.calculate-step__title
-                    span#step 1/3
-                    span Выберите подходящие параметры
+                h3.calculate-step__title
+                    p#step-1 <span>1</span>/3
+                    p Выберите подходящие параметры
                 .calculate-step__wrapper
-                    .step-section
-                        h3 Конфигурация террасы
+                    .step-section.config
+                        h4 Конфигурация террасы
                         form
-                            .form-row.form-checkbox
-                                .checkbox-style
-                                    input#form-type(type="checkbox" style="display:none" checked)
-                                    label(for="agreement")
-                            .form-row.form-checkbox
-                                .checkbox-style
-                                    input#agreement(type="checkbox" style="display:none" checked)
-                                    label(for="agreement")
-                            .form-row
-                                label.text Длина, мм
-                                input(type="number" name="config-length" placeholder="")
-                            .form-row
-                                label.text Ширина, мм
-                                input(type="number" name="config-width" placeholder="")
+                            .form-block.columns
+                                .form-row.form-checkbox
+                                    .checkbox-style.green-box
+                                        .form-image
+                                            +img('form-type-rect.svg')
+                                        input#form-type-rect(type="checkbox" style="display:none")
+                                        label(for="form-type-rect") Прямоугольная
+                                .form-row.form-checkbox
+                                    .checkbox-style.green-box
+                                        .form-image
+                                            +img('form-type-g.svg')
+                                        input#form-type-g(type="checkbox" style="display:none" checked)
+                                        label(for="form-type-g") Г-образная
+                            .form-block.columns
+                                .form-row
+                                    label Длина, мм
+                                    input(type="number" name="config-length" data-default='1' data-min='0' data-max='10000000' value='0')
+                                .form-row
+                                    label Ширина, мм
+                                    input(type="number" name="config-width" data-default='1' data-min='0' data-max='10000000' value='0')
 
-                            .form-row.select.sorting-select
-                                .selected-select
-                                    span
-                                    include assets/images/icon_chevron-down.svg
-                                .select-options
-                                    .options-wrapper
-                                        a(href='javascript:void(0)').option.active Бетон с уровнем пола до 80 мм
-                                        a(href='javascript:void(0)').option Бетон с уровнем пола до 100 мм
-                                        a(href='javascript:void(0)').option Бетон с уровнем пола до 120 мм
-                                        a(href='javascript:void(0)').option Бетон с уровнем пола до 140 мм
+                            .form-block.direction
+                                .select-label Направления уладки
+                                .form-row.sorting-select.calculator-select
+                                    .selected-select
+                                        span Вдоль
+                                        include assets/images/icon_chevron-down.svg
+                                    .select-options
+                                        .options-wrapper
+                                            .option.active Вдоль
+                                            .option Поперек
+                                            .option Вдоль
+                                            .option Поперек
 
-                            .form-row.radiobuttons
-                                .radiobutton
-                                    input(type="radio" checked)
-                                    label Поворот слева
-                                .radiobutton
-                                    input(type="radio")
-                                    label Поворот справа
+                                .form-row.form-radio
+                                    .radiobutton
+                                        input(type="radio" checked)
+                                        label Поворот слева
+                                    .radiobutton
+                                        input(type="radio")
+                                        label Поворот справа
+                            .form-block.columns
 
-                            .form-row
-                                label.text Длина поворота
-                                input(type="number" name="config-turning-length" placeholder="")
-                            .form-row
-                                label.text Ширина поворота
-                                input(type="number" name="config-turning-width" placeholder="")
+                                .form-row
+                                    label Длина поворота
+                                    input(type="number" name="config-turning-length" data-default='1' data-min='0' data-max='10000000' value='0')
+                                .form-row
+                                    label Ширина поворота
+                                    input(type="number" name="config-turning-width" data-default='1' data-min='0' data-max='10000000' value='0')
+
+                            .form-block
+                                .select-label Основание
+                                .form-row.sorting-select.calculator-select
+
+                                    .selected-select
+                                        span Бетон с уровнем пола до 80 мм
+                                        include assets/images/icon_chevron-down.svg
+                                    .select-options
+                                        .options-wrapper
+                                            .option.active Бетон с уровнем пола до 80 мм
+                                            .option Бетон с уровнем пола до 100 мм
+                                            .option Бетон с уровнем пола до 120 мм
+                                            .option Бетон с уровнем пола до 140 мм
 
 
 
+                    .step-section.terrace
+                        h4 Параметры террасного покрытия
+                        form
+                            .form-block.columns
+                                .form-row
+                                    label Ширина доски, мм
+                                    input(type="number" name="board-width" data-default='1' data-min='0' data-max='10000000' value="0")
+                                .form-row
+                                    label Ширина зазора, мм
+                                    .counter
+                                        .btn-count.btn-subtract
+                                            include assets/images/icon_minus.svg
+                                        input.counter(type='number' name="gap-width" data-default='1' data-min='0' data-max='10000000' value='0')
+                                        .btn-count.btn-add
+                                            include assets/images/icon_plus.svg
+                            .form-block.equipment
+                                .block-title Комплектация
+                                .form-row.form-checkbox
+                                    .checkbox-style
+                                        input#form-equipment-1(type="checkbox" style="display:none")
+                                        label(for="form-equipment-1") Использовать алюминиевую лагу
+                                .form-row.form-checkbox
+                                    .checkbox-style
+                                        input#form-equipment-2(type="checkbox" style="display:none" checked)
+                                        label(for="form-equipment-2") Учитывая отходы в размере 5%
+
+
+
+
+                    .step-action
+                        .btn.btn--yellow
+                            span Далее
+                            .btn-icon
+                                +img('icon_arrow-left.svg')
+
+    section.calculate-step.plans
+        .container
+            .calculate-step__inner
+                h3.calculate-step__title
+                    p#step-2 <span>2</span>/3
+                    p Предварительный расчёт материалов для террасы
+                .calculate-step__wrapper
+                    .step-images
+                        .step-image-wrapper
+                            .step-image
+                                +img('step-image-1.png')
+                            span План укладки террасной доски
+                        .step-image-wrapper
+                            .step-image
+                                +img('step-image-2.png')
+                            span План укладки алюминиевых лаг
+
+                    .step-total
+                        .total-title Итого
+                        .total-rows
+                            .total-row
+                                p Площадь террасы: <span>60 м2</span>
+                            .total-row
+                                p Полных рядов доски: <span>39</span>
+                            .total-row
+                                p Количество досок: <span>134 штуки длиной 3 метра</span>
+                            .total-row
+                                p Алюминиевые лаги: <span>228 м</span>
+                            .total-row
+                                p Клемма начальная: <span>30 штук</span>
+                            .total-row
+                                p Клемма основная: <span>40 штук</span>
+                            .total-row
+                                p Клемма конечная: <span>50 шт</span>
+                    .step-action
+                        a(href='javascript:void(0)').btn.btn--bordered
+                            .btn-icon
+                                +img('icon_download-calc.svg')
+                            span Скачать в PDF
 
     section.products-list
         .container

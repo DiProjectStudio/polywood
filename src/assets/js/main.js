@@ -18,14 +18,38 @@ $(document).ready(function () {
 
   // SELECT
 
-  $('.select').on('click', function () {
-    $('.select').not(this).removeClass('active');
-    $(this).toggleClass('active');
-    $('.select-options').slideUp();
-    if ($(this).hasClass('active')) {
-      $(this).find('.select-options').slideDown();
+
+
+  /*if ($(window).width() < 744) {
+    $('.sorting-select').on('click', function () {
+      $('.sorting-select').not(this).removeClass('active');
+      $(this).toggleClass('active');
+      $('.select-options').slideUp();
+      if ($(this).hasClass('active')) {
+        $(this).find('.select-options').slideDown();
+      }
+    })
+  }*/
+
+  function handleSortingSelect() {
+    if ($(window).width() < 744) {
+      $('.sorting-select').off('click').on('click', function () {
+        $('.sorting-select').not(this).removeClass('active');
+        $(this).toggleClass('active');
+        $('.select-options').slideUp();
+        if ($(this).hasClass('active')) {
+          $(this).find('.select-options').slideDown();
+        }
+      });
+    } else {
+      $('.sorting-select').off('click');
+      $('.sorting-select').removeClass('active');
+      $('.select-options').removeAttr('style');
     }
-  });
+  }
+
+  handleSortingSelect();
+
 
   function checkScreenSize() {
     if ($(window).width() >= 744) {
@@ -37,11 +61,12 @@ $(document).ready(function () {
     }
   }
 
-  // Проверка размера экрана при инициализации
   checkScreenSize();
 
-  // Проверка размера экрана при изменении размера окна
-  $(window).resize(checkScreenSize);
+  $(window).resize(function() {
+    handleSortingSelect();
+    checkScreenSize();
+  });
 
 
   // ЗАГРУЗКА ФАЙЛА РЕЗЮМЕ

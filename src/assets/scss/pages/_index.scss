@@ -30,7 +30,7 @@
       object-position: bottom;
 
       @include breakpoint(lg) {
-        object-position:unset;
+        object-position: unset;
       }
     }
 
@@ -54,7 +54,7 @@
     }
 
     @include breakpoint(lg) {
-     column-gap: 20px;
+      column-gap: 20px;
       grid-template-columns: 1fr 61%;
     }
     @include breakpoint(xl) {
@@ -290,6 +290,7 @@
         display: none;
       }
     }
+
     .actions__inner-items {
       @include breakpoint(md) {
         grid-template-columns: repeat(3, 1fr);
@@ -349,6 +350,35 @@
 
 .categories {
   .categories__inner {
+
+    .categories__items {
+
+
+      .category-card {
+        &:nth-child(7) {
+          position: relative;
+          @include breakpoint(xl) {
+            overflow: visible;
+          }
+
+          .yellow-sticker {
+            right: 20px;
+            bottom: 20px;
+            transform: rotate(18.91deg);
+            @include breakpointMax(lg) {
+              display: none;
+            }
+
+            @include breakpoint(xl) {
+              right: -50px;
+              bottom: calc(50% - 70px);
+            }
+          }
+        }
+      }
+
+
+    }
   }
 }
 

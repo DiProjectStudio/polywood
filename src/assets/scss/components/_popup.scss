@@ -11,6 +11,7 @@
 
     textarea, input {
       background-color: $bg;
+      color: $black;
 
       &::placeholder {
         color: $black;
@@ -76,8 +77,10 @@ form {
     }
   }
 
-  input {
+  input[type="text"],input[type="tel"]  {
     height: 70px;
+
+
   }
 
   textarea, input {

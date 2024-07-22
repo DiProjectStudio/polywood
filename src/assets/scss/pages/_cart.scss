@@ -206,26 +206,20 @@
 
           .counter {
             width: 113px;
-            position: relative;
-
 
             .btn-count {
-              position: absolute;
-              z-index: 2;
               top: calc(50% - 15px);
               background-color: $green-light;
               border-radius: 50%;
               width: 30px;
               height: 30px;
-              @include flexCenterCenter;
-              cursor: pointer;
 
               &.btn-subtract {
-                left: 0;
+                //left: 0;
               }
 
               &.btn-add {
-                right: 0;
+                //right: 0;
               }
             }
 

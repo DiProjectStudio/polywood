@@ -3,3 +3,389 @@
     margin-top: 0;
   }
 }
+
+.calculate-step {
+
+  .calculate-step__title {
+    display: flex;
+    gap: 16px;
+
+    p {
+      span {
+        color: $green-light;
+      }
+    }
+  }
+
+  .calculate-step__title + .calculate-step__wrapper {
+    margin-top: 20px;
+  }
+
+  &.parameters {
+    .calculate-step__inner {
+
+      .calculate-step__wrapper {
+        padding: 20px 12px;
+        @include whiteRoundedBlock;
+        @include breakpoint(md) {
+          padding: 30px;
+        }
+        @include breakpoint(lg) {
+          padding: 40px;
+        }
+
+
+        .step-section ~ .step-section {
+          margin-top: 40px;
+        }
+
+        .step-section {
+
+
+          h4 + form {
+            margin-top: 30px;
+          }
+
+          form {
+
+            .form-block {
+
+              &.columns {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(2, 1fr);
+              }
+
+              &.direction {
+                @include breakpoint(md) {
+                  display: grid;
+                  column-gap: 10px;
+                  grid-template-columns: repeat(2, 1fr);
+
+                  .select-label {
+                    grid-column: 1/3;
+                    grid-row: 1/2;
+                  }
+
+                }
+
+
+              }
+
+              &.equipment {
+                @include breakpoint(md) {
+                  display: grid;
+                  column-gap: 10px;
+                  grid-template-columns: repeat(2, 1fr);
+
+                  .block-title {
+                    grid-column: 1/3;
+                    grid-row: 1/2;
+                  }
+
+                }
+                @include breakpoint(lg) {
+                  grid-template-columns: auto 1fr;
+                  column-gap: 20px;
+                }
+              }
+
+              .select-label {
+                @include titleGeneral;
+              }
+
+
+            }
+
+
+            .form-block ~ .form-block {
+              margin-top: 30px;
+            }
+
+            .form-row ~ .form-row {
+              margin-top: 0;
+            }
+
+            .form-row {
+
+              &:not(.form-radio) {
+                label {
+                  @include titleGeneral;
+                }
+              }
+
+
+              &.form-radio {
+                margin-top: 10px;
+                @include flexCenterBetween;
+
+                @include breakpoint(md) {
+                  justify-content: unset;
+                  column-gap: 15px;
+                }
+                @include breakpoint(lg) {
+                  column-gap: 30px;
+                }
+
+                .radiobutton {
+                  @include flexAlignCenter;
+                  gap: 4px;
+                }
+
+              }
+
+              &.sorting-select {
+                font-weight: 400;
+                margin-top: 8px;
+                border: 1px solid $stroke;
+              }
+
+              label + input, label + .counter {
+                margin-top: 8px;
+              }
+            }
+          }
+
+          &.config {
+
+            form {
+              .form-row {
+                &.form-checkbox {
+                  padding: 12px;
+                  border: 1px solid $stroke;
+                  border-radius: 20px;
+
+                  .checkbox-style {
+                    @include flexColumn;
+                    justify-content: space-between;
+                    row-gap: 40px;
+                    position: relative;
+
+                    .form-image {
+                      width: 50px;
+                      height: 50px;
+
+                      img {
+                        object-fit: contain;
+                      }
+                    }
+
+                    label {
+                      &::before {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+
+          &.terrace {
+
+            form {
+
+              .form-checkbox ~ .form-checkbox {
+
+
+                @include breakpointMax(md) {
+                  margin-top: 20px;
+                }
+              }
+
+              .block-title {
+                @include titleGeneral;
+                margin-bottom: 8px;
+              }
+
+              .form-row {
+                .counter {
+                  .btn-count {
+                    top: calc(50% - 7px);
+
+                    svg path {
+                      stroke: $black;
+                      stroke-width: 1;
+                    }
+
+                    &.btn-subtract {
+                      left: 20px;
+                    }
+
+                    &.btn-add {
+                      right: 20px;
+                    }
+                  }
+                }
+
+                &.form-checkbox {
+
+                  .checkbox-style {
+                    label {
+                      @include flexAlignCenter;
+                      gap: 8px;
+                      font-weight: 400;
+                    }
+                  }
+
+                }
+              }
+            }
+
+          }
+        }
+
+        .step-action {
+
+          margin-top: 20px;
+
+          @include breakpoint(md) {
+            margin-top: 60px;
+          }
+
+          .btn {
+            width: 100%;
+            height: 70px;
+            @include breakpoint(md) {
+              margin-left: auto;
+              width: 231px;
+            }
+            @include breakpoint(lg) {
+              width: 272px;
+            }
+          }
+
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &.plans {
+    .calculate-step__wrapper {
+      display: grid;
+      gap: 30px;
+
+      .step-images {
+        display: grid;
+        gap: 10px;
+
+        .step-image-wrapper {
+          display: grid;
+          gap: 10px;
+
+          span {
+            @include titleGeneral;
+          }
+        }
+
+        .step-image {
+          height: 250px;
+          border-radius: 20px;
+
+          @include breakpoint(lg) {
+            height: 277px;
+          }
+          @include breakpoint(xl) {
+            height: 336px;
+          }
+        }
+      }
+
+      .step-total {
+
+        .total-title {
+          @include titleGeneral;
+          font-size: 20px;
+          color: $green-light;
+        }
+
+        .total-rows {
+          margin-top: 20px;
+
+          .total-row ~ .total-row {
+            margin-top: 10px;
+          }
+        }
+
+      }
+
+
+      .step-action {
+        width: 195px;
+
+        .btn {
+          height: 52px;
+
+        }
+      }
+    }
+  }
+
+  .sorting-select {
+    position: relative;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid $black;
+    border-radius: 41px;
+    transition: $transition-style;
+
+    .selected-select {
+      @include flexCenterBetween;
+      gap: 10px;
+    }
+
+
+    &.active {
+
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    flex: 1;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: $transition-style;
+    }
+
+    .select-options {
+      position: absolute;
+      top: calc(100% + 10px);
+      width: 100%;
+      right: 0;
+      display: none;
+      z-index: 3;
+      padding: 20px;
+      border-radius: 20px;
+      background: $white;
+      box-shadow: 0 0 28px 0 rgba(47, 48, 63, 0.09);
+
+      .option ~ .option {
+        margin-top: 20px;
+      }
+
+      .option {
+        &.active {
+          color: $green-light;
+        }
+      }
+
+
+      .option {
+        color: $black;
+      }
+
+    }
+  }
+
+
+}
