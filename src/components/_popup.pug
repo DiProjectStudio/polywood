@@ -41,7 +41,7 @@ block popups
                 button.btn.btn--yellow(type="submit") Отправить
                 p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
 
-    // ПОПАП "ЗАКАЗАТЬ РАСЧЕТ"
+    // ПОПАП "ЗАКАЗАТЬ ОБРАЗЦЫ"
     #popup-order-samples.popup
         .popup-title Закажите бесплатные образцы террасной доски
         form
@@ -150,3 +150,11 @@ block popups
             +img('icon_star-shape.svg')
         .popup-title Резюме успешно отправлено
         .popup-subtitle Спасибо за проявленный интерес к нашей вакансии. Мы рассмотрим вашу кандидатуру и свяжемся с вами для дальнейшего обсуждения.
+
+    //ПЛАШКА ПРИ ДОБАВЛЕНИИ ТОВАРА В КОРЗИНУ
+    .product-in-cart
+        .product-in-cart__content
+            .content__image
+                +img('product-1.png')
+            .content__title Товар добавлен в корзину
+            .content__product-name Террасная доска из ДПК POLYWOOD™ UNO графит 3 метра

@@ -67,5 +67,14 @@
     @include breakpoint(xl) {
       font-size: 50px;
     }
+
+    &.width-limit {
+      @include breakpoint(lg) {
+        width: 75%;
+      }
+      @include breakpoint(xl) {
+        width: 67%;
+      }
+    }
   }
 }

@@ -1,0 +1,350 @@
+---
+title: Polywood | Террасная доска из ДПК
+bodyClass: catalog-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Террасная доска из ДПК')
+
+    section.category-head
+        .container
+            .category-head__inner
+                .category-head__text
+                    h1 Террасная доска из ДПК
+                    p Компания Поливуд основана в 2007 году и занимает лидирующие позиции на рынке материалов и технологий в сфере древесно-полимерных композитов, является производителем террасной доски, сайдинга и ограждений из ДПК.
+
+                .category-head__slider
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .slide-wrapper
+                                    .slide-image
+                                        +img('catalog-head-1.jpg')
+                                        .label.label-green Акция
+                                        span.slide-name Сезонная распродажа складских остатков
+
+                            .swiper-slide
+                                .slide-wrapper
+                                    .slide-image
+                                        +img('catalog-head-1.jpg')
+                                        .label.label-green Акция
+                                        span.slide-name Сезонная распродажа складских остатков
+
+
+
+                        .swiper-pagination
+
+        //ПЛАШКА ПРИ ДОБАВЛЕНИИ В КОРЗИНУ
+        .product-in-cart
+            .product-in-cart__content
+                .content__image
+                    +img('product-1.png')
+                .content__title Товар добавлен в корзину
+                .content__product-name Террасная доска из ДПК POLYWOOD™ UNO графит 3 метра
+
+    section.catalog-section
+        .container
+            .catalog-section__inner
+                .catalog-section__purposes
+                    .purpose.btn.btn--white-bordered Для дома и дачи
+                    .purpose.btn.btn--white-bordered Коммерческие
+                .catalog-section__found-products
+                    p Найдено: <span>123</span> товара
+                .catalog-section__filter
+                    .products-filter.btn.btn--yellow
+                        .filter-icon
+                            +img('icon_filter.svg')
+                        span Фильтр
+                    include ./components/_filter
+
+                .catalog-section__sorting.sorting-select
+                    .selected-select
+                        span
+                        include assets/images/icon_chevron-down.svg
+                    .select-options
+                        .options-wrapper
+                            .option.active по умолчанию
+                            .option по возрастанию цены
+                            .option по убыванию цены
+
+                .catalog-section__products
+                    .products-layout
+                        include components/_product
+                        include components/_product
+                        include components/_product
+                        include components/_product
+                        include components/_product
+                .catalog-section__action.show-more
+                    button(type="button").btn.btn--bordered
+                        span Показать ещё
+                        include assets/images/icon_arrow-left.svg
+
+
+                .catalog-section__subcategories
+                    .tabs
+                        a(href='javascript:void(0)').tab Пластиковая доска
+                        a(href='javascript:void(0)').tab Палубная доска ДПК
+                        a(href='javascript:void(0)').tab Доска венге
+                        a(href='javascript:void(0)').tab Под дерево
+                        a(href='javascript:void(0)').tab Для парка
+                        a(href='javascript:void(0)').tab Для бассейна
+                        a(href='javascript:void(0)').tab Полимерная доска
+
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+    section.calculate
+        .container
+            .calculate__inner
+                .general-form.form-calculate
+
+                    .general-form__inner
+                        h3.general-form__title Рассчитайте количество материалов для строительства террасы
+                        .general-form__subtitle С помощью калькулятора вы сможете выполнить предварительный расчет необходимого количества материалов для постройки террасы из любой террасной доски.
+
+                        form
+                            .form-action
+                                a(href='calculator.html').btn.btn--yellow Рассчитать
+
+                        .general-form__image
+                            +img('calculate-screen.png')
+                    .ticker
+                        .ticker__inner
+                            .ticker__item
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                                +img('icon_star-white.svg')
+                                span.ticker__item-text Онлайн-калькулятор
+                .calculate__inner-options.service-extra-options
+                    a(href='javascript:void(0)').service-option
+                        .option-image
+                            +img('calculate-option-1.jpg')
+                        h6.option-title Бесплатный проект по вашему эскизу
+                    a(href='javascript:void(0)').service-option
+                        .option-image
+                            +img('calculate-option-2.jpg')
+                        h6.option-title Заказать видеоконсультацию (Whatsapp/ Telegram/ Viber)
+
+    section.products-list
+        .container
+            .products-list__inner
+                .products-list__inner-head.section-head
+                    h2.section-head__title Ознакомьтесь с нашей продукцией
+                .products-list__inner-items.general-cards-wrapper
+
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_timber.svg')
+                        h5.card-text Террасная доска из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_fence.svg')
+                        h5.card-text Заборы и ограждения
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_ladder.svg')
+                        h5.card-text Ступени из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_siding.svg')
+                        h5.card-text Сайдинг
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_pillar.svg')
+                        h5.card-text Регулируемые опоры
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_shed.svg')
+                        h5.card-text Навесы, перголы, беседки
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_rattan-furniture.svg')
+                        h5.card-text Мебель из искусственного ротанга
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_garden-bed.svg')
+                        h5.card-text Грядки из ДПК
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_components.svg')
+                        h5.card-text Комплектующие
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_tree.svg')
+                        h5.card-text Террасная доска из дерева
+
+
+
+
+    section.faq
+        .container
+            .faq__inner
+                .faq__inner-head.section-head
+                    h2.section-head__title Ответы на часто задаваемые вопросы
+                .faq__items.accordion__items
+                    +accordionItem('Какой состав продукции «Polywood»?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Где применяет декинг?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                    +accordionItem('Какого цвета бывает?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
+                .faq__inner-ask
+                    .ask-title Задайте вопрос специалисту
+                    .ask-text Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.
+                    .ask-action
+                        .btn.btn--yellow(data-src="#popup-ask-question" data-fancybox) Задать вопрос
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+
+    section.terrace
+        .container
+            .terrace__inner
+                .terrace__inner-head.section-head
+                    h2.section-head__title Террасная доска. Производство и монтаж.
+                    .section-head__text
+                        p Предлагаем комплексное обслуживание на выгодных условиях: от разработки проекта террас до их установки, технического обслуживания, а также демонтажа и временного хранения в сезон.
+                .terrace__inner-items
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-1.jpg')
+                        h6.terrace-title Для дома и дачи
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-2.jpg')
+                        h6.terrace-title Для ресторана и кафе
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-3.jpg')
+                        h6.terrace-title На кровле и балконе
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-4.jpg')
+                        h6.terrace-title Пирсы и причалы
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-5.jpg')
+                        h6.terrace-title В парке
+                    a(href='javascript:void(0)').terrace-item
+                        .terrace-cover
+                            +img('terrace-6.jpg')
+                        h6.terrace-title У бассейна
+
+
+    section.portfolio.slider-section
+        .container
+            .portfolio__inner.slider-section__inner
+
+                .section-head
+                    h2.section-head__title Примеры работ
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.portfolio__inner-items
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-2.jpg')
+                                    h5.slide-item__title Дом в Дмитровском Городском округе
+
+                            .swiper-slide
+                                .slide-item
+                                    .slide-item__img
+                                        +img('portfolio-1.jpg')
+                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+
+                        .swiper-pagination
+
+
+                .slider-section__inner-action
+                    a(href='javascript:void(0)').btn.btn--yellow Все проекты
+
+    section.promos.slider-section
+        .container
+            .promos__inner.slider-section__inner
+                .promos__inner-head.section-head
+                    h2.section-head__title Акции
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .promos__inner-items.slider-section__inner-items
+                    .swiper
+                        .swiper-wrapper
+
+                            .swiper-slide
+                                a(href='promo-detail.html').general-info-item
+                                    .item-date 14-21 марта
+
+                                    .item-image
+                                        +img('promo-1.jpg')
+                                        .item-sticker
+                                            +img('star-sticker.svg')
+                                            span Акция
+                                    .item-text
+                                        h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                                        .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+
+                            .swiper-slide
+                                a(href='promo-detail.html').general-info-item
+                                    .item-date 14-21 марта
+
+                                    .item-image
+                                        +img('promo-2.jpg')
+                                        .item-sticker
+                                            +img('star-sticker.svg')
+                                            span Акция
+                                    .item-text
+                                        h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                                        .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+
+                            .swiper-slide
+                                a(href='promo-detail.html').general-info-item
+                                    .item-date 14-21 марта
+
+                                    .item-image
+                                        +img('promo-3.jpg')
+                                        .item-sticker
+                                            +img('star-sticker.svg')
+                                            span Акция
+                                    .item-text
+                                        h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                                        .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+
+                        .swiper-pagination
+                .slider-section__inner-action
+                    a(href='javascript:void(0)').btn.btn--yellow Все новости
+
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__text
+                    h2 Для СЕО
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                .seo-block__image
+                    +img('hero-bg.jpg')

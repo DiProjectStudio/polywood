@@ -174,6 +174,28 @@ block main
                             include assets/images/icon_download-calc.svg
                             span Скачать в PDF
 
+
+    section.calculate-step.request
+        .container
+            .calculate-step__inner
+                h3.calculate-step__title
+                    p#step-3 <span>3</span>/3
+                    p Оставьте заявку, чтобы получить детальный расчёт
+                .calculate-step__wrapper
+                    form
+                        .form-row
+                            input(type="text" name="popup-order-calc_name" placeholder="Имя*")
+                        .form-row
+                            input.phone-mask(type="tel" name="popup-order-calc_name" placeholder="Телефон*")
+                        .form-row
+                            input(type="email" name="popup-order-calc_email" placeholder="E-mail")
+                        .form-action
+                            button.btn.btn--yellow(type="submit" data-src="#popup-success" data-fancybox) Отправить
+                            p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+
+
+
     section.products-list
         .container
             .products-list__inner
@@ -226,15 +248,15 @@ block main
     section.calculate.only-options
         .container
             .calculate__inner
-                .calculate__inner-options
-                    a(href='javascript:void(0)').option
+                .calculate__inner-options.service-extra-options
+                    a(href='javascript:void(0)').service-option
                         .option-image
                             +img('calculate-option-1.jpg')
                         h6.option-title Бесплатный проект по вашему эскизу
-                    a(href='javascript:void(0)').option
+                    a(href='javascript:void(0)').service-option
                         .option-image
                             +img('calculate-option-2.jpg')
-                        h6.option-title Заказать видеоконсультацию (Whatsapp/Telegram/Viber)
+                        h6.option-title Заказать видеоконсультацию (Whatsapp/ Telegram/ Viber)
     section.faq
         .container
             .faq__inner

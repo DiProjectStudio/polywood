@@ -17,30 +17,28 @@
           @include breakpoint(xl) {
             @include ratio(433, 230);
           }
-
-          .item-sticker {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            width: 70px;
-            height: 70px;
-            @include flexCenterCenter;
-            z-index: 0;
-
-            span {
-              position: relative;
-              z-index: 1;
-              transform: rotate(-18.968deg);
-              font-size: 14px;
-              font-weight: 700;
-
-            }
-          }
-
         }
       }
 
     }
+    .item-sticker {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 70px;
+      height: 70px;
+      @include flexCenterCenter;
+      z-index: 0;
+
+      span {
+        position: relative;
+        z-index: 1;
+        transform: rotate(-18.968deg);
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+
   }
 
   .general-info-item {

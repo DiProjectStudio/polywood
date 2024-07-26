@@ -17,7 +17,7 @@ block main
                     +accordionItem('Где применяет декинг?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
                     +accordionItem('Какого цвета бывает?', 'Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.')
                 .faq__action.show-more
-                    .btn.btn--bordered
+                    button(type="button").btn.btn--bordered
                         span Показать ещё
                         include assets/images/icon_arrow-left.svg
 
@@ -116,12 +116,12 @@ block main
                                 span.ticker__item-text Онлайн-калькулятор
                                 +img('icon_star-white.svg')
                                 span.ticker__item-text Онлайн-калькулятор
-                .calculate__inner-options
-                    a(href='javascript:void(0)').option
+                .calculate__inner-options.service-extra-options
+                    a(href='javascript:void(0)').service-option
                         .option-image
                             +img('calculate-option-1.jpg')
                         h4.option-title Бесплатный проект по вашему эскизу
-                    a(href='javascript:void(0)').option
+                    a(href='javascript:void(0)').service-option
                         .option-image
                             +img('calculate-option-2.jpg')
-                        h4.option-title Заказать видеоконсультацию (Whatsapp/Telegram/Viber)
+                        h4.option-title Заказать видеоконсультацию (Whatsapp/ Telegram/ Viber)

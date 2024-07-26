@@ -50,10 +50,10 @@ block main
                     +img('hero-bg.jpg')
 
 
+
     section.portfolio.slider-section
         .container
             .portfolio__inner.slider-section__inner
-
                 .section-head
                     h2.section-head__title Портфолио
                     .swiper-nav
@@ -88,10 +88,6 @@ block main
                     a(href='javascript:void(0)').btn.btn--yellow Все проекты
 
 
-
-
-
-
     section.prices.terraces-prices
         .container
             .prices__inner
@@ -118,12 +114,37 @@ block main
     section.general-form.form-shortcut.calculate
         .container
             .general-form__inner
-                h3.general-form__title Рассчитать стоимость террасы
+                h3.general-form__title Рассчитать стоимость террасы под ключ
                 .general-form__subtitle Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства террасы Вашей мечты.
 
                 form
                     .form-action
                         button.btn.btn--yellow(type="submit" data-src="#popup-order-calc" data-fancybox) Рассчитать
+
+    section.materials.slider-section
+        .container
+            .materials__inner.slider-section__inner
+                .section-head
+                    h2.section-head__title Использованные материалы
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.materials__inner-products
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                        .swiper-pagination
+                .slider-section__inner-action.material__inner-action
+                    a(href='catalog.html').btn.btn--yellow В каталог
 
     section.steps
         .container

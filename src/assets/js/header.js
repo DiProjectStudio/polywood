@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 // ТЕМНЫЙ ФОН
-  function checkActiveAndToggleHeaderBg() {
+  /*function checkActiveAndToggleHeaderBg() {
     // Проверяем, есть ли у потомков первого уровня .common-wrapper класс active
     if ($('.common-wrapper > .active').length > 0) {
       // Проверяем ширину окна
@@ -13,7 +13,7 @@ $(document).ready(function () {
         // console.log("Width < 1200, showing header background");
       }
     }
-  }
+  }*/
 
   $('#burger').on('click', () => {
     $('#menu').toggleClass('active');
@@ -30,7 +30,6 @@ $(document).ready(function () {
   const listItemCatalogEl = $('.list-item.catalog');
 
   let leaveTimer;
-
 
   function moveNavElement() {
     if ($(window).width() >= 1200) {
@@ -203,11 +202,7 @@ $(document).ready(function () {
 
     lastScrollTop = st <= 0 ? 0 : st; // Не позволяет lastScrollTop быть отрицательным
 
-    // скрываем вcплывающее меню на десктопе при скролле
-    /*if ($(window).width() >= 1200) {
-      if ($(this).scrollTop() > 250) {
-        // hideCommonWrapper();
-      }
-    }*/
   });
+
+
 });

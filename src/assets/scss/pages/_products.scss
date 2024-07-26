@@ -1,0 +1,1087 @@
+.catalog-section {
+  .products-layout {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(lg) {
+      gap: 20px;
+      grid-column: 2 / 4;
+      grid-row: 2/3;
+    }
+    @include breakpoint(xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.product {
+
+  @include whiteRoundedBlock;
+  display: grid;
+
+  .product-image {
+    position: relative;
+    height: 276px;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: inherit;
+    justify-self: center;
+    display: flex;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      z-index: 0;
+    }
+
+    .labels {
+      position: relative;
+    }
+
+    .colors {
+      margin-left: auto;
+      flex-direction: column;
+      position: relative;
+      z-index: 5;
+
+      .color {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+
+        &.active {
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+  }
+
+  .product-info {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    @include titleGeneral;
+
+    .info-title, .info-resistance, .info-size, .info-unit, .info-actions {
+      grid-column: 1/3;
+    }
+
+    .info-title {
+      .category {
+        color: $gray;
+      }
+
+      .name {
+        margin-top: 4px;
+      }
+    }
+
+    .info-resistance, .info-size, .info-unit {
+      font-size: 14px;
+    }
+
+    .info-resistance {
+      span {
+        color: $gray;
+      }
+    }
+
+    .info-size, .info-unit {
+      @include flexAlignCenter;
+    }
+
+    .info-price {
+      grid-column: 1/2;
+    }
+
+    .info-quantity {
+      grid-column: 2/3;
+
+
+    }
+
+    .info-actions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+
+      .btn {
+        height: 46px;
+        padding: 12px;
+      }
+    }
+
+    .sizes, .units {
+      margin-left: 10px;
+
+    }
+
+
+  }
+}
+
+.materials, .popular {
+
+  .section-head {
+    @include breakpoint(lg) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  .product {
+    .product-image {
+      .labels {
+        @include breakpointMax(xl) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+// PRODUCT PAGE
+
+
+.product-page {
+
+  .product-page__inner {
+    position: relative;
+
+    .yellow-sticker {
+
+      @include breakpointMax(xl) {
+        display: none;
+      }
+      right: 0;
+      top: -160px;
+      transform: rotate(18.91deg);
+    }
+  }
+
+  .product-page__product {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: calc(100% / 12 * 6 - 10px) calc(100% / 12 * 2 - 10px) calc(100% / 12 * 4 - 10px);
+      justify-content: space-between;
+
+      .product-part-1 {
+        order: 1;
+      }
+      .product-part-2 {
+        order: 3;
+
+      }
+    }
+    @include breakpoint(xl) {
+      grid-template-columns: calc(100% / 12 * 5 - 20px) 300px calc(100% / 12 * 4 - 20px);
+      column-gap: 40px;
+    }
+
+    .product-part-1, .product-part-2 {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 20px;
+
+      @include breakpoint(lg) {
+        grid-template-rows: 1fr auto;
+      }
+    }
+
+
+    .product-slider {
+      position: relative;
+      z-index: 0;
+
+      .swiper {
+        .swiper-nav {
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          width: 95%;
+          justify-content: space-between;
+        }
+      }
+
+      .labels {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+      }
+
+      .slide-image {
+        position: relative;
+        height: 302px;
+        width: 100%;
+        border-radius: 40px;
+        background-color: $white;
+        cursor: pointer;
+
+        @include breakpoint(md) {
+          height: 621px;
+        }
+        @include breakpoint(lg) {
+          height: 508px;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .product-services {
+      @include flexCenterBetween;
+      gap: 4px;
+
+      @include breakpointMax(md) {
+        position: relative;
+      }
+
+      .service {
+        width: 53px;
+        height: 53px;
+        padding: 12px;
+        border-radius: 12px;
+        background-color: $green-light;
+        cursor: pointer;
+
+
+        &:nth-child(2) {
+          .hint-wrapper {
+
+            &::after {
+              left: 70px;
+            }
+          }
+
+        }
+        &:nth-child(3) {
+          .hint-wrapper {
+            &::after {
+              left: 125px;
+            }
+          }
+
+        }
+        &:nth-child(4) {
+          .hint-wrapper {
+
+            &::after {
+              left: 180px;
+            }
+          }
+
+        }
+        &:nth-child(5) {
+          .hint-wrapper {
+
+            &::after {
+              left: 250px;
+            }
+          }
+
+        }
+        &:nth-child(6) {
+          .hint-wrapper {
+            &::after {
+              left: unset;
+              right: 20px;
+            }
+          }
+
+        }
+
+        @include breakpoint(md) {
+          width: 76px;
+          height: 76px;
+          padding: 18px;
+          position: relative;
+
+          &:nth-child(2) {
+            .hint-wrapper {
+              left: -50px;
+
+              &::after {
+                left: 70px;
+              }
+            }
+
+          }
+          &:nth-child(3) {
+            .hint-wrapper {
+              left: -60px;
+
+              &::after {
+                left: 80px;
+              }
+            }
+
+          }
+          &:nth-child(4) {
+            .hint-wrapper {
+              left: -90px;
+
+              &::after {
+                left: 110px;
+              }
+            }
+
+          }
+          &:nth-child(5) {
+            .hint-wrapper {
+              left: -210px;
+
+              &::after {
+                left: 250px;
+              }
+            }
+
+          }
+          &:nth-child(6) {
+            .hint-wrapper {
+              left: unset;
+              right:-10px;
+
+              &::after {
+                left: unset;
+                right: 20px;
+              }
+            }
+
+          }
+        }
+
+        &:hover {
+          .service-icon .hint-icon {
+            background-color: $gray-light;
+          }
+
+          .hint-wrapper {
+            animation: fadeOut .3s forwards;
+            display: block;
+          }
+        }
+
+        img {
+          border-radius: 0;
+        }
+
+        .service-icon {
+          position: relative;
+        }
+
+        .hint-icon {
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          top: -7px;
+          right: -7px;
+          border-radius: 50%;
+          background-color: $white;
+          font-size: 10px;
+          line-height: normal;
+          font-weight: 700;
+          color: $green-light;
+          padding-bottom: 2px;
+          @include flexCenterCenter;
+          cursor: pointer;
+
+          @include breakpoint(md) {
+            padding: 0 0 2px 1px;
+            top: -12px;
+            right: -12px;
+          }
+        }
+
+
+        .hint-wrapper {
+          position: absolute;
+          display: none;
+          opacity: 0;
+          border-radius: 20px;
+          background-color: $white;
+          box-shadow: 4px 4px 4px 0 rgba(47, 48, 63, 0.05);
+          padding: 12px;
+          width: 340px;
+          left: 0;
+          bottom: 125%;
+          z-index: 15;
+          font-size: 13px;
+          line-height: 150%;
+
+          @include breakpoint(md) {
+            left: 11px;
+
+            width: 426px;
+          }
+
+          .hint-title {
+            @include titleGeneral;
+          }
+
+          .hint-title + .hint-text {
+            margin-top: 6px;
+          }
+
+
+
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: -9px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border: 11px solid rgba(0, 0, 0, 0);
+            border-bottom: 0;
+            border-top: 15px solid $white;
+          }
+
+
+          @include breakpoint(md) {
+            width: 426px;
+          }
+
+          p {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .product-info {
+      padding: 20px 12px;
+      @include whiteRoundedBlock;
+
+      .info-item ~ .info-item {
+        margin-top: 20px
+      }
+
+      .info-item {
+        &:not(.info-price) {
+          p {
+            @include titleGeneral;
+            margin-bottom: 16px;
+          }
+        }
+
+        &.info-price {
+          .price-meter {
+            @include flexAlignCenter;
+            gap: 10px;
+            @include titleGeneral;
+
+            p {
+              font-size: 20px;
+            }
+
+            .price-new {
+              font-size: 24px;
+            }
+
+            .price-old {
+              color: $gray;
+            }
+
+            &:not(.price-old) {
+
+            }
+          }
+
+          .price-description {
+            margin: 4px 0 20px;
+          }
+
+          .price-total {
+            @include titleGeneral;
+
+            span {
+              color: $green-light;
+            }
+          }
+        }
+
+        .colors {
+          //margin-top: 16px;
+          position: relative;
+          z-index: 5;
+
+          .color {
+            width: 64px;
+            height: 40px;
+            border-radius: 97px;
+
+            &.active {
+              outline: 2px solid $green-light;
+            }
+          }
+
+        }
+
+        &.info-actions {
+          display: grid;
+          column-gap: 20px;
+          grid-template-columns: 121px auto;
+          align-items: center;
+
+          p {
+            font-size: 14px;
+            color: $gray;
+            margin-bottom: 4px;
+          }
+
+          .btn {
+            height: 61px;
+
+            @include breakpoint(md) {
+              width: 199px;
+            }
+            @include breakpoint(lg) {
+              width: unset;
+            }
+
+            &.active {
+              border-color: $black;
+              background: $white;
+            }
+          }
+        }
+
+      }
+
+
+    }
+
+    .product-pay-delivery {
+      @include whiteRoundedBlock;
+      padding: 12px;
+      font-size: 14px;
+      @include breakpoint(md) {
+        padding: 12px 20px;
+      }
+
+      @include breakpoint(lg) {
+        //grid-column: 3/4;
+        //grid-row: 2/3;
+      }
+
+      .pay-delivery-item ~ .pay-delivery-item {
+        margin-top: 10px;
+      }
+    }
+
+    .product-extra-options {
+      display: grid;
+      grid-template-columns: repeat(2, calc(50% - 5px));
+      grid-auto-rows: 130px;
+      gap: 10px;
+
+      @include breakpoint(md) {
+        grid-auto-rows: 167px;
+      }
+      @include breakpoint(lg) {
+        grid-auto-rows: 143.5px;
+        grid-template-columns: 100%;
+        order: 2;
+        align-content: space-between;
+        //grid-template-rows: repeat(4, 1fr);
+      }
+
+      .service-option {
+        padding: 12px;
+
+        .option-image {
+          //height: 130px;
+
+          @include breakpoint(md) {
+            //height: 167px;
+          }
+          @include breakpoint(lg) {
+            //height: 143px;
+          }
+        }
+
+        .option-title {
+          font-size: 14px;
+
+        }
+
+      }
+
+
+    }
+  }
+}
+
+
+// TABS
+
+.product-info-tabs {
+  margin-top: 80px;
+
+  .tabs-block {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-right: calc(var(--container) * (-1));
+    //margin-left: calc(var(--container) * (-1));
+    padding-right: var(--container);
+
+
+    &::-webkit-scrollbar {
+      height: 2px;
+    }
+  }
+
+  .tabs {
+    width: fit-content;
+    padding: 6px;
+    background-color: $white;
+    border-radius: 100px;
+    flex-wrap: nowrap;
+    //display: inline-block;
+    //min-width: 100%;
+
+    .tab {
+      padding: 14px 20px;
+      white-space: nowrap;
+
+      @include breakpointMax(xl) {
+        font-size: 14px;
+      }
+
+      @include breakpoint(xl) {
+        //font-size: 16px;
+      }
+    }
+  }
+
+  .product-tab {
+    &.tab {
+      border-color: transparent;
+      background-color: $bg;
+
+      &.active {
+        background-color: $yellow-light;
+      }
+    }
+
+    &.active {
+      &:hover {
+        background-color: $yellow-dark;
+      }
+    }
+  }
+
+  .tabs-content {
+    margin-top: 40px;
+    display: none;
+    animation: fadeOut .6s ease forwards;
+
+    @include breakpoint(lg) {
+      width: calc(100% / 12 * 8);
+    }
+
+
+    .info-section__content {
+      .content__title {
+        @include titleGeneral;
+        font-size: 24px;
+
+        @include breakpoint(lg) {
+          font-size: 30px;
+        }
+      }
+
+      .content__title + .content__inner {
+        margin-top: 20px;
+      }
+
+      .content__inner {
+
+        .section-head {
+          margin-bottom: 20px;
+        }
+
+        .slider-section + .slider-section {
+          margin-top: 40px;
+
+          @include breakpoint(md) {
+            margin-top: 60px;
+          }
+        }
+
+        .table {
+
+          .table-wrapper {
+            @include whiteRoundedBlock;
+            padding: 10px;
+
+            @include breakpoint(md) {
+              padding: 10px 20px;
+            }
+          }
+
+          .table-row ~ .table-row {
+            border-top: 1px solid $stroke;
+          }
+
+          .table-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            column-gap: 20px;
+            padding: 10px 0;
+            align-items: center;
+
+            @include breakpoint(md) {
+              grid-template-columns: calc(100% / 12 * 8) calc(100% / 12 * 5);
+            }
+            @include breakpoint(lg) {
+              grid-template-columns: calc(100% / 8 * 5) calc(100% / 8 * 3);
+            }
+            @include breakpoint(xl) {
+              grid-template-columns: repeat(2, 50%);
+            }
+
+            .cell {
+              &:first-child {
+                @include titleGeneral;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+
+    &.usage {
+
+      .portfolio, .gallery {
+        .slide-item {
+          .slide-item__img {
+            height: 225px;
+
+            @include breakpoint(lg) {
+              height: 244px;
+            }
+            @include breakpoint(xl) {
+              height: 296px;
+            }
+          }
+        }
+      }
+    }
+
+
+    &.reviews {
+      .info-section__content {
+        .content__title {
+          margin-bottom: 50px;
+        }
+
+
+        .reviews__action {
+          background-color: $white;
+
+          @include breakpoint(md) {
+            grid-template-columns: auto 1fr;
+            gap: 20px 30px;
+          }
+          @include breakpoint(lg) {
+            grid-template-columns: auto 1fr auto;
+            gap: 20px 30px;
+          }
+
+          .reviews__action-icon {
+            width: 50px;
+            height: 50px;
+          }
+
+          .reviews__action-btn {
+
+            .btn {
+              height: 54px;
+            }
+
+            @include breakpoint(md) {
+              grid-column: 2/3;
+              width: 287px;
+            }
+
+            @include breakpoint(lg) {
+              align-self: center;
+              grid-column: 3/4;
+              width: 207px;
+            }
+
+            @include breakpoint(xl) {
+              width: 287px;
+            }
+          }
+        }
+
+
+        .reviews__items {
+          margin-top: 50px;
+
+          .reviews__item ~ .reviews__item {
+            margin-top: 10px;
+          }
+
+          .reviews__item {
+            padding: 20px;
+            @include whiteRoundedBlock;
+
+            .reviews__item-date {
+              font-size: 14px;
+            }
+
+            .reviews__item-client {
+              margin: 8px 0 20px;
+              @include titleGeneral;
+              font-size: 20px;
+            }
+
+            .reviews__item-text {
+              max-height: 96px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              transition: all .6s ease-out;
+
+              &.text-collapse {
+                max-height: 1000px;
+              }
+
+              p ~ p {
+                margin-top: 10px;
+              }
+            }
+
+            .reviews__item-read {
+              @include titleGeneral;
+              color: $green-light;
+              width: fit-content;
+              padding-bottom: 3px;
+              margin-top: 10px;
+              border-bottom: 1px solid $green-light;
+              transition: $transition-style;
+              cursor: pointer;
+
+              @include flexAlignCenter;
+              gap: 4px;
+
+              &:hover {
+                color: $green-dark;
+                border-color: $green-dark;
+
+                svg path {
+                  stroke: $green-dark;
+                }
+              }
+
+              svg {
+                transition: $transition-style;
+              }
+            }
+          }
+
+        }
+
+
+        .show-more {
+          margin-top: 20px;
+
+          @include breakpoint(md) {
+            width: 327px;
+          }
+
+          .btn {
+            padding: 16px;
+            width: 100%;
+            height: 70px;
+          }
+
+
+        }
+      }
+
+      .reviews__leave-review {
+        margin-top: 30px;
+        color: $white;
+
+        .general-form__inner {
+          grid-template-columns: 100%;
+        }
+
+        form {
+          display: grid;
+          @include breakpoint(md) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+          }
+
+          .form-row ~ .form-row {
+            @include breakpoint(md) {
+              margin-top: 0;
+            }
+          }
+        }
+
+
+        input {
+          padding: 14px 24px;
+          height: 60px;
+        }
+
+        input, textarea {
+          background-color: rgba(255, 255, 255, 0.1);
+
+          &::placeholder {
+            @include titleGeneral;
+            color: $white;
+          }
+        }
+
+        .form-row {
+          &:nth-child(3) {
+            @include breakpoint(md) {
+              grid-column: 1/3;
+            }
+          }
+        }
+
+
+        .form-action {
+          gap: 20px;
+          @include breakpointMax(md) {
+            margin-top: 20px;
+          }
+
+          @include breakpoint(md) {
+            grid-column: 1/3;
+            grid-template-columns: 287px 1fr;
+            gap: 20px;
+            align-items: center;
+          }
+
+          .btn {
+            padding: 16px;
+          }
+        }
+      }
+    }
+
+    &.docs {
+      .slide-item__img {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.product-in-cart {
+  position: fixed;
+  top: 132px;
+  right: -100%;
+  //right: var(--container);
+  //opacity: 1;
+  opacity: 0;
+  z-index: 100;
+  width: 340px;
+  transition: all .6s ease-in-out;
+  @include breakpointMax(lg) {
+    font-size: 14px;
+  }
+
+  @include breakpoint(md) {
+    top: 164px;
+  }
+  @include breakpoint(lg) {
+    top: 200px;
+  }
+  @include breakpoint(xl) {
+    top: 210px;
+  }
+
+
+  &.show {
+    right: var(--container);
+    opacity: 1;
+
+    @include breakpoint(xl) {
+      right: calc((100vw - 1400px) / 2);
+    }
+  }
+
+  .product-in-cart__content {
+    padding: 12px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 4px 16px;
+    background-color: $white;
+    border: 1px solid $stroke;
+
+
+    .content__image {
+      grid-column: 1/2;
+      grid-row: 1/3;
+      width: 60px;
+      height: 60px;
+      background-color: $white;
+      border-radius: 10px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .content__title {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      @include titleGeneral;
+      line-height: 100%;
+      align-self: flex-end;
+    }
+
+    .content__product-name {
+      max-width: 240px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      line-height: 150%;
+
+    }
+  }
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

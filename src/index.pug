@@ -19,7 +19,7 @@ block main
                         p Polywood
 
                     .info-action
-                        a(href='javascript:void(0)').btn.btn--yellow В каталог
+                        a(href='catalog.html').btn.btn--yellow В каталог
 
 
                 .hero__inner-benefits
@@ -99,7 +99,7 @@ block main
                         p Строительные и отделочные материалы из древесно-полимерного композита – современное решение проблем обустройства комфортабельного дома и прилегающего к нему участка.
 
                 .categories__items.categories-cards
-                    a(href='javascript:void(0)').category-card
+                    a(href='catalog.html').category-card
                         h5.card-title Террасная доска из ДПК
                         .card-image
                             +img('catalog-1.png')
@@ -142,6 +142,29 @@ block main
                         .card-image
                             +img('catalog-10.png')
 
+
+    section.popular.slider-section
+        .container
+            .popular__inner.slider-section__inner
+                .section-head
+                    h2.section-head__title Популярные товары
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.popular__inner-products
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                        .swiper-pagination
 
     section.general-form.form-subscribe
         .container
@@ -239,7 +262,7 @@ block main
 
 
                 .slider-section__inner-action
-                    a(href='javascript:void(0)').btn.btn--yellow Все проекты
+                    a(href='projects.html').btn.btn--yellow Все проекты
 
 
 

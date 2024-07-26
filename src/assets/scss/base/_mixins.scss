@@ -142,3 +142,11 @@ $xl: 1440px;
     border-radius: 20px;
     background-color: $white;
 }
+
+@mixin sectionMarginTop {
+    margin-top: 40px;
+
+    @include breakpoint(lg) {
+        margin-top: 60px;
+    }
+}

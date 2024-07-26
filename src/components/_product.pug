@@ -1,0 +1,43 @@
+include ../includes/_mixins
+.product
+    a(href='product-page.html').product-image
+        +img('product-1.png')
+        .labels
+            .label.label-yellow Акция
+            .label.label-green Много
+        .colors
+            .color.active(style="background-image: url('assets/images/color-1.png')")
+            .color(style="background-image: url('assets/images/color-1.png')")
+            .color(style="background-image: url('assets/images/color-1.png')")
+            .color(style="background-image: url('assets/images/color-1.png')")
+    .product-info
+        a(href='product-page.html').info-title
+            p.category Террасная доска ДПК
+            p.name POLYWOOD™ MINERAL DUO 3D графит 4 метра
+        .info-resistance Ударная стойкость: <span>Высокая</span>
+        .info-size
+            p Размер
+            .sizes
+                .size 3 м
+                .size.active 4 м
+                .size 5 м
+
+        .info-price.price-block
+            .price-new 100 000 ₽
+            .price-old 200 000 ₽
+        .info-quantity
+            .counter
+                .btn-count.btn-subtract
+                    include ../assets/images/icon_minus.svg
+                input.counter(type='number' data-default='1' data-min='0' data-max='10000000' value='1')
+                .btn-count.btn-add
+                    include ../assets/images/icon_plus.svg
+        .info-unit
+            p Ед. измерения
+            .units
+                .unit шт
+                .unit.active  м<sup>2</sup>
+                .unit п.м
+        .info-actions
+            .btn.btn--yellow.addToCart В корзину
+            a(href='calculator.html').btn.btn--gray Рассчитать

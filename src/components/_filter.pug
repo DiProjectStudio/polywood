@@ -2,155 +2,115 @@
     .filter-close.menu-action.btn.btn--mint-bg
         include ../assets/images/icon_close.svg
     .filter-content-head
-        //include ../assets/images/icon_filter.svg
         span Фильтр
     .filter-items
         .filter-options
-            .filter-option.checkbox-style
-                input#all-products(type="checkbox" checked)
-                label(for="all-products") Все <span>10 000</span>
+
             .filter-option.checkbox-style
                 input#new-products(type="checkbox")
-                label(for="new-products") Новинки <span>1 000</span>
+                label(for="new-products") Новинка
+            .filter-option.checkbox-style
+                input#in-stock(type="checkbox" checked)
+                label(for="in-stock") В наличии
             .filter-option.checkbox-style
                 input#liquid-products(type="checkbox")
-                label(for="liquid-products") Ликвидация <span>2 000</span>
-        .filter-item.price
-            .filter-head
-                span Цена, ₽
-                .icon
-                    //include ../assets/images/icon_chevron-right.svg
-            .filter-options
-                .range_container
-                    .form_control
-                        .form_control_container
-                            input#fromInput.form_control_container__time__input(type='number' value='1000' min='0' max='99999' placeholder="от")
-                        .form_control_container
-                            input#toInput.form_control_container__time__input(type='number' value='50000' min='1' max='10000' placeholder="до")
-                    .sliders_control
-                        input#fromSlider(type='range' value='1000' min='0' max='99999')
-                        input#toSlider(type='range' value='50000' min='1' max='100000')
-
+                label(for="liquid-products") Акция
 
 
         .filter-item
             .filter-head
-                span Коллекция
-                .icon
-                    //include ../assets/images/icon_chevron-right.svg
+                span Назначение
             .filter-options
                 .filter-option.checkbox-style
-                        input#filter1(type="checkbox")
-                        label(for="filter1") Все<span>500</span>
+                    input#purpose1(type="checkbox")
+                    label(for="purpose1") Для дома и дачи
                 .filter-option.checkbox-style
-                        input#filter2(type="checkbox")
-                        label(for="filter2") Айла<span>20</span>
+                    input#purpose2(type="checkbox")
+                    label(for="purpose2") Для ресторана и кафе
                 .filter-option.checkbox-style
-                        input#filter3(type="checkbox")
-                        label(for="filter3") Александрия<span>23</span>
+                    input#purpose3(type="checkbox")
+                    label(for="purpose3") На кровле и балконе
                 .filter-option.checkbox-style
-                        input#filter4(type="checkbox")
-                        label(for="filter4") Аликанте<span>10</span>
+                    input#purpose4(type="checkbox")
+                    label(for="purpose4") Пирсы и причалы
                 .filter-option.checkbox-style
-                        input#filter5(type="checkbox")
-                        label(for="filter5") Амели Оникс<span>12</span>
+                    input#purpose5(type="checkbox")
+                    label(for="purpose5") В парке
                 .filter-option.checkbox-style
-                        input#filter6(type="checkbox")
-                        label(for="filter6") Бари<span>10 000</span>
-                .filter-option.checkbox-style
-                        input#filter7(type="checkbox")
-                        label(for="filter7") Все<span>10 000</span>
-                .filter-option.checkbox-style
-                        input#filter8(type="checkbox")
-                        label(for="filter8") Айла<span>10 000</span>
+                    input#purpose6(type="checkbox")
+                    label(for="purpose6") У бассейна
 
         .filter-item
             .filter-head
-                span Длина, мм
-                .icon
-                    //include ../assets/images/icon_chevron-right.svg
+                span Размер
             .filter-options
-                .range_container
-                    .form_control
-                        .form_control_container
-                            input#fromLengthInput.form_control_container__time__input(type='number' value='1000' min='0' max='99999' placeholder="от" data-type="length" data-bound="from")
-                        .form_control_container
-                            input#toLengthInput.form_control_container__time__input(type='number' value='50000' min='1' max='10000' placeholder="до" data-type="length" data-bound="to")
-                    .sliders_control
-                        input#fromLengthSlider(type='range' value='1000' min='0' max='99999' data-type="length" data-bound="from")
-                        input#toLengthSlider(type='range' value='50000' min='1' max='100000' data-type="length" data-bound="to")
-        .filter-item
-            .filter-head
-                span Ширина, мм
-                .icon
-                    //include ../assets/images/icon_chevron-right.svg
-            .filter-options
-                .range_container
-                    .form_control
-                        .form_control_container
-                            input#fromWidthInput.form_control_container__time__input(type='number' value='0' min='0' max='99999' placeholder="от")
-                        .form_control_container
-                            input#toWidthInput.form_control_container__time__input(type='number' value='' min='1' max='10000' placeholder="до")
-                    .sliders_control
-                        input#fromWidthSlider(type='range' value='1000' min='0' max='99999')
-                        input#toWidthSlider(type='range' value='50000' min='1' max='1000000')
-        .filter-item
-            .filter-head
-                span Высота, мм
-                .icon
-                    //include ../assets/images/icon_chevron-right.svg
-            .filter-options
-                .range_container
-                    .form_control
-                        .form_control_container
-                            input#fromHeightInput.form_control_container__time__input(type='number' value='1000' min='0' max='99999' placeholder="от")
-                        .form_control_container
-                            input#toHeightInput.form_control_container__time__input(type='number' value='50000' min='1' max='10000' placeholder="до")
-                    .sliders_control
-                        input#fromHeightSlider(type='range' value='1000' min='0' max='99999')
-                        input#toHeightSlider(type='range' value='50000' min='1' max='100000')
-
-
+                .filter-option.checkbox-style
+                    input#size1(type="checkbox")
+                    label(for="size1") 3 м
+                .filter-option.checkbox-style
+                    input#size2(type="checkbox")
+                    label(for="size2") 4 м
+                .filter-option.checkbox-style
+                    input#size3(type="checkbox")
+                    label(for="size3") 5 м
         .filter-item
             .filter-head
                 span Цвет
-                .icon
-                    //include ../assets/images/icon_chevron-right.svg
             .filter-options
                 .filter-option.checkbox-style
                     input#color1(type="checkbox")
                     label(for="color1")
-                        .filter-color(style="background: #F3DCC6")
-                        .filter-text Бежевый&nbsp;<span>934</span>
+                        .filter-color.color(style="background-image: url('assets/images/color-1.png')")
+                        .filter-text Бежевый
+                .filter-option.checkbox-style
+                    input#color2(type="checkbox")
+                    label(for="color2")
+                        .filter-color.color(style="background-image: url('assets/images/color-1.png')")
+                        .filter-text Белый
                 .filter-option.checkbox-style
                     input#color3(type="checkbox")
                     label(for="color3")
-                        .filter-color(style="background: #FFFFFF")
-                        .filter-text Белый&nbsp;<span>1 000</span>
+                        .filter-color.color(style="background-image: url('assets/images/color-1.png')")
+                        .filter-text Бирюзовый
                 .filter-option.checkbox-style
                     input#color4(type="checkbox")
                     label(for="color4")
-                        .filter-color(style="background: #94DFD6")
-                        .filter-text Бирюзовый&nbsp;<span>30</span>
-                .filter-option.checkbox-style
-                    input#color5(type="checkbox")
-                    label(for="color5")
-                        .filter-color(style="background: #986634")
-                        .filter-text Бронза&nbsp;<span>10</span>
-                .filter-option.checkbox-style
-                    input#color6(type="checkbox")
-                    label(for="color6")
-                        .filter-color(style="background: #70CDEB")
-                        .filter-text Голубой&nbsp;<span>15</span>
-                .filter-option.checkbox-style
-                    input#color7(type="checkbox")
-                    label(for="color7")
-                        .filter-color(style="background: #F2E03B")
-                        .filter-text Желтый&nbsp;<span>8</span>
+                        .filter-color.color(style="background-image: url('assets/images/color-1.png')")
+                        .filter-text Бронза
 
 
+
+
+
+        .filter-item
+            .filter-head
+                span Обработка поверхности
+            .filter-options
+                .filter-option.checkbox-style
+                    input#processing1(type="checkbox")
+                    label(for="processing1") обработка 1
+                .filter-option.checkbox-style
+                    input#processing2(type="checkbox")
+                    label(for="processing2") обработка 2
+                .filter-option.checkbox-style
+                    input#processing3(type="checkbox")
+                    label(for="processing3") обработка 3
+
+        .filter-item
+            .filter-head
+                span Ударная стойкость
+            .filter-options
+                .filter-option.checkbox-style
+                    input#resistance1(type="checkbox")
+                    label(for="resistance1") ударная стойкость 1
+                .filter-option.checkbox-style
+                    input#resistance2(type="checkbox")
+                    label(for="resistance2") ударная стойкость 2
+                .filter-option.checkbox-style
+                    input#resistance3(type="checkbox")
+                    label(for="resistance3") ударная стойкость 3
     .filter-actions
-        .btn.btn--mint-bg#applyFilter Применить
-        .btn.btn--mint-border#resetFilter
+        .btn.btn--yellow#applyFilter Применить
+        .btn.btn--bordered#resetFilter
             include ../assets/images/icon_close.svg
             span Сбросить

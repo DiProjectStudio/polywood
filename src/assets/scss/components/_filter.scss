@@ -1,0 +1,194 @@
+.filter-content {
+  @include flexColumn;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+
+  @include breakpoint(md) {
+    width: 368px;
+  }
+
+  @include breakpoint(lg) {
+    width: unset;
+  }
+
+  @include breakpointMax(lg) {
+    overflow-y: auto;
+    z-index: 100;
+    padding: 20px 22px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    left: -100%;
+    //left: 0;
+    transition: visibility 0s ease 0.3s, opacity 0.5s ease, left 1s ease;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      left: 0;
+      transition: visibility 0s linear 0s, opacity 0.3s linear, left 0.5s ease;
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding: 12px 20px;
+    @include whiteRoundedBlock;
+  }
+
+  .filter-close {
+    margin-bottom: 24px;
+    align-self: flex-end;
+
+    svg path {
+      stroke: $black
+    }
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .filter-content-head {
+    @include titleGeneral;
+    font-size: 30px;
+  }
+
+
+  .filter-items {
+    margin-top: 20px;
+    line-height: normal;
+
+
+    .filter-item {
+      @include flexColumn;
+      border-radius: 100px;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: 1px solid $stroke;
+      transition: border-radius .3s ease-in-out;
+
+      .filter-head {
+        @include flexCenterBetween;
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url("../images/icon_chevron-down.svg") no-repeat center;
+          background-size: 20px;
+          transition: $transition-style;
+        }
+
+        span {
+          @include titleGeneral;
+          font-size: 16px;
+        }
+      }
+
+      &.expanded {
+        border-radius: 20px;
+
+        .filter-head {
+          &::after {
+            transform: rotate(-180deg);
+          }
+        }
+
+        .filter-options {
+          display: flex;
+        }
+      }
+
+
+    }
+
+    .filter-options {
+      &:not(:first-child) {
+        display: none;
+        overflow-y: auto;
+        max-height: 194px;
+        margin-top: 16px;
+      }
+
+      @include flexColumn;
+      width: 100%;
+
+
+      .filter-option {
+        @include flexAlignCenter;
+        justify-content: flex-start;
+        gap: 8px;
+
+        &.checkbox-style label {
+          @include flexAlignCenter;
+          gap: 12px;
+        }
+
+        .filter-color {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .filter-option ~ .filter-option {
+        margin-top: 10px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+    }
+  }
+
+  .filter-actions {
+    width: 100%;
+    @include flexColumn;
+    gap: 10px;
+    margin-top: 24px;
+
+
+    .btn {
+      border-radius: 41px;
+      height: 52px;
+      padding: 16px;
+      outline: none;
+
+      svg path {
+        stroke: $black
+      }
+
+      &:hover {
+        svg path {
+          stroke: $gray;
+        }
+      }
+
+      &:last-child {
+
+        svg {
+          min-width: 24px;
+          min-height: 24px;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+.bx-filter-section.container-fluid {
+  padding: 0;
+
+  .smartfilter .row {
+    margin: 0;
+  }
+}

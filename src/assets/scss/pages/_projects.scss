@@ -62,12 +62,7 @@
 // PROJECT DETAIL
 
 .project-detail {
-  margin-top: 40px;
-
-  @include breakpoint(lg) {
-    margin-top: 60px;
-  }
-
+  @include sectionMarginTop;
   .seo-block .seo-block__inner {
 
     @include breakpoint(lg) {

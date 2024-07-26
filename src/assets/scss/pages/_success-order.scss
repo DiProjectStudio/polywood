@@ -1,8 +1,5 @@
 .order-success {
-  margin-top: 40px;
-  @include breakpoint(lg) {
-    margin-top: 60px;
-  }
+  @include sectionMarginTop;
 
   .order-success__inner {
     background-color: $white;

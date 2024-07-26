@@ -1,4 +1,4 @@
-// SERVICE DETAIL
+// TERRACE DETAIL
 .hero.hero-terraces {
   .hero__inner {
 
@@ -85,6 +85,17 @@
     .show-more .btn {
       margin-left: 0;
       margin-right: 0;
+    }
+  }
+}
+
+.general-form.form-shortcut.calculate {
+  .general-form__inner {
+    @include breakpoint(lg) {
+      grid-template-columns: 37% 40% auto;
+    }
+    @include breakpoint(xl) {
+      grid-template-columns: 30% calc(100% / 12 * 5) auto;
     }
   }
 }

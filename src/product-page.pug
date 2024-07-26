@@ -1,0 +1,544 @@
+---
+title: Polywood | Товар
+bodyClass: product-detail-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Террасная доска из ДПК POLYWOOD™ UNO графит 3 метра', 'Террасная доска из ДПК', ['Террасная доска из ДПК POLYWOOD™ UNO графит 3 метра'])
+
+    section.product-page
+        .container
+            .product-page__inner
+                .yellow-sticker
+                    +img('yellow-sticker.svg')
+
+                .product-page__product
+                    .product-part-1
+
+                        .product-slider
+                            .labels
+                                .label.label-yellow Акция
+                                .label.label-green Много
+
+                            .swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .slide-image(data-src="assets/images/product-1.png" data-fancybox="gallery1")
+                                            +img('product-1.png')
+                                    .swiper-slide
+                                        .slide-image(data-src="assets/images/product-1.png" data-fancybox="gallery1")
+                                            +img('product-1.png')
+                                    .swiper-slide
+                                        .slide-image(data-src="assets/images/product-1.png" data-fancybox="gallery1")
+                                            +img('product-1.png')
+
+                                .swiper-pagination
+
+                                .swiper-nav
+                                    .swiper-nav-arrow.swiper-nav-arrow--prev.disabled
+                                        include assets/images/icon_chevron-right-gray.svg
+                                    .swiper-nav-arrow.swiper-nav-arrow--next
+                                        include assets/images/icon_chevron-right-gray.svg
+
+                        .product-services
+                            .service
+                                .service-icon
+                                    +img('icon_services-return.svg')
+                                    .hint-icon ?
+                                .hint
+                                    .hint-wrapper
+                                        .hint-title Гарантия возврата товара
+                                        .hint-text Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва
+
+                            .service
+                                .service-icon
+                                    +img('icon_services-blueprint.svg')
+                                    .hint-icon ?
+                                .hint
+                                    .hint-wrapper
+                                        .hint-title Гарантия возврата товара
+                                        .hint-text Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва
+
+                            .service
+                                .service-icon
+                                    +img('icon_services-diamond.svg')
+                                    .hint-icon ?
+                                .hint
+                                    .hint-wrapper
+                                        .hint-title Гарантия возврата товара
+                                        .hint-text Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва
+
+                            .service
+                                .service-icon
+                                    +img('icon_services-engineer.svg')
+                                    .hint-icon ?
+                                .hint
+                                    .hint-wrapper
+                                        .hint-title Гарантия возврата товара
+                                        .hint-text Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва
+
+
+                            .service
+                                .service-icon
+                                    +img('icon_services-interior.svg')
+                                    .hint-icon ?
+                                .hint
+                                    .hint-wrapper
+                                        .hint-title Гарантия возврата товара
+                                        .hint-text Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва
+
+
+                            .service
+                                .service-icon
+                                    +img('icon_services-truck.svg')
+                                    .hint-icon ?
+                                .hint
+                                    .hint-wrapper
+                                        .hint-title Гарантия возврата товара
+                                        .hint-text Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва
+
+
+                    .product-part-2
+                        .product-info
+                            .info-item.info-colors
+                                p Цвет
+                                .colors
+                                    .color.active(style="background-image: url('assets/images/color-1.png')")
+                                    .color(style="background-image: url('assets/images/color-1.png')")
+                                    .color(style="background-image: url('assets/images/color-1.png')")
+                                    .color(style="background-image: url('assets/images/color-1.png')")
+                            .info-item.info-size
+                                p Размер
+                                .sizes
+                                    .size 3 м
+                                    .size.active 4 м
+                                    .size 5 м
+
+                            .info-item.info-unit
+                                p Выберите единицу измерения
+                                .units
+                                    .unit шт
+                                    .unit.active  м<sup>2</sup>
+                                    .unit п.м
+                            .info-item.info-price
+                                .price-meter
+                                    p Цена за <sup>м2</sup>:
+                                    .price-block
+                                        .price-new 100 000 ₽
+                                        .price-old 200 000 ₽
+                                .price-description
+                                    p Акционная цена действительна только при заказе террасной доски вместе с крепёжными элементами.
+                                .price-total
+                                    p Итого заказ 30  пог.м:&nbsp;<span>3 000 000 ₽</span>
+
+                            .info-item.info-actions
+                                .action
+                                    p Количество:
+                                    .counter
+                                        .btn-count.btn-subtract
+                                            include assets/images/icon_minus.svg
+                                        input.counter(type='number' data-default='1' data-min='0' data-max='10000000' value='1')
+                                        .btn-count.btn-add
+                                            include assets/images/icon_plus.svg
+                                .action
+                                    .btn.btn--yellow.addToCart В корзину
+
+
+                        .product-pay-delivery
+                            .pay-delivery-item.pay
+                                p <b>Способы оплаты:</b> Наличные, Банковский перевод, Visa, Mastercard, МИР
+                            .pay-delivery-item.delivery
+                                p <b>Доставка:</b> По всей России и странам СНГ
+
+
+                    .product-extra-options.service-extra-options
+                        a(href='javascript:void(0)').service-option
+                            .option-image
+                                +img('calculate-option-3.jpg')
+                            h6.option-title Калькулятор террас
+
+                        a(href='javascript:void(0)').service-option
+                            .option-image
+                                +img('calculate-option-1.jpg')
+                            h6.option-title Бесплатный проект по вашему эскизу
+
+                        a(href='javascript:void(0)').service-option
+                            .option-image
+                                +img('calculate-option-4.jpg')
+                            h6.option-title Бесплатные образцы продукции
+
+                        a(href='javascript:void(0)').service-option
+                            .option-image
+                                +img('calculate-option-2.jpg')
+                            h6.option-title Заказать видеоконсультацию (Whatsapp/ Telegram/ Viber)
+
+
+    section.product-info-tabs
+        .container
+            .tabs-block
+                .tabs
+                    .product-tab.tab.active Описание
+                    .product-tab.tab Характеристики
+                    .product-tab.tab Документы
+                    .product-tab.tab Пример использования
+                    .product-tab.tab Отзывы <span>(10)</span>
+
+            .tabs-content.description.active
+                .info-section__content
+                    .content__title Описание
+                    .content__inner
+                        p Шовный пустотелый профиль POLYWOOD™ NEO с обработкой поверхности мелкий вельвет оттенков венге и графит прочный, долговечный, не деформируется от влажности или жары.
+
+            .tabs-content.characteristics
+                .info-section__content
+                    .content__title Характеристики
+                    .content__inner
+                        .table
+                            .table-wrapper
+                                .table-row
+                                    .cell Страна производитель
+                                    .cell Россия
+                                .table-row
+                                    .cell Профиль
+                                    .cell 145
+                                .table-row
+                                    .cell Ширина, мм
+                                    .cell 2000
+                                .table-row
+                                    .cell Глубина, мм
+                                    .cell 200
+                                .table-row
+                                    .cell Высота, мм
+                                    .cell 600
+                                .table-row
+                                    .cell Расход на 1 кв. м, пог.м
+                                    .cell 2.7
+                                .table-row
+                                    .cell Длина, метров
+                                    .cell 6.67
+
+            .tabs-content.docs
+                .info-section__content
+                    .content__inner
+                        .product-docs.slider-section
+                            .product-docs__inner.slider-section__inner
+                                .section-head
+                                    .section-head__title.content__title Документы
+                                    .swiper-nav
+                                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                                            include assets/images/icon_chevron-right-gray.svg
+                                        .swiper-nav-arrow.swiper-nav-arrow--next
+                                            include assets/images/icon_chevron-right-gray.svg
+                                .slider-section__inner-items.portfolio__inner-items
+                                    .swiper
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('product-doc.png')
+
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('product-doc.png')
+
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('product-doc.png')
+
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('product-doc.png')
+                                        .swiper-pagination
+
+            .tabs-content.usage
+                .info-section__content
+                    .content__inner
+                        .portfolio.slider-section
+                            .portfolio__inner.slider-section__inner
+                                .section-head
+                                    .section-head__title.content__title Проекты
+                                    .swiper-nav
+                                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                                            include assets/images/icon_chevron-right-gray.svg
+                                        .swiper-nav-arrow.swiper-nav-arrow--next
+                                            include assets/images/icon_chevron-right-gray.svg
+                                .slider-section__inner-items.portfolio__inner-items
+                                    .swiper
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('portfolio-1.jpg')
+                                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('portfolio-2.jpg')
+                                                    h5.slide-item__title Дом в Дмитровском Городском округе
+
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('portfolio-1.jpg')
+                                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+
+                                        .swiper-pagination
+
+
+                        .gallery.slider-section
+                            .gallery__inner.slider-section__inner
+
+                                .section-head
+                                    .section-head__title.content__title Галерея
+                                    .swiper-nav
+                                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                                            include assets/images/icon_chevron-right-gray.svg
+                                        .swiper-nav-arrow.swiper-nav-arrow--next
+                                            include assets/images/icon_chevron-right-gray.svg
+                                .slider-section__inner-items.gallery__inner-items
+                                    .swiper
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('portfolio-1.jpg')
+                                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('portfolio-2.jpg')
+                                                    h5.slide-item__title Дом в Дмитровском Городском округе
+
+                                            .swiper-slide
+                                                .slide-item
+                                                    .slide-item__img
+                                                        +img('portfolio-1.jpg')
+                                                    h5.slide-item__title Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша
+
+                                        .swiper-pagination
+
+
+            .tabs-content.reviews
+                .info-section__content
+                    .content__title Отзывы
+                    .content__inner
+                        .reviews__action
+                            .reviews__action-icon
+                                +img('icon_reviews.svg')
+                            .reviews__action-text Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе.
+                            .reviews__action-btn
+                                button.btn.btn--yellow#leave-review Оставить свой отзыв
+                        .reviews__items
+                            .reviews__item
+                                .reviews__item-date 23.11.2023
+                                .reviews__item-client Олег
+                                .reviews__item-text
+                                    p Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую
+                                .reviews__item-read
+                                    span Подробнее
+                                    include assets/images/icon_arrow-down-sm.svg
+                            .reviews__item
+                                .reviews__item-date 23.11.2023
+                                .reviews__item-client Олег
+                                .reviews__item-text
+                                    p Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую
+                                    p Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую
+                                .reviews__item-read
+                                    span Подробнее
+                                    include assets/images/icon_arrow-down-sm.svg
+                            .reviews__item
+                                .reviews__item-date 23.11.2023
+                                .reviews__item-client Олег
+                                .reviews__item-text
+                                    p Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую
+                                .reviews__item-read
+                                    span Подробнее
+                                    include assets/images/icon_arrow-down-sm.svg
+
+                        .show-more
+                            button(type="button").btn.btn--bordered
+                                span Показать ещё отзывы
+                                include assets/images/icon_arrow-left.svg
+
+                        .reviews__leave-review
+                            .general-form__inner
+                                h3.general-form__title Оставить отзыв
+                                form
+                                    .form-row
+                                        input(type="text" name="review_name" placeholder="Имя")
+                                    .form-row
+                                        input(type="email" name="review_email" placeholder="E-mail*")
+                                    .form-row
+                                        textarea(placeholder="Отзыв*")
+                                    .form-action
+                                        button.btn.btn--yellow(type="submit") Оставить свой отзыв
+                                        p Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой
+
+    section.services-section
+        .container
+            .services-section__inner
+                .text-sticker
+                    +img('text-sticker.svg')
+                .services-sectio__inner-head.section-head
+                    h2.section-head__title Услуги
+                .services-section__inner-items.general-cards-wrapper
+
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-measure.svg')
+                        h5.card-text Замер и расчёт
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-design.svg')
+                        h5.card-text Дизайн и проектирование
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-brick.svg')
+                        h5.card-text Строительные и монтажные работы
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-storage.svg')
+                        h5.card-text Сезонное хранение материалов
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-guarantee.svg')
+                        h5.card-text Гарантийное обслуживание
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-delivery.svg')
+                        h5.card-text Доставка
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-assembly.svg')
+                        h5.card-text Монтаж террасной доски
+                    a(href='javascript:void(0)').general-card
+                        .card-icon
+                            +img('icon_service-production.svg')
+                        h5.card-text Производство террасной доски
+
+    section.components.slider-section
+        .container
+            .components__inner.slider-section__inner
+                .section-head
+                    h2.section-head__title Комплектующие
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.components__inner-products
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                        .swiper-pagination
+
+
+    section.also-buy.slider-section
+        .container
+            .also-buy__inner.slider-section__inner
+                .section-head
+                    h2.section-head__title С этим товаром покупают
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .slider-section__inner-items.also-buy__inner-products
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                            .swiper-slide
+                                include components/_product
+                        .swiper-pagination
+
+
+    section.promos.slider-section
+        .container
+            .promos__inner.slider-section__inner
+                .promos__inner-head.section-head
+                    h2.section-head__title Акции
+                    .swiper-nav
+                        .swiper-nav-arrow.swiper-nav-arrow--prev
+                            include assets/images/icon_chevron-right-gray.svg
+                        .swiper-nav-arrow.swiper-nav-arrow--next
+                            include assets/images/icon_chevron-right-gray.svg
+                .promos__inner-items.slider-section__inner-items
+                    .swiper
+                        .swiper-wrapper
+
+                            .swiper-slide
+                                a(href='promo-detail.html').general-info-item
+                                    .item-date 14-21 марта
+
+                                    .item-image
+                                        +img('promo-1.jpg')
+                                        .item-sticker
+                                            +img('star-sticker.svg')
+                                            span Акция
+                                    .item-text
+                                        h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                                        .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+
+                            .swiper-slide
+                                a(href='promo-detail.html').general-info-item
+                                    .item-date 14-21 марта
+
+                                    .item-image
+                                        +img('promo-2.jpg')
+                                        .item-sticker
+                                            +img('star-sticker.svg')
+                                            span Акция
+                                    .item-text
+                                        h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                                        .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+
+                            .swiper-slide
+                                a(href='promo-detail.html').general-info-item
+                                    .item-date 14-21 марта
+
+                                    .item-image
+                                        +img('promo-3.jpg')
+                                        .item-sticker
+                                            +img('star-sticker.svg')
+                                            span Акция
+                                    .item-text
+                                        h4.item-name Готовимся к новому строительному сезону по ценам уходящего года!
+                                        .item-description Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!
+
+
+                        .swiper-pagination
+                .slider-section__inner-action
+                    a(href='javascript:void(0)').btn.btn--yellow Все новости
+
+
+    include ./components/_faq-products-calculate
+    section.seo-block
+        .container
+            .seo-block__inner
+                .seo-block__text
+                    h2 Для СЕО
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                    p Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.
+                .seo-block__image
+                    +img('hero-bg.jpg')

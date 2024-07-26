@@ -214,9 +214,6 @@
 }
 
 .general-items + .section-head {
-  margin-top: 40px;
 
-  @include breakpoint(lg) {
-    margin-top: 60px;
-  }
+  @include sectionMarginTop;
 }

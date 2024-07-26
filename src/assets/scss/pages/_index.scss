@@ -286,7 +286,7 @@
       z-index: 0;
       transform: rotate(-41.599deg);
 
-      @include breakpointMaxCustom(1550px) {
+      @include breakpointMaxCustom(1920px) {
         display: none;
       }
     }
@@ -348,6 +348,21 @@
   }
 }
 
+.portfolio {
+  .slide-item {
+    .slide-item__img {
+      height: 225px;
+
+      @include breakpoint(lg) {
+        height: 371px;
+      }
+      @include breakpoint(xl) {
+        height: 450px;
+      }
+    }
+  }
+}
+
 .categories {
   .categories__inner {
 
@@ -365,7 +380,7 @@
             right: 20px;
             bottom: 20px;
             transform: rotate(18.91deg);
-            @include breakpointMax(lg) {
+            @include breakpointMaxCustom(1920px) {
               display: none;
             }
 
@@ -453,7 +468,7 @@
       @include breakpoint(md) {
         height: 395px;
         padding: 20px;
-        justify-content: space-between;
+        //justify-content: space-between;
       }
       @include breakpoint(lg) {
         height: 655px;
@@ -478,9 +493,11 @@
           @include breakpoint(md) {
             padding: 16px;
             font-size: 24px;
+            height: 61px;
           }
           @include breakpoint(lg) {
             font-size: 40px;
+            height: 80px;
           }
 
           &:first-child {
@@ -533,10 +550,12 @@
         @include breakpoint(md) {
           width: 80px;
           height: 80px;
+          margin-top: 16px;
         }
         @include breakpoint(lg) {
           width: 130px;
           height: 130px;
+          margin-top: 75px;
         }
       }
 
@@ -545,10 +564,17 @@
         transform: rotate(18.91deg);
         align-self: flex-end;
 
+        @include breakpoint(md) {
+          bottom: 20px;
+        }
+        @include breakpoint(lg) {
+          bottom: 40px;
+        }
+
         @include breakpoint(xl) {
-          position: relative;
+          //position: relative;
           bottom: 60px;
-          right: -100px;
+          right: -60px;
         }
       }
     }

@@ -17,7 +17,7 @@ block main
                             +img('icon_favorite-white.svg')
                         .reviews__action-text Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе.
                         .reviews__action-btn
-                            .btn.btn--yellow#leave-review(data-src="#popup-leave-review" data-fancybox) Оставить свой отзыв
+                            button.btn.btn--yellow#leave-review(type="button" data-src="#popup-leave-review" data-fancybox) Оставить свой отзыв
                     .reviews__items
                         .reviews__item
                             .reviews__item-photo
@@ -38,6 +38,6 @@ block main
                             .reviews__item-client Марина
 
                 .reviews__inner-action.show-more
-                    .btn.btn--bordered
+                    button(type="button").btn.btn--bordered
                         span Показать ещё
                         include assets/images/icon_arrow-left.svg

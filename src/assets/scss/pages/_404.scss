@@ -1,9 +1,6 @@
 .page404 {
 
-  margin-top: 40px;
-  @include breakpoint(lg) {
-    margin-top: 60px;
-  }
+  @include sectionMarginTop;
 
   .page404__inner {
     background-color: $white;

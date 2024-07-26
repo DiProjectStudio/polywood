@@ -18,8 +18,9 @@ mixin breadcrumbs(title, ...items)
                           a(href="#")= item
 
     if bodyClass != 'main-page' && title
+
         .head-title
 
             .container
 
-                h1.main-title= title
+                h1.main-title(class={ 'width-limit': bodyClass == 'product-detail-page' })= title

@@ -22,16 +22,6 @@ body b {
   color: inherit;
 }
 
-::-webkit-scrollbar {
-  //width: 0;
-  //height: 0;
-
-  @include breakpoint(lg) {
-    //width: 8px;
-    //height: 10px;
-  }
-}
-
 
 ::-webkit-scrollbar-track {
   background-color: $stroke;
@@ -45,8 +35,6 @@ body b {
 
 ::-webkit-scrollbar {
   width: 5px;
-  //cursor: pointer;
-  //height: 2px;
 }
 
 
@@ -59,7 +47,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
 main {
   min-height: calc(max(calc(100vh - 614px), 350px));
-  overflow: hidden;
+  //overflow-x: hidden;
+
+  @include breakpointMax(lg) {
+    overflow: hidden;
+  }
+
+
 }
 
 .hide {
@@ -74,20 +68,20 @@ main {
   @include flexColumn;
 }
 
-/*#page::before {
+#page::before {
   content: '';
 }
 
 #page.bg-overlay::before {
-  //background: $opacity-black-72;
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   left: 0;
   display: block;
   width: 100%;
   height: 100%;
-  z-index: 6;
-  //transition: $transition-style;
-}*/
+  z-index: 16;
+  transition: $transition-style;
+}
 
 section {
   position: relative;
@@ -131,13 +125,14 @@ input:not([type="radio"]) {
   border-radius: 100px;
   border: 0;
   height: 70px;
-  //border: 1px solid $stroke;
+
   background-color: unset;
 }
 
 input[type="number"] {
   color: $black;
   height: 48px;
+  border: 1px solid $stroke;
 }
 
 textarea {
@@ -291,12 +286,84 @@ input[type=number] {
 .general-form {
 
   &.form-shortcut {
+    .general-form__inner {
+      position: relative;
+
+      @include breakpoint(md) {
+        grid-template-columns: calc(100% / 12 * 3) calc(100% / 12 * 7);
+        justify-content: space-between;
+      }
+
+      @include breakpoint(lg) {
+        grid-template-columns: 30% calc(100% / 12 * 5) auto;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      @include breakpoint(xl) {
+        grid-template-columns: 25% calc(100% / 12 * 5) auto;
+      }
+
+      .general-form__subtitle {
+
+        @include breakpoint(md) {
+          width: unset;
+        }
+
+        @include breakpoint(lg) {
+          grid-row: 1/2;
+          grid-column: 2/3;
+          font-size: 16px;
+        }
+
+        @include breakpoint(xl) {
+          font-size: 20px;
+        }
+      }
+
+      form {
+        margin-top: 0;
+        @include breakpoint(md) {
+          grid-row: 2/3;
+          grid-column: 2/3;
+        }
+        @include breakpoint(lg) {
+          grid-row: 1/2;
+          grid-column: 3/4;
+        }
+
+        .btn {
+          padding: 16px;
+          width: 195px;
+          height: 52px;
+        }
+      }
+
+      .yellow-sticker {
+        transform: rotate(-25deg);
+
+        right: 0;
+        top: -142px;
+
+        @include breakpoint(lg) {
+          top: -85px;
+        }
+        @include breakpoint(xl) {
+          right: -50px;
+          top: -80px;
+        }
+      }
+    }
 
     .form-action {
       @include breakpoint(lg) {
         margin-top: 0;
       }
     }
+
+  }
+
+  &.form-order-call {
 
   }
 
@@ -402,17 +469,20 @@ input[type=number] {
     }
   }
 
-  /*&.btn--white-bordered {
+  &.btn--white-bordered {
     background-color: $white;
-    border-color: $black;
+    border-color: $stroke;
+    height: 52px;
 
     &:hover {
       border-color: $gray;
       color: $gray;
     }
-  }*/
+  }
+
   &.btn--bordered {
     border-color: $black;
+    background-color: transparent;
 
     &:hover {
       border-color: $gray;
@@ -432,9 +502,10 @@ input[type=number] {
 }
 
 .show-more {
+  margin: 40px auto 0;
 
   .btn {
-    margin: 40px auto 0;
+
     padding: 16px 60px;
     width: fit-content;
   }
@@ -493,9 +564,16 @@ a {
   }
 }
 
+.labels {
+  @include flexColumn;
+  gap: 4px;
+}
+
 .label {
   padding: 2px 8px 4px;
   //height: 22px;
+  width: fit-content;
+
 
   color: $white;
   font-size: 12px;
@@ -536,6 +614,7 @@ a {
   //padding: 14px 30px;
   padding: 16px 24px;
   //height: 40px;
+  cursor: pointer;
 
   font-size: 16px;
   font-weight: 700;
@@ -547,7 +626,6 @@ a {
 
   &:not(.active) {
     border-color: black;
-
   }
 
   &.active {
@@ -799,42 +877,15 @@ a {
 
 .slider-section {
   .swiper-nav {
-    /*@include breakpointMax(md) {
+    @include breakpointMax(md) {
       display: none;
     }
     position: static;
     justify-self: flex-end;
-    grid-column: 2 / 3;*/
+    grid-column: 2 / 3;
 
   }
 
-  .slider-section__inner-items {
-    .swiper {
-
-    }
-
-    .swiper-slide {
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      overflow: hidden;
-
-      .slide-item {
-        display: grid;
-        gap: 12px;
-
-        .slide-item__img {
-          border-radius: 20px;
-
-          img {
-            border-radius: inherit;
-          }
-        }
-
-
-      }
-
-    }
-  }
 
   .slider-section__inner-action {
     width: fit-content;
@@ -974,17 +1025,30 @@ a {
   }
 }
 
+.portfolio, .gallery {
+  .slide-item {
+    .slide-item__img {
+      border-radius: 25px;
+      @include breakpoint(md) {
+        border-radius: 30px;
+      }
+    }
+
+    .slide-item__title {
+      margin-top: 20px;
+    }
+  }
+}
+
 /////////////////////
 /// CARDS & CATALOG
 /////////////////////
 
 .general-cards-wrapper {
   display: grid;
-  //grid-auto-rows: 167px;
   gap: 10px;
 
   @include breakpoint(lg) {
-    //grid-auto-rows: 218px;
     gap: 20px;
   }
 }
@@ -1004,14 +1068,15 @@ a {
     padding: 30px;
   }
 
-  &::after {
+  &::after, &::before {
     content: '';
     position: absolute;
     right: 12px;
     top: 12px;
     width: 34px;
     height: 34px;
-    background: $bg url("../images/icon_chevron-right-green.svg") no-repeat center;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 16px;
     border-radius: 50%;
     transition: $transition-style;
@@ -1024,13 +1089,27 @@ a {
       right: 30px;
       top: 30px;
     }
+  }
 
+  &::after {
+    opacity: 1;
+    background-color: $bg;
+    background-image: url("../images/icon_chevron-right-green.svg");
+
+
+  }
+  &::before {
+    opacity: 0;
+    background-color: $green-light;
+    background-image: url("../images/icon_chevron-right-white.svg");
   }
 
   &:hover {
     &::after {
-      background-color: $green-light;
-      background-image: url("../images/icon_chevron-right-white.svg");
+      opacity: 0;
+    }
+    &::before {
+      opacity: 1;
     }
   }
 
@@ -1115,8 +1194,8 @@ a {
 
   &:nth-child(2) {
 
-      .card-image {
-        @include breakpoint(lg) {
+    .card-image {
+      @include breakpoint(lg) {
         @include flexCenterCenter;
 
         img {
@@ -1124,37 +1203,38 @@ a {
         }
       }
 
-        @include breakpoint(xl) {
-          position: relative;
-          top: 30px;
-        }
+      @include breakpoint(xl) {
+        position: relative;
+        top: 30px;
+      }
     }
   }
+
   &:nth-child(3) {
 
-      .card-image {
-        @include breakpoint(xl) {
-          position: relative;
-          top: 35px;
-          right: 10px;
+    .card-image {
+      @include breakpoint(xl) {
+        position: relative;
+        top: 35px;
+        right: 10px;
 
         img {
           height: 86%;
         }
       }
 
-        @include breakpoint(xl) {
-          position: relative;
-          top: 30px;
-        }
+      @include breakpoint(xl) {
+        position: relative;
+        top: 30px;
+      }
     }
   }
 
   &:nth-child(5) {
     .card-image {
       @include breakpointMax(md) {
-      position: relative;
-      top: 10px;
+        position: relative;
+        top: 10px;
 
 
       }
@@ -1187,6 +1267,7 @@ a {
 
 
   }
+
   &:nth-child(8) {
 
     .card-image {
@@ -1211,6 +1292,7 @@ a {
 
 
   }
+
   &:nth-child(9) {
     .card-image {
       position: relative;
@@ -1262,12 +1344,12 @@ a {
     border-radius: 50%;
     transition: $transition-style;
 
-     @include breakpointMax(md) {
-       display: none;
-     }
-     @include breakpoint(md) {
-       display: block;
-     }
+    @include breakpointMax(md) {
+      display: none;
+    }
+    @include breakpoint(md) {
+      display: block;
+    }
 
     @include breakpoint(md) {
       right: 30px;
@@ -1380,6 +1462,136 @@ a {
   }
 }
 
+.colors {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  @include flexAlignCenter;
+  gap: 6px;
+
+  .color {
+
+    @include backgroundParams;
+    border: 2px solid $white;
+    transition: $transition-style;
+    outline: 2px solid transparent;
+    cursor: pointer;
+
+    &.active {
+      outline: 2px solid $green-light;
+    }
+  }
+
+}
+
+.product-info {
+  .counter {
+    width: 96px;
+    height: 24px;
+
+    input {
+      border: 0;
+    }
+
+    .btn-count {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      top: calc(50% - 12px);
+
+      &.btn-subtract {
+        background-color: $gray-light;
+      }
+
+      &.btn-add {
+        background-color: $green-light;
+      }
+    }
+
+    input {
+      font-weight: 700;
+    }
+  }
+
+  .sizes, .units {
+    @include flexAlignCenter;
+    gap: 6px;
+    @include titleGeneral;
+
+    .size, .unit {
+      border-radius: 105px;
+      background-color: $gray-light;
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: $transition-style;
+
+      &.active {
+        background-color: $green-light;
+        color: $white;
+      }
+    }
+  }
+}
+
+.service-extra-options {
+  .service-option {
+    border-radius: 20px;
+    position: relative;
+    padding: 18px;
+    //height: 100%;
+    display: flex;
+    //width: fit-content;
+
+    & * {
+      border-radius: inherit;
+    }
+
+    @include breakpoint(md) {
+      padding: 20px;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+      z-index: -1;
+    }
+
+    &:hover {
+      .option-image img {
+        transform: scale(1.1);
+      }
+    }
+
+    .option-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      overflow: hidden;
+
+      img {
+        transition: $transition-cubic-bezier;
+      }
+    }
+
+    .option-title {
+      align-self: flex-end;
+      @include titleGeneral;
+      color: $white;
+      @include breakpoint(lg) {
+        font-size: 24px;
+      }
+    }
+  }
+}
 
 /////////////////////
 /// TYPOGRAPHY
