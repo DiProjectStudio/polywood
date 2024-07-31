@@ -99,13 +99,12 @@
   }
 }
 
-.licenses {
-
+.licenses, .docs {
   position: relative;
 
   .yellow-sticker {
     top: -70px;
-    right: 0;
+    right: 20px;
     transform: rotate(-21.619deg);
 
     @include breakpoint(lg) {
@@ -113,9 +112,13 @@
       width: 140px;
     }
     @include breakpoint(xl) {
+      right: 0;
       top: -140px;
     }
   }
+}
+
+.licenses {
 
   .section-head {
     @include breakpoint(lg) {

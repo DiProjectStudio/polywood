@@ -126,12 +126,13 @@
       @include breakpointMax(lg) {
         display: none;
       }
-      right: 0;
+      right: 20px;
       width: 140px;
       top: -82px;
       transform: rotate(-28.248deg);
 
       @include breakpoint(xl) {
+        right: 0;
         top: -90px;
       }
     }

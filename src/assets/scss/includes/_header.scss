@@ -26,6 +26,9 @@
       grid-template-columns: 1fr 268px;
       gap: 20px;
     }
+    @include breakpoint(xl) {
+      grid-template-columns: 1fr 350px;
+    }
 
     .header__content {
       display: grid;
@@ -204,6 +207,7 @@
             font-weight: 800;
             color: $green-light;
             border-bottom: 1px solid $green-light;
+            cursor: pointer;
           }
 
           &.dealers {
@@ -311,35 +315,57 @@
       }
     }
 
-    .header__search {
-      @include breakpointMax(lg) {
-        display: none;
-      }
+    .header__search-block {
       order: 3;
+      top: 130px;
+      width: calc(100% - (var(--container) * 2));
 
-      .header__search-input {
+      @include breakpoint(md) {
+        top: 170px;
+      }
+
+
+      @include breakpointMax(lg) {
+        position: fixed;
+        right: -100%;
+      }
+
+      @include breakpoint(lg) {
+        top: unset;
+        width: unset;
+      }
+
+
+      transition: $transition-style;
+
+      &.active {
+        right: var(--container);
+      }
+
+
+      .search-block__wrapper form {
         position: relative;
+      }
+
+      .search-icon-wrapper {
+        position: absolute;
+        background-color: $white;
+        top: calc(50% - 12px);
+        right: 16px;
 
         svg {
-          position: absolute;
-          top: calc(50% - 12px);
-          right: 16px;
-
           path {
             stroke: $green-light;
           }
         }
-
-        form {
-          //margin-bottom: 0;
-        }
       }
+
     }
 
   }
 }
 
-.header__menu, .header__catalog-secondary, .header__category {
+.header__menu, .header__catalog, .header__submenu, .header__category {
   &.active {
     .header-wrapper {
       left: 0;
@@ -394,17 +420,18 @@
 
   @include breakpoint(lg) {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 20px);
     width: 100%;
+    //width: 97%;
     left: -150%;
     transition: all .6s ease-out;
 
-    padding: 20px 30px;
-    border-radius: 0 0 20px 20px;
+    padding: 20px;
+    border-radius: 30px;
     background: $white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 4px 4px 4px 0 rgba(47, 48, 63, 0.05);;
 
-    .header__catalog-secondary {
+    .header__catalog, .header__submenu {
 
       .menu-nav__catalog .menu-nav__list {
         flex-direction: column;
@@ -419,32 +446,10 @@
 
           a, .link {
             text-decoration: none;
-
-            @include breakpoint(lg) {
-              img {
-                display: none;
-              }
-            }
           }
-
 
           a img {
             display: flex;
-          }
-
-          &::after {
-            width: 16px;
-            height: 16px;
-            display: block;
-            position: absolute;
-            right: 0;
-            top: calc(50% - 8px);
-            content: '';
-            //background-image: url("../images/icon_sidebar-arrow.svg");
-            @include backgroundParams;
-            transform: rotate(0);
-            transition: transform .3s ease;
-            z-index: 0;
           }
 
           &.active {
@@ -501,13 +506,30 @@
 
 }
 
+#menu, #catalog {
+  .list-item:not(.contacts) {
+    &::after {
+      display: block;
+      content: "";
+      background: url("../images/icon_chevron-right-green.svg") center no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
 .header-wrapper {
   width: 100%;
   display: flex;
   background-color: white;
+  gap: 20px;
 
   @include breakpoint(md) {
-    width: calc(100% / 12 * 7);
+    width: 367px;
   }
 
   @include breakpointMax(lg) {
@@ -520,7 +542,6 @@
     left: -100%;
     height: 100%;
     transition: all .7s ease;
-    //background-color: $gray-5;
   }
 
   &.header__menu-wrapper {
@@ -538,11 +559,12 @@
 
   }
 
-  &.header__catalog-wrapper, &.header__category-wrapper {
-    gap: 20px;
+  &.header__catalog-wrapper, &.header__category-wrapper, &.header__submenu-wrapper {
+    //gap: 20px;
 
     .header__menu-title {
       order: 2;
+      @include titleGeneral;
       font-size: 20px;
 
       @include breakpoint(lg) {
@@ -558,15 +580,6 @@
 
       &:last-child {
         border-bottom: 0;
-      }
-
-      .item-subcategories {
-        padding-top: 15px;
-        border-top: 1px solid $stroke;
-      }
-
-      .subcategory ~ .subcategory {
-        margin-top: 10px;
       }
     }
   }
@@ -586,6 +599,10 @@
   .header__menu-actions {
     order: 1;
 
+    .menu-action {
+      cursor: pointer;
+    }
+
     @include flexCenterBetween;
     @include breakpoint(lg) {
       display: none;
@@ -604,11 +621,8 @@
     }
 
     .header__menu-back {
-      background-color: $white;
-
-      svg {
-        transform: rotate(-180deg);
-      }
+      @include flexAlignCenter;
+      gap: 10px;
     }
   }
 
@@ -617,9 +631,6 @@
 
 .menu-nav__catalog {
   order: 2;
-  @include breakpointMax(lg) {
-    margin-top: 20px;
-  }
 
   .menu-nav__list {
 
@@ -632,6 +643,13 @@
       @include flexCenterBetween;
       padding: 12px 0;
       font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        a {
+          color: $green-light;
+        }
+      }
 
       @include breakpointMax(lg) {
         border-bottom: 1px solid $stroke;
@@ -654,25 +672,70 @@
 
         a {
 
-          @include breakpointMax(lg) {
-            svg {
-              &:first-child {
-                display: block;
-              }
-
-              &:nth-child(2) {
-                display: none;
-              }
+          svg {
+            &:first-child {
+              display: block;
             }
+
+            &:nth-child(2) {
+              display: none;
+            }
+
+            path {
+              stroke: $black;
+            }
+          }
+
+          /*img{
+            &:first-child {
+              display: block;
+            }
+
+            &:nth-child(2) {
+              display: none;
+            }
+          }*/
+
+          @include breakpointMax(lg) {
+
           }
           @include breakpoint(lg) {
             svg {
               &:first-child {
-                display: none;
+                //display: block;
               }
 
               &:nth-child(2) {
-                display: block;
+                //display: block;
+
+
+              }
+            }
+          }
+
+        }
+
+        &:hover {
+          a svg {
+            path {
+              stroke: $green-light;
+            }
+          }
+        }
+
+        @include breakpoint(lg) {
+          &.active {
+            a {
+              color: $black;
+
+              svg {
+                &:first-child {
+                  display: none;
+                }
+
+                &:nth-child(2) {
+                  display: block;
+                }
 
                 path {
                   stroke: $black;
@@ -680,29 +743,79 @@
               }
             }
           }
-
         }
-      }
 
-      &::after {
-        display: block;
-        content: "";
-        background: url("../images/icon_chevron-right-green.svg") center no-repeat;
-        background-size: contain;
-        width: 20px;
-        height: 20px;
-        @include breakpoint(lg) {
-          display: none;
-        }
       }
 
 
       a {
         @include flexAlignCenter;
-        gap: 10px;
+        gap: 16px;
 
         svg path {
           stroke: $green-light;
+        }
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+
+#catalog .menu-nav__list.catalog-list, #submenu .menu-nav__list.submenu-list {
+  @include breakpoint(lg) {
+    display: block;
+    column-count: 3;
+    column-gap: 30px;
+
+    .list-item ~ .list-item {
+      border-top: 0;
+    }
+
+
+    .list-item {
+      flex-direction: column;
+      align-items: unset;
+      break-inside: avoid;
+
+      &:hover a {
+        color: $black;
+      }
+
+      // внутренний список, который переместили из #category
+
+      .menu-nav__list {
+        margin-top: 20px;
+
+        .list-item ~ .list-item {
+          margin-top: 10px;
+        }
+
+        .list-item {
+          padding: 0;
+          font-weight: 400;
+          line-height: normal;
+          width: 95%;
+
+          &:hover a {
+            color: $green-light;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+#submenu .menu-nav__list.submenu-list {
+  @include breakpoint(lg) {
+    .list-item {
+      &:hover {
+        a {
+          color: $green-light;
         }
       }
     }

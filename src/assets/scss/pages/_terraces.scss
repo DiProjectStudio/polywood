@@ -1,48 +1,27 @@
 // TERRACE DETAIL
-.hero.hero-terraces {
-  .hero__inner {
-
-    @include breakpoint(md) {
-      grid-template-columns: 60% 25%;
-    }
-    @include breakpoint(lg) {
-      grid-template-columns: 36% 1fr;
-    }
-    @include breakpoint(xl) {
-      column-gap: 20px;
-      grid-template-columns: 43% 1fr;
-    }
-
-    .hero-bg img {
-      //object-position: right;
-    }
-
-    .info-title {
-      font-size: 35px;
+.hero {
+  &.hero-terraces,  &.hero-terraces-detail {
+    .hero__inner {
 
       @include breakpoint(md) {
-        font-size: 40px;
+        grid-template-columns: 60% 25%;
       }
       @include breakpoint(lg) {
-        font-size: 45px;
+        grid-template-columns: 36% 1fr;
       }
       @include breakpoint(xl) {
-        font-size: 50px;
+        column-gap: 20px;
+        grid-template-columns: 43% 1fr;
       }
 
-      span {
+      .hero-bg img {
+        //object-position: right;
+      }
 
-        letter-spacing: unset;
-        //line-height: 150%;
-
-        font-size: 16px;
-
-        @include breakpoint(xl) {
-          font-size: 20px;
-        }
-
+      .hero__inner-info {
 
       }
+
     }
   }
 }

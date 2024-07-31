@@ -94,6 +94,12 @@
       grid-column: 2/3;
       grid-row: 2/4;
     }
+
+    &.accordion__items {
+      .accordion__visible {
+      align-items: center;
+      }
+    }
   }
 
   .yellow-sticker {
@@ -126,6 +132,12 @@
     @include breakpoint(lg) {
       grid-auto-rows: 218px;
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    .general-card {
+      @include breakpointMax(md) {
+      padding: 12px;
+      }
     }
   }
 }

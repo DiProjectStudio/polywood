@@ -47,7 +47,7 @@
         @include breakpoint(lg) {
           top: 0;
         }
-        @include breakpointCustom(1530px) {
+        @include breakpoint(hd) {
           top: 25px;
           right: -55px;
         }
@@ -107,7 +107,7 @@
       bottom: -50px;
       right: 40px;
 
-      @include breakpointCustom(1530px) {
+      @include breakpoint(hd) {
         right: -55px;
       }
     }

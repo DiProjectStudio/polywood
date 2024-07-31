@@ -25,7 +25,7 @@ block header
                         a(href="tel:74951095209").header-contact.mos +7 495 109-52-09
                         a(href="tel:88005055209").header-contact.rus 8 800 505-52-09
                         .header-contact.order-call(data-src="#popup-order-call", data-fancybox) Заказать звонок
-                        .header-contact.dealers
+                        a(href='javascript:void(0)').header-contact.dealers
                             include ../assets/images/icon_user.svg
                             span Для дилеров
                     a(href='cart.html').header__cart
@@ -62,14 +62,16 @@ block header
                                 .header__menu-actions
                                     .header__menu-close.menu-action#menu-close
                                         include ../assets/images/icon_close.svg
-                                nav.header__menu-nav.menu-nav__catalog
+                                nav.header__menu-nav.menu-nav__catalog.main-catalog
                                     ul.menu-nav__list
                                         li.list-item.catalog(data-category="catalog")
                                             a(href='javascript:void(0)').link.link--black
                                                 include ../assets/images/icon_menu.svg
+                                                //+img('icon_menu.svg')
                                                 include ../assets/images/icon_close.svg
+                                                //+img('icon_close-black.svg')
                                                 span Каталог
-                                        li.list-item.all-products(data-category="terraces")
+                                        li.list-item(data-category="terraces")
                                             a(href='terraces.html').link.link--black
                                                 span Террасы под ключ
                                         li.list-item(data-category="services")
@@ -91,243 +93,348 @@ block header
                                             a(href='contacts.html').link.link--black
                                                 span Контакты
 
+                        .header__catalog#catalog
+                            .header__catalog-wrapper.header-wrapper
+                                .header__menu-title(data-category="catalog") Каталог
 
-                        //.header__catalog-secondary#catalog
-                        //    .header__catalog-wrapper.header-wrapper
-                        //        .header__menu-title(data-category="all-products") Все товары
-                        //
-                        //        .header__menu-actions
-                        //            .header__menu-back.menu-action#catalog-back
-                        //                include ../assets/images/icon_chevron-right.svg
-                        //            .header__menu-close.menu-action#catalog-close.btn.btn--mint-bg
-                        //                include ../assets/images/icon_close.svg
-                        //        nav.header__menu-nav.menu-nav__catalog
-                        //            ul.menu-nav__list
-                        //                li.list-item(data-category="bedroom")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Спальни
-                        //                li.list-item(data-category="kids")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_baby.svg')
-                        //                        span Детские
-                        //                li.list-item(data-category="kitchen")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_kitchen.svg')
-                        //                        span Кухни
-                        //                li.list-item(data-category="living-room")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_living-room.svg')
-                        //                        span Гостиные
-                        //                li.list-item(data-category="teen-room")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_teenager.svg')
-                        //                        span Подростковые
-                        //                li.list-item(data-category="entrance-hall")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_shoe.svg')
-                        //                        span Прихожие
-                        //                li.list-item(data-category="mattresses")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_mattress.svg')
-                        //                        span Матрасы
-                        //                li.list-item(data-category="sofa")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_sofa.svg')
-                        //                        span Мягкая мебель
-                        //                li.list-item.sale(data-category="sale")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_fire.svg')
-                        //                        span Распродажа
-                        //                li.list-item(data-category="wall-panels")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_brick-wall.svg')
-                        //                        span Стеновые панели
-                        //                li.list-item(data-category="collections")
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_collections.svg')
-                        //                        span Коллекции
-                        //
-                        //.header__category#category
-                        //    .header__category-wrapper.header-wrapper
-                        //        .header__menu-title(data-category="collections") Коллекции
-                        //        .header__menu-title(data-category="kitchen") Кухни
-                        //        .header__menu-title(data-category="bedroom") Спальни
-                        //        .header__menu-title(data-category="living-room") Гостиные
-                        //        .header__menu-title(data-category="sofa") Мягкая мебель
-                        //        .header__menu-title(data-category="entrance-hall") Прихожие
-                        //        .header__menu-title(data-category="kids") Детские
-                        //        .header__menu-title(data-category="mattresses") Матрасы
-                        //        .header__menu-title(data-category="teen-room") Подростковые
-                        //        .header__menu-title(data-category="wall-panels") Стеновые панели
-                        //
-                        //        .header__menu-actions
-                        //            .header__menu-back.menu-action#category-back
-                        //                include ../assets/images/icon_chevron-right.svg
-                        //            .header__menu-close.menu-action#category-close.btn.btn--mint-bg
-                        //                //include ../assets/images/icon_close.svg
-                        //        nav.header__menu-nav.menu-nav__catalog
-                        //            ul.menu-nav__list(data-category="bedroom")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория спальни
-                        //                    nav
-                        //                        ul.item-subcategories
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Двуспальные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Кровати с подъёмным механизмом
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Мягкие кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Полуторные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Односпальные кровати
-                        //
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //
-                        //                    nav
-                        //                        ul.item-subcategories
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Двуспальные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Кровати с подъёмным механизмом
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Мягкие кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Полуторные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Односпальные кровати
-                        //
-                        //
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //
-                        //                    nav
-                        //                        ul.item-subcategories
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Двуспальные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Кровати с подъёмным механизмом
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Мягкие кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Полуторные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Односпальные кровати
-                        //
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //
-                        //            ul.menu-nav__list(data-category="kids")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория для Детские
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория для Детские
-                        //                    nav
-                        //                        ul.item-subcategories
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Двуспальные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Кровати с подъёмным механизмом
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Мягкие кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Полуторные кровати
-                        //                            li.subcategory
-                        //                                a(href='javascript:void(0)').link.link--black Односпальные кровати
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория для Детские
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория для Детские
-                        //            ul.menu-nav__list(data-category="kitchen")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория
-                        //            ul.menu-nav__list(data-category="living-room")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Гостиные
-                        //            ul.menu-nav__list(data-category="teen-room")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Подростковые
-                        //            ul.menu-nav__list(data-category="entrance-hall")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Прихожие
-                        //            ul.menu-nav__list(data-category="mattresses")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Матрасы
-                        //            ul.menu-nav__list(data-category="sofa")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Мягкая мебель
-                        //            ul.menu-nav__list(data-category="sale")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Распродажа
-                        //            ul.menu-nav__list(data-category="wall-panels")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Стеновые панели
-                        //            ul.menu-nav__list(data-category="collections")
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Коллекции
-                        //                li.list-item
-                        //                    a(href='javascript:void(0)').link.link--black
-                        //                        +img('icon_bed.svg')
-                        //                        span Подкатегория Коллекции
+                                .header__menu-actions
+                                    .header__menu-back.menu-action#catalog-back
+                                        include ../assets/images/icon_arrow-left-menu.svg
+                                        span Назад
+                                    .header__menu-close.menu-action#catalog-close.btn.btn--mint-bg
+                                        include ../assets/images/icon_close.svg
+                                nav.header__menu-nav.menu-nav__catalog
+                                    ul.menu-nav__list.catalog-list(data-category="catalog")
+                                        li.list-item(data-category="timber")
+                                            a(href='terraces-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Террасная доска из ДПК
+                                        li.list-item(data-category="fence")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_fence.svg')
+                                                span Заборы и ограждения
+                                        li.list-item(data-category="ladder")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_ladder.svg')
+                                                span Ступени из ДПК
+                                        li.list-item(data-category="siding")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_siding.svg')
+                                                span Сайдинг ДПК
+                                        li.list-item(data-category="pillar")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_pillar.svg')
+                                                span Регулируемые опоры
+                                        li.list-item(data-category="shed")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_shed.svg')
+                                                span Навесы, перголы, беседки
+                                        li.list-item(data-category="rattan-furniture")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_rattan-furniture.svg')
+                                                span Искусственный ротанг
+                                        li.list-item(data-category="garden-bed")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_garden-bed.svg')
+                                                span Грядки из ДПК
+                                        li.list-item.sale(data-category="components")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_components.svg')
+                                                span Комплектующие
+                                        li.list-item(data-category="tree")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_tree.svg')
+                                                span Террасная доска из дерева
+                                        li.list-item(data-category="weave")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_weave.svg')
+                                                span Полимерная лоза
+                                        li.list-item(data-category="sale")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_discount.svg')
+                                                span Распродажа
+                                        li.list-item(data-category="novelties")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_star.svg')
+                                                span Новинки
+                                        li.list-item(data-category="promos")
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_fire.svg')
+                                                span Акции
 
-                .header__search
-                    .header__search-input
-                        input(type="search" placeholder="Поиск")
-                        include ../assets/images/icon_search.svg
+
+
+                        .header__submenu#submenu
+                            .header__submenu-wrapper.header-wrapper
+                                .header__menu-title(data-category="terraces") Террасы под ключ
+                                .header__menu-title(data-category="services") Услуги
+                                .header__menu-title(data-category="projects") Наши проекты
+                                .header__menu-title(data-category="info") Информация
+                                .header__menu-title(data-category="engineering") Инжиниринг
+                                .header__menu-title(data-category="about") О нас
+
+
+                                .header__menu-actions
+                                    .header__menu-back.menu-action#submenu-back
+                                        include ../assets/images/icon_arrow-left-menu.svg
+                                        span Назад
+                                    .header__menu-close.menu-action#submenu-close.btn.btn--mint-bg
+                                        include ../assets/images/icon_close.svg
+                                nav.header__menu-nav.menu-nav__catalog
+                                    ul.menu-nav__list.submenu-list(data-category="terraces")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Для дома и дачи
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Для ресторана и кафе
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_timber.svg')
+                                                span На кровле и балконе
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Пирсы и причалы
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_timber.svg')
+                                                span У бассейна
+                                    ul.menu-nav__list.submenu-list(data-category="services")
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-measure.svg')
+                                                span Замер и расчёты
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-design.svg')
+                                                span Дизайн и проектирование
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-brick.svg')
+                                                span Строительство террасы, веранды
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-storage.svg')
+                                                span Сезонное хранение материалов
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-guarantee.svg')
+                                                span Гарантийное обслуживание
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-delivery.svg')
+                                                span Доставка
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-production.svg')
+                                                span Производство террасной доски
+                                        li.list-item
+                                            a(href='service-detail.html').link.link--black
+                                                +img('icon_service-assembly.svg')
+                                                span Монтаж террасной доски
+                                    ul.menu-nav__list.submenu-list(data-category="projects")
+                                        li.list-item
+                                            a(href='projects-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Открытые террасы
+                                        li.list-item
+                                            a(href='projects-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Патио
+                                        li.list-item
+                                            a(href='projects-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Телепроекты и знаменитости
+                                        li.list-item
+                                            a(href='projects-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Террасы на крыше дома
+                                        li.list-item
+                                            a(href='projects-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Дорожки
+                                        li.list-item
+                                            a(href='projects-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Заборы и ограждения из ДПК
+                                        li.list-item
+                                            a(href='projects-detail.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Кафе и рестораны
+                                    ul.menu-nav__list.submenu-list(data-category="info")
+                                        li.list-item
+                                            a(href='promos.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Акции
+                                        li.list-item
+                                            a(href='news.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Новости
+                                        li.list-item
+                                            a(href='articles.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Статьи
+                                        li.list-item
+                                            a(href='faq.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Вопрос-ответ
+                                        li.list-item
+                                            a(href='instructions.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Инструкции
+                                        li.list-item
+                                            a(href='payment.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Оплата
+                                    ul.menu-nav__list.submenu-list(data-category="engineering")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_eng-1.svg')
+                                                span Технологическое сопровождение
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_eng-2.svg')
+                                                span Разбор рекламаций
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_eng-3.svg')
+                                                span Инновационные технологии
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_eng-4.svg')
+                                                span Оборудование для производства ДПК
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_eng-5.svg')
+                                                span Сырьё для производства ДПК
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                +img('icon_eng-6.svg')
+                                                span Коммерческий консалтинг
+                                    ul.menu-nav__list.submenu-list(data-category="about")
+                                        li.list-item
+                                            a(href='docs.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Документы
+                                        li.list-item
+                                            a(href='products-benefits.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Преимущества
+                                        li.list-item
+                                            a(href='licenses.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Лицензии
+                                        li.list-item
+                                            a(href='partners.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Партнёры
+                                        li.list-item
+                                            a(href='clients.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Клиенты
+                                        li.list-item
+                                            a(href='reviews.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Отзывы
+                                        li.list-item
+                                            a(href='partnership.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Сотрудничество
+                                        li.list-item
+                                            a(href='vacancies.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Вакансии
+                                        li.list-item
+                                            a(href='requisites.html').link.link--black
+                                                +img('icon_timber.svg')
+                                                span Реквизиты
+                        .header__category#category
+                            .header__category-wrapper.header-wrapper
+                                .header__menu-title(data-category="timber") Террасная доска из ДПК
+                                .header__menu-title(data-category="fence") Заборы и ограждения
+                                .header__menu-title(data-category="ladder") Ступени из ДПК
+                                .header__menu-title(data-category="siding") Сайдинг ДПК
+                                .header__menu-title(data-category="pillar") Регулируемые опоры
+                                .header__menu-title(data-category="shed") Навесы, перголы, беседки
+                                .header__menu-title(data-category="rattan-furniture") Искусственный ротанг
+                                .header__menu-title(data-category="garden-bed") Грядки из ДПК
+                                .header__menu-title(data-category="components") Комплектующие
+                                .header__menu-title(data-category="tree") Террасная доска из дерева
+                                .header__menu-title(data-category="weave") Полимерная лоза
+
+                                .header__menu-actions
+                                    .header__menu-back.menu-action#category-back
+                                        include ../assets/images/icon_arrow-left-menu.svg
+                                        span Назад
+                                    .header__menu-close.menu-action#category-close
+                                        include ../assets/images/icon_close.svg
+                                nav.header__menu-nav.menu-nav__catalog
+                                    ul.menu-nav__list.category-list(data-category="timber")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Полимерная доска Polywood
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Доска террасная полимерная MEGAWOOD и EASYDECK
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Доска для террасы TWINSON
+                                    ul.menu-nav__list.category-list(data-category="fence")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория для Детские
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория для Детские
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория для Детские
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория для Детские
+                                    ul.menu-nav__list.category-list(data-category="ladder")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+                                    ul.menu-nav__list.category-list(data-category="siding")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+                                    ul.menu-nav__list.category-list(data-category="pillar")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+                                    ul.menu-nav__list.category-list(data-category="shed")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория Прихожие
+                                    ul.menu-nav__list.category-list(data-category="rattan-furniture")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+                                    ul.menu-nav__list.category-list(data-category="garden-bed")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+                                    ul.menu-nav__list.category-list(data-category="components")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+                                    ul.menu-nav__list.category-list(data-category="tree")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+                                    ul.menu-nav__list.category-list(data-category="weave")
+                                        li.list-item
+                                            a(href='javascript:void(0)').link.link--black
+                                                span Подкатегория
+
+                .header__search-block
+                    .search-block__wrapper
+                        form
+                            input#search-input(type="search" placeholder="Поиск")
+                            button(type="submit").search-icon-wrapper
+                                include ../assets/images/icon_search.svg

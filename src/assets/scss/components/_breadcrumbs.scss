@@ -2,8 +2,8 @@
   padding: 20px var(--container) 0;
 
   @include breakpoint(xl) {
-    padding-left: calc((100vw - 1400px) / 2);;
-    padding-right: calc((100vw - 1400px) / 2);;
+    //padding-left: calc((100vw - 1400px) / 2);;
+    //padding-right: calc((100vw - 1400px) / 2);;
   }
 
   //margin-bottom: 40px;
@@ -21,7 +21,6 @@
   white-space: nowrap;
   @include textLimit(1);
   @include flexAlignCenter;
-  //max-width: 200px;
 }
 
 .breadcrumbs-item {

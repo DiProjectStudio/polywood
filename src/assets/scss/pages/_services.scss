@@ -2,31 +2,20 @@
 .hero.hero-service {
   .hero__inner {
 
+    @include breakpoint(md) {
+      grid-template-columns: 60% 25%;
+    }
+    @include breakpoint(lg) {
+      grid-template-columns: 36% 1fr;
+    }
+    @include breakpoint(xl) {
+      column-gap: 20px;
+      grid-template-columns: 45% 1fr;
+    }
     .hero-bg img {
       object-position: right;
     }
 
-    .info-title {
-      font-size: 35px;
-
-      @include breakpoint(md) {
-        font-size: 40px;
-      }
-      @include breakpoint(lg) {
-        font-size: 45px;
-      }
-      @include breakpoint(xl) {
-        font-size: 50px;
-      }
-
-      span {
-        font-size: 16px;
-
-        @include breakpoint(md) {
-          font-size: 20px;
-        }
-      }
-    }
   }
 }
 

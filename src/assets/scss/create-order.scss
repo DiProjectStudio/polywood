@@ -1,0 +1,473 @@
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/fonts';
+
+.displayNone,
+#bx-soa-basket,
+.form-check-group,
+.bx-soa-reference,
+#bx-soa-main-notifications,
+.bx-soa-coupon,
+#bx-soa-orderSave .main-user-consent-request-announce-link,
+.btn.btn-primary.btn-lg.d-none.d-sm-inline-block,
+.col-md-5.mb-lg-0.col-12.mb-3.order-md-2.order-1.bx-soa-pp-desc-container,
+.bx-soa-custom-label, .bx-soa-customer-label {
+  display: none;
+}
+
+#bx-soa-total-mobile {
+  display: none !important;
+}
+
+.cart__inner-content .col-lg-8.col-md-7.bx-soa {
+  display: grid;
+  gap: 10px;
+}
+
+.bx-soa-section {
+  padding: 20px 10px;
+  //background-color: $gray-5;
+  border-radius: 10px;
+  @include breakpoint(lg) {
+    padding: 20px;
+  }
+
+  &.bx-active {
+    @include flexColumn;
+    gap: 20px;
+
+    .bx-soa-section-title-container {
+      @include flexCenterBetween;
+
+      .bx-soa-editstep {
+        @include titleGeneral;
+        //color: $mint-1;
+        //border-bottom: 1px solid $mint-1;
+        transition: $transition-style;
+
+        &:hover {
+          //color: $pink;
+          //border-bottom: 1px solid $pink;
+        }
+      }
+
+      div {
+        &:not(.bx-soa-section-title) {
+          @include flexAlignCenter;
+          gap: 20px;
+        }
+      }
+
+    }
+
+    .bx-soa-section-content {
+      p {
+        @include flexColumn;
+        gap: 4px;
+      }
+    }
+  }
+
+  &.bx-step-completed {
+    .bx-soa-section-content {
+      .bx-soa-pp-company-selected {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .alert.alert-danger {
+    color: red;
+  }
+
+
+}
+
+.has-error {
+  .tooltip-inner {
+    display: none;
+  }
+  .bx-soa-tooltip.bx-soa-tooltip-static.bx-soa-tooltip-danger.tooltip.top {
+    //display: none!important;
+    //order: 2;
+    //color: red;
+    //font-size: 12px;
+    //padding-left: 5px;
+  }
+
+  input.form-control {
+    border-color: red!important;
+    &::placeholder {
+      color: red!important;
+    }
+  }
+}
+
+.bx-soa-more-btn {
+  display: flex;
+  margin-top: 20px;
+
+  @include breakpointMax(lg) {
+    font-size: 14px;
+  }
+
+  .btn.btn--mint-border {
+    background-color: transparent;
+  }
+
+  .pull-right {
+    margin-left: auto;
+  }
+}
+
+.bx-soa-section-title {
+  @include titleGeneral;
+  @include flexAlignCenter;
+  gap: 10px;
+
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
+
+  .bx-soa-section-title-count {
+    position: relative;
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 4px;
+    //background-color: $pink;
+  }
+
+  .bx-soa-section-title-count::after {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: 0;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    transition: all .3s ease;
+    content: '';
+    //content: counter(heading);
+    //counter-increment: heading;
+    text-align: center;
+  }
+
+  .bx-soa-section-title-count::before {
+    position: absolute;
+    right: -5px;
+    bottom: -2px;
+    display: none;
+    width: 10px;
+    height: 10px;
+    content: "";
+  }
+}
+
+
+#bx-soa-region {
+  .bx_soa_location {
+    .col:first-child {
+      display: flex;
+      gap: 10px;
+
+      @include breakpointMax(lg) {
+        flex-direction: column;
+      }
+
+      @include breakpoint(lg) {
+        .bx-soa-location-input-container {
+          width: 50%;
+        }
+      }
+
+      .bx-soa-location-input-container[data-property-id-row="6"] {
+
+        .tooltip-inner {
+          display: none;
+        }
+
+        //display: none;
+        .bx-sls {
+
+          border: 1px solid $stroke;
+          border-radius: 8px;
+          font: normal 600 14px / 160% $mainFont!important;
+          color: $black;
+          padding: 0;
+          width: 100%;
+          background-color: $white;
+
+          .dropdown-block {
+            border: 0;
+            box-shadow: unset;
+            background-color: transparent;
+            padding: 10px 16px;
+          }
+
+          .bx-ui-sls-pane {
+            border-color: $stroke;
+            border-radius: 8px;
+            top: 100%;
+            bottom: unset;
+          }
+
+          .dropdown-icon {
+            display: none;
+          }
+
+          .bx-ui-sls-fake, .bx-ui-sls-route {
+            padding: 0;
+            height: 100%;
+            font-family: $mainFont!important;
+          }
+
+          .bx-ui-sls-clear {
+            margin-top: 7px;
+            right: 3px;
+            z-index: 20;
+          }
+
+        }
+      }
+
+      .bx-soa-location-input-container[data-property-id-row="5"] {
+        display: none;
+      }
+    }
+  }
+
+  .bx-soa-section-title-count::after {
+    content: '1';
+  }
+}
+
+
+.bx-soa-pp {
+  display: grid;
+  gap: 10px;
+}
+
+.bx-soa-section-title-container {
+  background: none;
+}
+
+.bx-soa-pp-company {
+  padding: 12px 10px;
+  @include flexColumn;
+  gap: 10px;
+  height: 100%;
+  @include breakpointMax(lg) {
+    font-size: 14px;
+  }
+
+  .bx-soa-pp-company-subTitle, .bx-soa-pp-company-smalltitle {
+    @include titleGeneral;
+
+  }
+
+  .bx-soa-pp-company-desc {
+    font-size: 12px;
+    line-height: 160%;
+  }
+
+  .bx-soa-pp-list-description {
+    @include titleGeneral;
+    //color: $mint-1;
+    margin-top: auto;
+  }
+
+  &.col-6 {
+    border-radius: 10px;
+    background-color: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-transition: var(--transition-style);
+    transition: var(--transition-style);
+
+    .bx-soa-pp-delivery-cost {
+      display: none !important;
+    }
+
+    &.bx-selected {
+      //border-color: var(--color-mint-1)
+    }
+  }
+
+}
+
+
+.bx-soa-pp-desc-container {
+  border-radius: 10px;
+  background-color: $white;
+  border: 1px solid transparent;
+  transition: $transition-style;
+
+  &.active {
+    //border-color: $mint-1;
+  }
+}
+
+#bx-soa-delivery .bx-soa-pp {
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(3, calc(100% / 6 * 2 - 10px));
+  }
+}
+
+#bx-soa-delivery {
+  .bx-soa-section-title-count::after {
+    content: '2';
+  }
+}
+
+
+#bx-soa-paysystem .bx-soa-pp {
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(2, calc(50% - 10px));
+  }
+}
+
+#bx-soa-paysystem {
+  .bx-soa-section-title-count::after {
+    content: '3';
+  }
+}
+
+#bx-soa-properties.bx-active {
+  .bx-soa-section-content {
+    p {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    p ~ p {
+      margin-top: 10px;
+    }
+  }
+}
+
+#bx-soa-properties {
+
+  .row {
+    display: grid;
+    gap: 10px;
+
+    .bx-soa-tooltip {
+      display: none;
+    }
+
+
+  }
+
+  .bx-soa-customer {
+    display: grid;
+    gap: 10px;
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .bx-soa-customer-field {
+        &:last-child {
+          //grid-column: 1/3;
+        }
+      }
+    }
+
+  }
+
+  .bx-soa-section-title-count::after {
+    content: '4';
+  }
+}
+
+#bx-soa-order {
+
+  display: grid;
+  row-gap: 20px;
+
+  @include breakpoint(md) {
+    justify-content: space-between;
+    column-gap: 10px;
+    grid-template-columns: calc(100% / 12 * 8 - 5px) calc(100% / 12 * 4 - 5px);
+  }
+  @include breakpoint(xl) {
+    grid-template-columns: calc(100% / 12 * 7 - 5px) calc(100% / 12 * 4 - 5px);
+  }
+}
+
+
+#bx-soa-total {
+  .bx-soa-cart-total-line {
+    margin-top: 8px;
+    @include flexCenterBetween;
+    line-height: 160%;
+
+    @include breakpointMax(lg) {
+      font-size: 14px;
+    }
+
+    &:nth-child(2n) {
+      margin-top: 24px;
+    }
+
+    &.bx-soa-cart-total-line-total {
+      @include titleGeneral;
+      font-size: 20px;
+      margin-bottom: 30px;
+
+      .bx-soa-cart-d {
+        //color: $black;
+      }
+    }
+  }
+
+  .bx-soa-cart-total-button-container {
+    width: 100%;
+
+    .btn {
+      margin: 30px 0 10px;
+      width: 100%;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: initial;
+    }
+  }
+}
+
+.cart__inner-total .col .cart__inner-total {
+  padding: 0;
+}
+
+
+
+.basket-coupon-alert-section {
+  margin-top: 10px;
+}
+
+.basket-coupon-alert {
+  gap: 5px;
+  display: grid;
+
+
+  .basket-coupon-text {
+    font-size: 14px;
+
+  }
+
+  &.text-danger {
+    //color: red;
+  }
+
+  .close-link {
+    cursor: pointer;
+     //color: $mint-1;
+
+    &:hover {
+      //color: $pink;
+    }
+  }
+}

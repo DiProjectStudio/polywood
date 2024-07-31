@@ -910,14 +910,15 @@
         .show-more {
           margin-top: 20px;
 
-          @include breakpoint(md) {
-            width: 327px;
-          }
 
           .btn {
             padding: 16px;
             width: 100%;
             height: 70px;
+
+            @include breakpoint(md) {
+              width: 327px;
+            }
           }
 
 
