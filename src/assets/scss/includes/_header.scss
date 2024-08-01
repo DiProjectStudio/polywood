@@ -373,6 +373,14 @@
   }
 
 }
+.header__menu {
+  &.active {
+    .header__menu-nav.main-catalog .menu-nav__list {
+      //display: block;
+    }
+  }
+
+}
 
 .header__bg {
   display: none;
@@ -407,15 +415,6 @@
 
   @include breakpointMax(lg) {
     position: relative;
-    #menu {
-      //order: 1;
-    }
-    #catalog {
-      //order: 2;
-    }
-    #category {
-      //order: 3;
-    }
   }
 
   @include breakpoint(lg) {

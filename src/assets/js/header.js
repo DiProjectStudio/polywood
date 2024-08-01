@@ -24,6 +24,10 @@ $(document).ready(function () {
 
   $('#burger').on('click', () => {
     $('#menu').toggleClass('active');
+    if ($('#menu').hasClass('active')) {
+      $('.header__menu-nav.main-catalog .menu-nav__list').css('display', 'block');
+    }
+    // $('.header__menu-nav.main-catalog .menu-nav__list').css('display', 'block');
     checkActiveAndToggleHeaderBg();
     headerBgElement.show();
   });
@@ -158,6 +162,9 @@ $(document).ready(function () {
     // Клик на элемент меню - переход в каталог
     $('#menu .list-item[data-category="catalog"]').on('click', function () {
       $('#menu').removeClass('active');
+      let category = $(this).data('category');
+      // $('.header__menu-nav.main-catalog .menu-nav__list').css('display', 'none');
+      $('.header__menu-title[data-category="' + category + '"], .menu-nav__list[data-category="' + category + '"]').show();
       $('#catalog').addClass('active');
       headerBgElement.show();
     });
@@ -204,7 +211,7 @@ $(document).ready(function () {
     });
 
 
-    $('#catalog-close, #menu-close, #category-close,#submenu-close , .header__bg').on('click', function () {
+    $('#catalog-close, #menu-close, #category-close, #submenu-close , .header__bg').on('click', function () {
       $('#menu, #catalog, #category, #submenu').removeClass('active');
       headerBgElement.hide();
     });
