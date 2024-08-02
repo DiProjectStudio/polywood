@@ -423,6 +423,7 @@
         @include flexCenterCenter;
         width: 40px;
         height: 40px;
+        cursor: pointer;
 
 
         @include breakpointMax(md) {

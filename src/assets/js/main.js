@@ -41,7 +41,7 @@ $(document).ready(function () {
 
   // СОРТИРОВКА ТОВАРОВ
   let defaultText = $('.catalog-section__sorting .option:first').text();
-  $('.catalog-section__sorting .sorting-select span').text(defaultText);
+  $('.catalog-section__sorting.sorting-select span').text(defaultText);
 
   $('.catalog-section__sorting .option').on('click', function (event) {
     event.stopPropagation();
@@ -113,12 +113,12 @@ $(document).ready(function () {
 
     if (tabsContentEl.eq(index).hasClass('reviews')) {
       $('.reviews__item-text').each(function () {
-        // handleReadMore($(this), $(this).closest('.reviews__item').find('.reviews__item-read'), 140);
+        handleReadMore($(this), $(this).closest('.reviews__item').find('.reviews__item-read'), 96);
       });
 
-      $('.reviews__content').on('click', '.reviews__item-read', function () {
+      $('.reviews__content').off('click', '.reviews__item-read').on('click', '.reviews__item-read', function () {
         let $textElement = $(this).closest('.reviews__item').find('.reviews__item-text');
-        // toggleTextCollapse($(this), $textElement, 'Свернуть', 'Показать ещё');
+        toggleTextCollapse($(this), $textElement, 'Свернуть', 'Показать ещё');
       });
     }
   });
@@ -154,9 +154,6 @@ $(document).ready(function () {
 
 
   // REVIEWS
-  $('.reviews__item-text').each(function () {
-    handleReadMore($(this), $(this).closest('.reviews__item').find('.reviews__item-read'), 96);
-  });
 
   function handleReadMore($textElement, $readMoreButton, maxHeight) {
     if ($textElement[0].scrollHeight > maxHeight) {
