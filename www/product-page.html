@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polywood | Товар</title>
+    <!-- Fonts::Start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap">
+    <!-- Fonts::End-->
+    <!-- Styles::Start-->
+    <link rel="stylesheet" href="assets/css/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/create-order.min.css">
+    <!-- Styles::End-->
+    <!-- Yandex Map-->
+</head>
+
+<body class="product-detail-page">
+    <div class="page" id="page">
+        <!-- Header::Start-->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__content"><a class="header__logo" href="/"><img src="assets/images/logo.svg" alt="">
+                            <div class="header__slogan">
+                                <p>Производитель террасной доски и сайдинга с 2017 года!</p>
+                            </div>
+                        </a>
+                        <div class="header__location"><img src="assets/images/icon_pin.svg" alt=""><span>Санкт-Петербург</span>
+                        </div>
+                        <div class="header__service"><span>производство</span><span>строительство</span><span>проектирование</span></div>
+                        <div class="header__contacts"><a class="header-contact mos" href="tel:74951095209">+7 495 109-52-09</a><a class="header-contact rus" href="tel:88005055209">8 800 505-52-09</a>
+                            <div class="header-contact order-call" data-src="#popup-order-call" data-fancybox>Заказать звонок</div><a class="header-contact dealers" href="javascript:void(0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.12104 17.8037C7.15267 16.6554 9.4998 16 12 16C14.5002 16 16.8473 16.6554 18.879 17.8037M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg><span>Для дилеров</span></a>
+                        </div><a class="header__cart" href="cart.html">
+                            <div class="cart-wrapper"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.75 3H5.75L6.15 5M7.75 13H17.75L21.75 5H6.15M7.75 13L6.15 5M7.75 13L5.45711 15.2929C4.82714 15.9229 5.27331 17 6.16421 17H17.75M17.75 17C16.6454 17 15.75 17.8954 15.75 19C15.75 20.1046 16.6454 21 17.75 21C18.8546 21 19.75 20.1046 19.75 19C19.75 17.8954 18.8546 17 17.75 17ZM9.75 19C9.75 20.1046 8.85457 21 7.75 21C6.64543 21 5.75 20.1046 5.75 19C5.75 17.8954 6.64543 17 7.75 17C8.85457 17 9.75 17.8954 9.75 19Z" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="cart-count"><span>1</span></div>
+                        </a>
+                    </div>
+                    <div class="header__bar">
+                        <div class="header__bar-item" id="burger"><a href="javascript:void(0)"><img src="assets/images/icon_menu.svg" alt=""><span>Меню</span></a></div>
+                        <div class="header__bar-item" id="search"><a href="javascript:void(0)"><img src="assets/images/icon_search.svg" alt=""><span>Поиск</span></a></div>
+                        <div class="header__bar-item"><a href="/"><img src="assets/images/icon_home.svg" alt=""><span>Главная</span></a></div>
+                        <div class="header__bar-item"><a href="cart.html"><img src="assets/images/icon_cart.svg" alt=""><span>Корзина</span></a></div>
+                    </div>
+                    <div class="common-wrapper">
+                        <div class="wrapper">
+                            <div class="header__bg"></div>
+                            <div class="header__menu" id="menu">
+                                <div class="header__menu-wrapper header-wrapper">
+                                    <div class="header__menu-actions">
+                                        <div class="header__menu-close menu-action" id="menu-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 18L18 6M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <nav class="header__menu-nav menu-nav__catalog main-catalog">
+                                        <ul class="menu-nav__list">
+                                            <li class="list-item catalog" data-category="catalog"><a class="link link--black" href="javascript:void(0)"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.25 6H20.25M4.25 12H20.25M4.25 18H20.25" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <!--+img('icon_menu.svg')--><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 18L18 6M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <!--+img('icon_close-black.svg')--><span>Каталог</span></a></li>
+                                            <li class="list-item" data-category="terraces"><a class="link link--black" href="terraces.html"><span>Террасы под ключ</span></a></li>
+                                            <li class="list-item" data-category="services"><a class="link link--black" href="services.html"><span>Услуги</span></a></li>
+                                            <li class="list-item" data-category="projects"><a class="link link--black" href="projects.html"><span>Наши проекты</span></a></li>
+                                            <li class="list-item" data-category="info"><a class="link link--black" href="info.html"><span>Информация</span></a></li>
+                                            <li class="list-item" data-category="engineering"><a class="link link--black" href="engineering.html"><span>Инжиниринг</span></a></li>
+                                            <li class="list-item" data-category="about"><a class="link link--black" href="about.html"><span>О нас</span></a></li>
+                                            <li class="list-item contacts" data-category="contacts"><a class="link link--black" href="contacts.html"><span>Контакты</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header__catalog" id="catalog">
+                                <div class="header__catalog-wrapper header-wrapper">
+                                    <div class="header__menu-title" data-category="catalog">Каталог</div>
+                                    <div class="header__menu-actions">
+                                        <div class="header__menu-back menu-action" id="catalog-back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 16L3 12M3 12L7 8M3 12L21 12" stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg><span>Назад</span>
+                                        </div>
+                                        <div class="header__menu-close menu-action btn btn--mint-bg" id="catalog-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 18L18 6M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <nav class="header__menu-nav menu-nav__catalog">
+                                        <ul class="menu-nav__list catalog-list" data-category="catalog">
+                                            <li class="list-item" data-category="timber"><a class="link link--black" href="terraces-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Террасная доска из ДПК</span></a></li>
+                                            <li class="list-item" data-category="fence"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_fence.svg" alt=""><span>Заборы и ограждения</span></a></li>
+                                            <li class="list-item" data-category="ladder"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_ladder.svg" alt=""><span>Ступени из ДПК</span></a></li>
+                                            <li class="list-item" data-category="siding"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_siding.svg" alt=""><span>Сайдинг ДПК</span></a></li>
+                                            <li class="list-item" data-category="pillar"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_pillar.svg" alt=""><span>Регулируемые опоры</span></a></li>
+                                            <li class="list-item" data-category="shed"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_shed.svg" alt=""><span>Навесы, перголы, беседки</span></a></li>
+                                            <li class="list-item" data-category="rattan-furniture"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_rattan-furniture.svg" alt=""><span>Искусственный ротанг</span></a></li>
+                                            <li class="list-item" data-category="garden-bed"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_garden-bed.svg" alt=""><span>Грядки из ДПК</span></a></li>
+                                            <li class="list-item sale" data-category="components"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_components.svg" alt=""><span>Комплектующие</span></a></li>
+                                            <li class="list-item" data-category="tree"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_tree.svg" alt=""><span>Террасная доска из дерева</span></a></li>
+                                            <li class="list-item" data-category="weave"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_weave.svg" alt=""><span>Полимерная лоза</span></a></li>
+                                            <li class="list-item" data-category="sale"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_discount.svg" alt=""><span>Распродажа</span></a></li>
+                                            <li class="list-item" data-category="novelties"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_star.svg" alt=""><span>Новинки</span></a></li>
+                                            <li class="list-item" data-category="promos"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_fire.svg" alt=""><span>Акции</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header__submenu" id="submenu">
+                                <div class="header__submenu-wrapper header-wrapper">
+                                    <div class="header__menu-title" data-category="terraces">Террасы под ключ</div>
+                                    <div class="header__menu-title" data-category="services">Услуги</div>
+                                    <div class="header__menu-title" data-category="projects">Наши проекты</div>
+                                    <div class="header__menu-title" data-category="info">Информация</div>
+                                    <div class="header__menu-title" data-category="engineering">Инжиниринг</div>
+                                    <div class="header__menu-title" data-category="about">О нас</div>
+                                    <div class="header__menu-actions">
+                                        <div class="header__menu-back menu-action" id="submenu-back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 16L3 12M3 12L7 8M3 12L21 12" stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg><span>Назад</span>
+                                        </div>
+                                        <div class="header__menu-close menu-action btn btn--mint-bg" id="submenu-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 18L18 6M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <nav class="header__menu-nav menu-nav__catalog">
+                                        <ul class="menu-nav__list submenu-list" data-category="terraces">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_timber.svg" alt=""><span>Для дома и дачи</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_timber.svg" alt=""><span>Для ресторана и кафе</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_timber.svg" alt=""><span>На кровле и балконе</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_timber.svg" alt=""><span>Пирсы и причалы</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_timber.svg" alt=""><span>У бассейна</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list submenu-list" data-category="services">
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-measure.svg" alt=""><span>Замер и расчёты</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-design.svg" alt=""><span>Дизайн и проектирование</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-brick.svg" alt=""><span>Строительство террасы, веранды</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-storage.svg" alt=""><span>Сезонное хранение материалов</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-guarantee.svg" alt=""><span>Гарантийное обслуживание</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-delivery.svg" alt=""><span>Доставка</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-production.svg" alt=""><span>Производство террасной доски</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="service-detail.html"><img src="assets/images/icon_service-assembly.svg" alt=""><span>Монтаж террасной доски</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list submenu-list" data-category="projects">
+                                            <li class="list-item"><a class="link link--black" href="projects-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Открытые террасы</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="projects-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Патио</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="projects-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Телепроекты и знаменитости</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="projects-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Террасы на крыше дома</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="projects-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Дорожки</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="projects-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Заборы и ограждения из ДПК</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="projects-detail.html"><img src="assets/images/icon_timber.svg" alt=""><span>Кафе и рестораны</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list submenu-list" data-category="info">
+                                            <li class="list-item"><a class="link link--black" href="promos.html"><img src="assets/images/icon_timber.svg" alt=""><span>Акции</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="news.html"><img src="assets/images/icon_timber.svg" alt=""><span>Новости</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="articles.html"><img src="assets/images/icon_timber.svg" alt=""><span>Статьи</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="faq.html"><img src="assets/images/icon_timber.svg" alt=""><span>Вопрос-ответ</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="instructions.html"><img src="assets/images/icon_timber.svg" alt=""><span>Инструкции</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="payment.html"><img src="assets/images/icon_timber.svg" alt=""><span>Оплата</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list submenu-list" data-category="engineering">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_eng-1.svg" alt=""><span>Технологическое сопровождение</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_eng-2.svg" alt=""><span>Разбор рекламаций</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_eng-3.svg" alt=""><span>Инновационные технологии</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_eng-4.svg" alt=""><span>Оборудование для производства ДПК</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_eng-5.svg" alt=""><span>Сырьё для производства ДПК</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><img src="assets/images/icon_eng-6.svg" alt=""><span>Коммерческий консалтинг</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list submenu-list" data-category="about">
+                                            <li class="list-item"><a class="link link--black" href="docs.html"><img src="assets/images/icon_timber.svg" alt=""><span>Документы</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="products-benefits.html"><img src="assets/images/icon_timber.svg" alt=""><span>Преимущества</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="licenses.html"><img src="assets/images/icon_timber.svg" alt=""><span>Лицензии</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="partners.html"><img src="assets/images/icon_timber.svg" alt=""><span>Партнёры</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="clients.html"><img src="assets/images/icon_timber.svg" alt=""><span>Клиенты</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="reviews.html"><img src="assets/images/icon_timber.svg" alt=""><span>Отзывы</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="partnership.html"><img src="assets/images/icon_timber.svg" alt=""><span>Сотрудничество</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="vacancies.html"><img src="assets/images/icon_timber.svg" alt=""><span>Вакансии</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="requisites.html"><img src="assets/images/icon_timber.svg" alt=""><span>Реквизиты</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header__category" id="category">
+                                <div class="header__category-wrapper header-wrapper">
+                                    <div class="header__menu-title" data-category="timber"><a href="terraces-detail.html">Террасная доска из ДПК</a></div>
+                                    <div class="header__menu-title" data-category="fence"><a href="terraces-detail.html">Заборы и ограждения</a></div>
+                                    <div class="header__menu-title" data-category="ladder"><a href="terraces-detail.html">Ступени из ДПК</a></div>
+                                    <div class="header__menu-title" data-category="siding"><a href="terraces-detail.html">Сайдинг ДПК</a></div>
+                                    <div class="header__menu-title" data-category="pillar"><a href="terraces-detail.html">Регулируемые опоры</a></div>
+                                    <div class="header__menu-title" data-category="shed"><a href="terraces-detail.html">Навесы, перголы, беседки</a></div>
+                                    <div class="header__menu-title" data-category="rattan-furniture"><a href="terraces-detail.html">Искусственный ротанг</a></div>
+                                    <div class="header__menu-title" data-category="garden-bed"><a href="terraces-detail.html">Грядки из ДПК</a></div>
+                                    <div class="header__menu-title" data-category="components"><a href="terraces-detail.html">Комплектующие</a></div>
+                                    <div class="header__menu-title" data-category="tree"><a href="terraces-detail.html">Террасная доска из дерева</a></div>
+                                    <div class="header__menu-title" data-category="weave"><a href="terraces-detail.html">Полимерная лоза</a></div>
+                                    <div class="header__menu-actions">
+                                        <div class="header__menu-back menu-action" id="category-back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 16L3 12M3 12L7 8M3 12L21 12" stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg><span>Назад</span>
+                                        </div>
+                                        <div class="header__menu-close menu-action" id="category-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 18L18 6M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <nav class="header__menu-nav menu-nav__catalog">
+                                        <ul class="menu-nav__list category-list" data-category="timber">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Полимерная доска Polywood</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Доска террасная полимерная MEGAWOOD и EASYDECK</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Доска для террасы TWINSON</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="fence">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория для Детские</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория для Детские</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория для Детские</span></a></li>
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория для Детские</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="ladder">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="siding">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="pillar">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="shed">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория Прихожие</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="rattan-furniture">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="garden-bed">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="components">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="tree">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                        <ul class="menu-nav__list category-list" data-category="weave">
+                                            <li class="list-item"><a class="link link--black" href="javascript:void(0)"><span>Подкатегория</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__search-block">
+                        <div class="search-block__wrapper">
+                            <form>
+                                <input id="search-input" type="search" placeholder="Поиск">
+                                <button class="search-icon-wrapper" type="submit"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.75 21L15.75 15M17.75 10C17.75 13.866 14.616 17 10.75 17C6.88401 17 3.75 13.866 3.75 10C3.75 6.13401 6.88401 3 10.75 3C14.616 3 17.75 6.13401 17.75 10Z" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header::End-->
+        <!-- Main::Start-->
+        <main id="main">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs-wrapper">
+                        <div class="breadcrumbs-item"><a href="/">Главная</a></div>
+                        <div class="breadcrumbs-item"><a href="#">Террасная доска из ДПК</a></div>
+                        <div class="breadcrumbs-item"><span>Террасная доска из ДПК POLYWOOD™ UNO графит 3 метра</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="head-title">
+                <div class="container">
+                    <h1 class="main-title width-limit">Террасная доска из ДПК POLYWOOD™ UNO графит 3 метра</h1>
+                </div>
+            </div>
+            <section class="product-page">
+                <div class="container">
+                    <div class="product-page__inner">
+                        <div class="yellow-sticker"><img src="assets/images/yellow-sticker.svg" alt="">
+                        </div>
+                        <div class="product-page__product">
+                            <div class="product-part-1">
+                                <div class="product-slider">
+                                    <div class="labels">
+                                        <div class="label label-yellow">Акция</div>
+                                        <div class="label label-green">Много</div>
+                                    </div>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="slide-image" data-src="assets/images/product-1.png" data-fancybox="gallery1"><img src="assets/images/product-1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="slide-image" data-src="assets/images/product-1.png" data-fancybox="gallery1"><img src="assets/images/product-1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="slide-image" data-src="assets/images/product-1.png" data-fancybox="gallery1"><img src="assets/images/product-1.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-nav">
+                                            <div class="swiper-nav-arrow swiper-nav-arrow--prev disabled"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-nav-arrow swiper-nav-arrow--next"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-services">
+                                    <div class="service">
+                                        <div class="service-icon"><img src="assets/images/icon_services-return.svg" alt="">
+                                            <div class="hint-icon">?</div>
+                                        </div>
+                                        <div class="hint">
+                                            <div class="hint-wrapper">
+                                                <div class="hint-title">Гарантия возврата товара</div>
+                                                <div class="hint-text">Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <div class="service-icon"><img src="assets/images/icon_services-blueprint.svg" alt="">
+                                            <div class="hint-icon">?</div>
+                                        </div>
+                                        <div class="hint">
+                                            <div class="hint-wrapper">
+                                                <div class="hint-title">Гарантия возврата товара</div>
+                                                <div class="hint-text">Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <div class="service-icon"><img src="assets/images/icon_services-diamond.svg" alt="">
+                                            <div class="hint-icon">?</div>
+                                        </div>
+                                        <div class="hint">
+                                            <div class="hint-wrapper">
+                                                <div class="hint-title">Гарантия возврата товара</div>
+                                                <div class="hint-text">Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <div class="service-icon"><img src="assets/images/icon_services-engineer.svg" alt="">
+                                            <div class="hint-icon">?</div>
+                                        </div>
+                                        <div class="hint">
+                                            <div class="hint-wrapper">
+                                                <div class="hint-title">Гарантия возврата товара</div>
+                                                <div class="hint-text">Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <div class="service-icon"><img src="assets/images/icon_services-interior.svg" alt="">
+                                            <div class="hint-icon">?</div>
+                                        </div>
+                                        <div class="hint">
+                                            <div class="hint-wrapper">
+                                                <div class="hint-title">Гарантия возврата товара</div>
+                                                <div class="hint-text">Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <div class="service-icon"><img src="assets/images/icon_services-truck.svg" alt="">
+                                            <div class="hint-icon">?</div>
+                                        </div>
+                                        <div class="hint">
+                                            <div class="hint-wrapper">
+                                                <div class="hint-title">Гарантия возврата товара</div>
+                                                <div class="hint-text">Мы уверены в высочайшем качестве декинга, выпускаемого под маркой POLYWOOD™, но если качество доски Вас не устроило, Вы можете вернуть или обменять Заказ в полном объёме в течение 60 дней, если не нарушен товарный вид и заводская упаковка товара. Контроль качества внешнего вида и приемка продукции происходит на складе компании «Поливуд» в городе Москва</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-part-2">
+                                <div class="product-info">
+                                    <div class="info-item info-colors">
+                                        <p>Цвет</p>
+                                        <div class="colors">
+                                            <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                            <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                            <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                            <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="info-item info-size">
+                                        <p>Размер</p>
+                                        <div class="sizes">
+                                            <div class="size">3 м</div>
+                                            <div class="size active">4 м</div>
+                                            <div class="size">5 м</div>
+                                        </div>
+                                    </div>
+                                    <div class="info-item info-unit">
+                                        <p>Выберите единицу измерения</p>
+                                        <div class="units">
+                                            <div class="unit">шт</div>
+                                            <div class="unit active"> м<sup>2</sup></div>
+                                            <div class="unit">п.м</div>
+                                        </div>
+                                    </div>
+                                    <div class="info-item info-price">
+                                        <div class="price-meter">
+                                            <p>Цена за <sup>м2</sup>:</p>
+                                            <div class="price-block">
+                                                <div class="price-new">100 000 ₽</div>
+                                                <div class="price-old">200 000 ₽</div>
+                                            </div>
+                                        </div>
+                                        <div class="price-description">
+                                            <p>Акционная цена действительна только при заказе террасной доски вместе с крепёжными элементами.</p>
+                                        </div>
+                                        <div class="price-total">
+                                            <p>Итого заказ 30 пог.м:&nbsp;<span>3 000 000 ₽</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="info-item info-actions">
+                                        <div class="action">
+                                            <p>Количество:</p>
+                                            <div class="counter">
+                                                <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="action">
+                                            <div class="btn btn--yellow addToCart">В корзину</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-pay-delivery">
+                                    <div class="pay-delivery-item pay">
+                                        <p><b>Способы оплаты:</b> Наличные, Банковский перевод, Visa, Mastercard, МИР</p>
+                                    </div>
+                                    <div class="pay-delivery-item delivery">
+                                        <p><b>Доставка:</b> По всей России и странам СНГ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-extra-options service-extra-options"><a class="service-option" href="javascript:void(0)">
+                                    <div class="option-image"><img src="assets/images/calculate-option-3.jpg" alt="">
+                                    </div>
+                                    <h6 class="option-title">Калькулятор террас</h6>
+                                </a><a class="service-option" href="javascript:void(0)">
+                                    <div class="option-image"><img src="assets/images/calculate-option-1.jpg" alt="">
+                                    </div>
+                                    <h6 class="option-title">Бесплатный проект по вашему эскизу</h6>
+                                </a><a class="service-option" href="javascript:void(0)">
+                                    <div class="option-image"><img src="assets/images/calculate-option-4.jpg" alt="">
+                                    </div>
+                                    <h6 class="option-title">Бесплатные образцы продукции</h6>
+                                </a><a class="service-option" href="javascript:void(0)">
+                                    <div class="option-image"><img src="assets/images/calculate-option-2.jpg" alt="">
+                                    </div>
+                                    <h6 class="option-title">Заказать видеоконсультацию (Whatsapp/ Telegram/ Viber)</h6>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="product-info-tabs">
+                <div class="container">
+                    <div class="tabs-block">
+                        <div class="tabs">
+                            <div class="product-tab tab active">Описание</div>
+                            <div class="product-tab tab">Характеристики</div>
+                            <div class="product-tab tab">Документы</div>
+                            <div class="product-tab tab">Пример использования</div>
+                            <div class="product-tab tab">Отзывы <span>(10)</span></div>
+                        </div>
+                    </div>
+                    <div class="tabs-content description active">
+                        <div class="info-section__content">
+                            <div class="content__title">Описание</div>
+                            <div class="content__inner">
+                                <p>Шовный пустотелый профиль POLYWOOD™ NEO с обработкой поверхности мелкий вельвет оттенков венге и графит прочный, долговечный, не деформируется от влажности или жары.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content characteristics">
+                        <div class="info-section__content">
+                            <div class="content__title">Характеристики</div>
+                            <div class="content__inner">
+                                <div class="table">
+                                    <div class="table-wrapper">
+                                        <div class="table-row">
+                                            <div class="cell">Страна производитель</div>
+                                            <div class="cell">Россия</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="cell">Профиль</div>
+                                            <div class="cell">145</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="cell">Ширина, мм</div>
+                                            <div class="cell">2000</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="cell">Глубина, мм</div>
+                                            <div class="cell">200</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="cell">Высота, мм</div>
+                                            <div class="cell">600</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="cell">Расход на 1 кв. м, пог.м</div>
+                                            <div class="cell">2.7</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="cell">Длина, метров</div>
+                                            <div class="cell">6.67</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content docs">
+                        <div class="info-section__content">
+                            <div class="content__inner">
+                                <div class="product-docs slider-section">
+                                    <div class="product-docs__inner slider-section__inner">
+                                        <div class="section-head">
+                                            <div class="section-head__title content__title">Документы</div>
+                                            <div class="swiper-nav">
+                                                <div class="swiper-nav-arrow swiper-nav-arrow--prev"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <div class="swiper-nav-arrow swiper-nav-arrow--next"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-section__inner-items portfolio__inner-items">
+                                            <div class="swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/product-doc.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/product-doc.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/product-doc.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/product-doc.png" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content usage">
+                        <div class="info-section__content">
+                            <div class="content__inner">
+                                <div class="portfolio slider-section">
+                                    <div class="portfolio__inner slider-section__inner">
+                                        <div class="section-head">
+                                            <div class="section-head__title content__title">Проекты</div>
+                                            <div class="swiper-nav">
+                                                <div class="swiper-nav-arrow swiper-nav-arrow--prev"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <div class="swiper-nav-arrow swiper-nav-arrow--next"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-section__inner-items portfolio__inner-items">
+                                            <div class="swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/portfolio-1.jpg" alt="">
+                                                            </div>
+                                                            <h5 class="slide-item__title">Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/portfolio-2.jpg" alt="">
+                                                            </div>
+                                                            <h5 class="slide-item__title">Дом в Дмитровском Городском округе</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/portfolio-1.jpg" alt="">
+                                                            </div>
+                                                            <h5 class="slide-item__title">Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery slider-section">
+                                    <div class="gallery__inner slider-section__inner">
+                                        <div class="section-head">
+                                            <div class="section-head__title content__title">Галерея</div>
+                                            <div class="swiper-nav">
+                                                <div class="swiper-nav-arrow swiper-nav-arrow--prev"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <div class="swiper-nav-arrow swiper-nav-arrow--next"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-section__inner-items gallery__inner-items">
+                                            <div class="swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/portfolio-1.jpg" alt="">
+                                                            </div>
+                                                            <h5 class="slide-item__title">Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/portfolio-2.jpg" alt="">
+                                                            </div>
+                                                            <h5 class="slide-item__title">Дом в Дмитровском Городском округе</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="slide-item">
+                                                            <div class="slide-item__img"><img src="assets/images/portfolio-1.jpg" alt="">
+                                                            </div>
+                                                            <h5 class="slide-item__title">Терраса из доски ДПК POLYWOOD DUO цвет графит в городе Икша</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content reviews">
+                        <div class="info-section__content">
+                            <div class="content__title">Отзывы</div>
+                            <div class="content__inner">
+                                <div class="reviews__action">
+                                    <div class="reviews__action-icon"><img src="assets/images/icon_reviews.svg" alt="">
+                                    </div>
+                                    <div class="reviews__action-text">Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе.</div>
+                                    <div class="reviews__action-btn">
+                                        <button class="btn btn--yellow" id="leave-review">Оставить свой отзыв</button>
+                                    </div>
+                                </div>
+                                <div class="reviews__items">
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-date">23.11.2023</div>
+                                        <div class="reviews__item-client">Олег</div>
+                                        <div class="reviews__item-text">
+                                            <p>Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую</p>
+                                        </div>
+                                        <div class="reviews__item-read"><span>Подробнее</span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.3307 9.16667L7.99739 12.5M7.99739 12.5L4.66406 9.16667M7.99739 12.5L7.9974 4.5" stroke="#599A39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-date">23.11.2023</div>
+                                        <div class="reviews__item-client">Олег</div>
+                                        <div class="reviews__item-text">
+                                            <p>Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую</p>
+                                            <p>Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую</p>
+                                            <p>Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую</p>
+                                        </div>
+                                        <div class="reviews__item-read"><span>Подробнее</span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.3307 9.16667L7.99739 12.5M7.99739 12.5L4.66406 9.16667M7.99739 12.5L7.9974 4.5" stroke="#599A39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-date">23.11.2023</div>
+                                        <div class="reviews__item-client">Олег</div>
+                                        <div class="reviews__item-text">
+                                            <p>Делаем веранду в загородном доме, решили заказать террасные доски. Друг занимается ремонтом 7 лет, посоветовал брать здесь. Покупали Polywood UNO. Заказ я оформлял на сайте, всё прошло быстро и без проблем. Доставили через день. Очень порадовала цена, если захотите что-то брать здесь для ремонта или строительства, то лучше это делать сейчас, потому что хорошие скидки. В общем всем рекомендую</p>
+                                        </div>
+                                        <div class="reviews__item-read"><span>Подробнее</span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.3307 9.16667L7.99739 12.5M7.99739 12.5L4.66406 9.16667M7.99739 12.5L7.9974 4.5" stroke="#599A39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <button class="btn btn--bordered" type="button"><span>Показать ещё отзывы</span><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.5 19L3.5 12M3.5 12L10.5 5M3.5 12L21.5 12" stroke="#292929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="reviews__leave-review">
+                                    <div class="general-form__inner">
+                                        <h3 class="general-form__title">Оставить отзыв</h3>
+                                        <form>
+                                            <div class="form-row">
+                                                <input type="text" name="review_name" placeholder="Имя">
+                                            </div>
+                                            <div class="form-row">
+                                                <input type="email" name="review_email" placeholder="E-mail*">
+                                            </div>
+                                            <div class="form-row">
+                                                <textarea placeholder="Отзыв*"></textarea>
+                                            </div>
+                                            <div class="form-action">
+                                                <button class="btn btn--yellow" type="submit">Оставить свой отзыв</button>
+                                                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services-section">
+                <div class="container">
+                    <div class="services-section__inner">
+                        <div class="text-sticker"><img src="assets/images/text-sticker.svg" alt="">
+                        </div>
+                        <div class="services-sectio__inner-head section-head">
+                            <h2 class="section-head__title">Услуги</h2>
+                        </div>
+                        <div class="services-section__inner-items general-cards-wrapper"><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-measure.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Замер и расчёт</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-design.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Дизайн и проектирование</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-brick.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Строительные и монтажные работы</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-storage.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Сезонное хранение материалов</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-guarantee.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Гарантийное обслуживание</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-delivery.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Доставка</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-assembly.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Монтаж террасной доски</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_service-production.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Производство террасной доски</h5>
+                            </a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="components slider-section">
+                <div class="container">
+                    <div class="components__inner slider-section__inner">
+                        <div class="section-head">
+                            <h2 class="section-head__title">Комплектующие</h2>
+                            <div class="swiper-nav">
+                                <div class="swiper-nav-arrow swiper-nav-arrow--prev"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="swiper-nav-arrow swiper-nav-arrow--next"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-section__inner-items components__inner-products">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="also-buy slider-section">
+                <div class="container">
+                    <div class="also-buy__inner slider-section__inner">
+                        <div class="section-head">
+                            <h2 class="section-head__title">С этим товаром покупают</h2>
+                            <div class="swiper-nav">
+                                <div class="swiper-nav-arrow swiper-nav-arrow--prev"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="swiper-nav-arrow swiper-nav-arrow--next"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-section__inner-items also-buy__inner-products">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product"><a class="product-image" href="product-page.html"><img src="assets/images/product-1.png" alt="">
+                                                <div class="labels">
+                                                    <div class="label label-yellow">Акция</div>
+                                                    <div class="label label-green">Много</div>
+                                                </div>
+                                                <div class="colors">
+                                                    <div class="color active" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                    <div class="color" style="background-image: url('assets/images/color-1.png')"></div>
+                                                </div>
+                                            </a>
+                                            <div class="product-info"><a class="info-title" href="product-page.html">
+                                                    <p class="category">Террасная доска ДПК</p>
+                                                    <p class="name">POLYWOOD™ MINERAL DUO 3D графит 4 метра</p>
+                                                </a>
+                                                <div class="info-resistance">Ударная стойкость: <span>Высокая</span></div>
+                                                <div class="info-size">
+                                                    <p>Размер</p>
+                                                    <div class="sizes">
+                                                        <div class="size">3 м</div>
+                                                        <div class="size active">4 м</div>
+                                                        <div class="size">5 м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-price price-block">
+                                                    <div class="price-new">100 000 ₽</div>
+                                                    <div class="price-old">200 000 ₽</div>
+                                                </div>
+                                                <div class="info-quantity">
+                                                    <div class="counter">
+                                                        <div class="btn-count btn-subtract"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.3337 8H2.66699" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input class="counter" type="number" data-default="1" data-min="0" data-max="10000000" value="1">
+                                                        <div class="btn-count btn-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.00033 2.66675V13.3334M13.3337 8.00008L2.66699 8.00008" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-unit">
+                                                    <p>Ед. измерения</p>
+                                                    <div class="units">
+                                                        <div class="unit">шт</div>
+                                                        <div class="unit active"> м<sup>2</sup></div>
+                                                        <div class="unit">п.м</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-actions">
+                                                    <div class="btn btn--yellow addToCart">В корзину</div><a class="btn btn--gray" href="calculator.html">Рассчитать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="promos slider-section">
+                <div class="container">
+                    <div class="promos__inner slider-section__inner">
+                        <div class="promos__inner-head section-head">
+                            <h2 class="section-head__title">Акции</h2>
+                            <div class="swiper-nav">
+                                <div class="swiper-nav-arrow swiper-nav-arrow--prev"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="swiper-nav-arrow swiper-nav-arrow--next"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 3L8 6.5L4.5 10" stroke="#494949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promos__inner-items slider-section__inner-items">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><a class="general-info-item" href="promo-detail.html">
+                                            <div class="item-date">14-21 марта</div>
+                                            <div class="item-image"><img src="assets/images/promo-1.jpg" alt="">
+                                                <div class="item-sticker"><img src="assets/images/star-sticker.svg" alt=""><span>Акция</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-text">
+                                                <h4 class="item-name">Готовимся к новому строительному сезону по ценам уходящего года!</h4>
+                                                <div class="item-description">Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!</div>
+                                            </div>
+                                        </a></div>
+                                    <div class="swiper-slide"><a class="general-info-item" href="promo-detail.html">
+                                            <div class="item-date">14-21 марта</div>
+                                            <div class="item-image"><img src="assets/images/promo-2.jpg" alt="">
+                                                <div class="item-sticker"><img src="assets/images/star-sticker.svg" alt=""><span>Акция</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-text">
+                                                <h4 class="item-name">Готовимся к новому строительному сезону по ценам уходящего года!</h4>
+                                                <div class="item-description">Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!</div>
+                                            </div>
+                                        </a></div>
+                                    <div class="swiper-slide"><a class="general-info-item" href="promo-detail.html">
+                                            <div class="item-date">14-21 марта</div>
+                                            <div class="item-image"><img src="assets/images/promo-3.jpg" alt="">
+                                                <div class="item-sticker"><img src="assets/images/star-sticker.svg" alt=""><span>Акция</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-text">
+                                                <h4 class="item-name">Готовимся к новому строительному сезону по ценам уходящего года!</h4>
+                                                <div class="item-description">Сезонные скидки на продукцию из ДПК и бесплатное хранение материалов!</div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="slider-section__inner-action"><a class="btn btn--yellow" href="javascript:void(0)">Все новости</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="faq">
+                <div class="container">
+                    <div class="faq__inner">
+                        <div class="faq__inner-head section-head">
+                            <h2 class="section-head__title">Ответы на часто задаваемые вопросы</h2>
+                        </div>
+                        <div class="faq__items accordion__items">
+                            <div class="accordion__item">
+                                <div class="accordion__visible">
+                                    <div class="accordion__visible-text">
+                                        <p>Какой состав продукции «Polywood»?</p>
+                                    </div>
+                                    <div class="accordion__visible-icon">
+                                        <div class="plus"><img src="assets/images/icon_plus.svg" alt="">
+                                        </div>
+                                        <div class="minus"><img src="assets/images/icon_minus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion__hidden">Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.</div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__visible">
+                                    <div class="accordion__visible-text">
+                                        <p>Где применяет декинг?</p>
+                                    </div>
+                                    <div class="accordion__visible-icon">
+                                        <div class="plus"><img src="assets/images/icon_plus.svg" alt="">
+                                        </div>
+                                        <div class="minus"><img src="assets/images/icon_minus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion__hidden">Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.</div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__visible">
+                                    <div class="accordion__visible-text">
+                                        <p>Какого цвета бывает?</p>
+                                    </div>
+                                    <div class="accordion__visible-icon">
+                                        <div class="plus"><img src="assets/images/icon_plus.svg" alt="">
+                                        </div>
+                                        <div class="minus"><img src="assets/images/icon_minus.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion__hidden">Lorem ipsum dolor sit amet consectetur. Vulputate convallis condimentum volutpat justo orci iaculis mauris. Enim praesent commodo sagittis aliquam nunc.</div>
+                            </div>
+                        </div>
+                        <div class="faq__inner-ask">
+                            <div class="ask-title">Задайте вопрос специалисту</div>
+                            <div class="ask-text">Менеджеры компании Поливуд ответят на все вопросы, а так же произведут расчет стоимости материалов и услуг для строительства Вашей любимой террасы.</div>
+                            <div class="ask-action">
+                                <div class="btn btn--yellow" data-src="#popup-ask-question" data-fancybox>Задать вопрос</div>
+                            </div>
+                        </div>
+                        <div class="yellow-sticker"><img src="assets/images/yellow-sticker.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="products-list">
+                <div class="container">
+                    <div class="products-list__inner">
+                        <div class="products-list__inner-head section-head">
+                            <h2 class="section-head__title">Ознакомьтесь с нашей продукцией</h2>
+                        </div>
+                        <div class="products-list__inner-items general-cards-wrapper"><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_timber.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Террасная доска из ДПК</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_fence.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Заборы и ограждения</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_ladder.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Ступени из ДПК</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_siding.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Сайдинг</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_pillar.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Регулируемые опоры</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_shed.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Навесы, перголы, беседки</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_rattan-furniture.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Мебель из искусственного ротанга</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_garden-bed.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Грядки из ДПК</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_components.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Комплектующие</h5>
+                            </a><a class="general-card" href="javascript:void(0)">
+                                <div class="card-icon"><img src="assets/images/icon_tree.svg" alt="">
+                                </div>
+                                <h5 class="card-text">Террасная доска из дерева</h5>
+                            </a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="calculate">
+                <div class="container">
+                    <div class="calculate__inner">
+                        <div class="general-form form-calculate">
+                            <div class="general-form__inner">
+                                <h3 class="general-form__title">Рассчитайте количество материалов для строительства террасы</h3>
+                                <div class="general-form__subtitle">С помощью калькулятора вы сможете выполнить предварительный расчет необходимого количества материалов для постройки террасы из любой террасной доски.</div>
+                                <form>
+                                    <div class="form-action"><a class="btn btn--yellow" href="calculator.html">Рассчитать</a></div>
+                                </form>
+                                <div class="general-form__image"><img src="assets/images/calculate-screen.png" alt="">
+                                </div>
+                            </div>
+                            <div class="ticker">
+                                <div class="ticker__inner">
+                                    <div class="ticker__item"><span class="ticker__item-text">Онлайн-калькулятор</span><img src="assets/images/icon_star-white.svg" alt=""><span class="ticker__item-text">Онлайн-калькулятор</span><img src="assets/images/icon_star-white.svg" alt=""><span class="ticker__item-text">Онлайн-калькулятор</span><img src="assets/images/icon_star-white.svg" alt=""><span class="ticker__item-text">Онлайн-калькулятор</span><img src="assets/images/icon_star-white.svg" alt=""><span class="ticker__item-text">Онлайн-калькулятор</span><img src="assets/images/icon_star-white.svg" alt=""><span class="ticker__item-text">Онлайн-калькулятор</span><span class="ticker__item-text">Онлайн-калькулятор</span><img src="assets/images/icon_star-white.svg" alt=""><span class="ticker__item-text">Онлайн-калькулятор</span><img src="assets/images/icon_star-white.svg" alt=""><span class="ticker__item-text">Онлайн-калькулятор</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculate__inner-options service-extra-options"><a class="service-option" href="javascript:void(0)">
+                                <div class="option-image"><img src="assets/images/calculate-option-1.jpg" alt="">
+                                </div>
+                                <h6 class="option-title">Бесплатный проект по вашему эскизу</h6>
+                            </a><a class="service-option" href="javascript:void(0)">
+                                <div class="option-image"><img src="assets/images/calculate-option-2.jpg" alt="">
+                                </div>
+                                <h6 class="option-title">Заказать видеоконсультацию (Whatsapp/ Telegram/ Viber)</h6>
+                            </a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="seo-block">
+                <div class="container">
+                    <div class="seo-block__inner">
+                        <div class="seo-block__text">
+                            <h2>Для СЕО</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Vel fusce tempus tempor pharetra fames. Sed tortor mi neque at ac. Dignissim varius aliquam diam duis. Sem pellentesque nisi montes metus risus arcu. Rutrum amet pulvinar a nisi quam at phasellus a placerat. Consectetur vitae habitant in fames sed elementum bibendum eu ipsum.</p>
+                        </div>
+                        <div class="seo-block__image"><img src="assets/images/hero-bg.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Main::End-->
+        <!-- Footer::Start-->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <nav class="footer__nav">
+                        <div class="footer__nav-block nav-block nav-catalog">
+                            <div class="nav-block__head">
+                                <h4 class="nav-block__title">Каталог</h4>
+                            </div>
+                            <ul class="nav-block__list">
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Новинки</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Террасная доска из ДПК</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Ступени из ДПК</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Заборы и ограждения</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Сайдинг ДПК</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Регулируемые опоры</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Комплектующие</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Искусственный ротанг</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Полимерная лоза</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Террасная доска из дерева</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-block nav-block nav-services">
+                            <div class="nav-block__head">
+                                <h4 class="nav-block__title">Услуги</h4>
+                            </div>
+                            <ul class="nav-block__list">
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Замер и расчёты</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Дизайн и проектирование</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Строительство террасы, веранды</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Сезонное хранение материалов</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Гарантийное обслуживание</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Доставка</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Производство террасной доски</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)"> Монтаж террасной доски</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-block nav-block nav-projects">
+                            <div class="nav-block__head">
+                                <h4 class="nav-block__title">Проекты</h4>
+                            </div>
+                            <ul class="nav-block__list">
+                                <li class="nav-list__item"><a href="javascript:void(0)">Открытые террасы</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Патио</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Телепроекты и знаменитости</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Террасы на крыше дома</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Дорожки</a></li>
+                                <li class="nav-list__item"><a href="javascript:void(0)">Заборы и ограждения из ДПК</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Кафе и рестораны</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Набережные</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Отделка бассейнов</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Пирсы и причалы</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Фасады из ДПК</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Сайдинг</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Садовый паркет</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="javascript:void(0)">Парковая мебель</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-block nav-block nav-info">
+                            <div class="nav-block__head">
+                                <h4 class="nav-block__title">Информация</h4>
+                            </div>
+                            <ul class="nav-block__list">
+                                <li class="nav-list__item"><a class="link link--white" href="news.html">Новости</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="articles.html">Статьи</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="faq.html">Вопрос-ответ</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="instructions.html">Инструкции</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="engineering.html">Инжиниринг</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="site-map.html">Карта сайта</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="payment.html">Оплата</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="prices.html">Цены</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="about.html">О компании</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="partnership.html">Сотрудничество</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="vacancies.html">Вакансии</a></li>
+                                <li class="nav-list__item"><a class="link link--white" href="requisites.html">Реквизиты</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="footer__contacts">
+                        <h4 class="contacts-title">Контакты</h4>
+                        <div class="contacts-items"><a class="footer__contact phone-mos" href="tel:74951095209">
+                                <div class="image-wrapper"><img src="assets/images/icon_phone.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="bold">+7 495 109-52-09</p>
+                                    <p>Москва</p>
+                                </div>
+                            </a><a class="footer__contact phone-rus" href="tel:88005055209">
+                                <div class="image-wrapper"><img src="assets/images/icon_phone.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="bold">8 800 505-52-09</p>
+                                    <p>Бесплатно по России</p>
+                                </div>
+                            </a><a class="footer__contact email" href="mailto:salon_sweet_home@mail.ru">
+                                <div class="image-wrapper"><img src="assets/images/icon_email.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="bold">market@polywood.ru</p>
+                                </div>
+                            </a>
+                            <div class="footer__contact address">
+                                <div class="image-wrapper"><img src="assets/images/icon_pin.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p>123592, Россия, г. Москва, ул. Кулакова, д. 20, строение 1А, эт 5, пом. XVII, ком. 37,74,75,76</p>
+                                </div>
+                            </div>
+                            <div class="footer__contact socials">
+                                <noIndex>
+                                    <div class="social__items"><a class="social-item" href="https://dzen.ru/polywood" rel="nofollow" target="_blank"><img src="assets/images/icon_social-dzen.svg" alt=""></a><a class="social-item" href="https://t.me/polywood_ru" rel="nofollow" target="_blank"><img src="assets/images/icon_social-tg.svg" alt=""></a><a class="social-item" href="https://vk.com/polywood" rel="nofollow" target="_blank"><img src="assets/images/icon_social-vk.svg" alt=""></a><a class="social-item" href="https://www.youtube.com/channel/UCvGMJBY7VhvbFlie6LXZFFw" rel="nofollow" target="_blank"><img src="assets/images/icon_social-youtube.svg" alt=""></a><a class="social-item" href="https://ok.ru/group/53751182065754" rel="nofollow" target="_blank"><img src="assets/images/icon_social-ok.svg" alt=""></a></div>
+                                </noIndex>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__payment">
+                        <div class="payment-systems">
+                            <div class="image-wrapper"><img src="assets/images/icon_payment-mir.svg" alt="">
+                            </div>
+                            <div class="image-wrapper"><img src="assets/images/icon_payment-visa.svg" alt="">
+                            </div>
+                            <div class="image-wrapper"><img src="assets/images/icon_payment-master.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="payment-types">
+                            <div class="payment-type transfer">
+                                <div class="image-wrapper"><img src="assets/images/icon_money-transfer.svg" alt="">
+                                </div><span>Банковский перевод</span>
+                            </div>
+                            <div class="payment-type cash">
+                                <div class="image-wrapper"><img src="assets/images/icon_money-cash.svg" alt="">
+                                </div><span>Оплата наличными</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <p class="footer__rights">© Поливуд. Все права защищены. 2007 - 2024 г.</p>
+                        <p>Сайт не является публичной офертой</p>
+                    </div>
+                    <div class="footer__devs"><a href="https://di-project.studio/">Разработка сайта:</a><span>Di-Project.Studio</span></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer::End-->
+    </div>
+    <!-- ПОПАП "ЗАДАТЬ ВОПРОС"-->
+    <div class="popup" id="popup-ask-question">
+        <div class="popup-title">Задать вопрос</div>
+        <div class="popup-subtitle">Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</div>
+        <form>
+            <div class="form-row">
+                <input type="text" name="popup-ask-question_name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+                <input class="phone-mask" type="tel" name="popup-ask-question_phone" placeholder="Телефон*">
+            </div>
+            <div class="form-row">
+                <input type="email" name="popup-ask-question_email" placeholder="E-mail">
+            </div>
+            <div class="form-row">
+                <input type="text" name="popup-ask-question_product" placeholder="Интересующий товар/услуга*">
+            </div>
+            <div class="form-row">
+                <textarea placeholder="Комментарий к заказу"></textarea>
+            </div>
+            <div class="form-action">
+                <button class="btn btn--yellow" type="submit">Отправить</button>
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+            </div>
+        </form>
+    </div>
+    <!-- ПОПАП "ЗАКАЗАТЬ РАСЧЕТ"-->
+    <div class="popup" id="popup-order-calc">
+        <div class="popup-title">Заявка на расчёт</div>
+        <div class="popup-subtitle">Форма заявки на расчёт проекта</div>
+        <form>
+            <div class="form-row">
+                <input type="text" name="popup-order-calc_name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+                <input class="phone-mask" type="tel" name="popup-order-calc_phone" placeholder="Телефон*">
+            </div>
+            <div class="form-row">
+                <input type="email" name="popup-order-calc_email" placeholder="E-mail">
+            </div>
+            <div class="form-row">
+                <textarea placeholder="Комментарий к заказу"></textarea>
+            </div>
+            <div class="form-action">
+                <button class="btn btn--yellow" type="submit">Отправить</button>
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+            </div>
+        </form>
+    </div>
+    <!-- ПОПАП "ЗАКАЗАТЬ ОБРАЗЦЫ"-->
+    <div class="popup" id="popup-order-samples">
+        <div class="popup-title">Закажите бесплатные образцы террасной доски</div>
+        <form>
+            <div class="form-row">
+                <input type="text" name="popup-order-samples_name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+                <input class="phone-mask" type="tel" name="popup-order-samples_phone" placeholder="Телефон*">
+            </div>
+            <div class="form-row">
+                <input type="email" name="popup-order-samples_email" placeholder="E-mail">
+            </div>
+            <div class="form-action">
+                <button class="btn btn--yellow" type="submit">Отправить</button>
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+            </div>
+        </form>
+    </div>
+    <!-- ПОПАП "ЗАКАЗАТЬ ЗВОНОК"-->
+    <div class="popup" id="popup-order-call">
+        <div class="popup-title">Обратный звонок</div>
+        <div class="popup-subtitle">Представьтесь, мы вам перезвоним</div>
+        <form>
+            <div class="form-row">
+                <input type="text" name="popup-order-call_name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+                <input class="phone-mask" type="tel" name="popup-order-call_phone" placeholder="Телефон*">
+            </div>
+            <div class="form-action">
+                <button class="btn btn--yellow" type="submit">Отправить</button>
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+            </div>
+        </form>
+    </div>
+    <!-- ПОПАП "ВЫЗВАТЬ СПЕЦИАЛИСТА"-->
+    <div class="popup" id="popup-call-spec">
+        <div class="popup-title">Вызвать специалиста на замер</div>
+        <div class="popup-subtitle">Наш специалист привезет образцы ДПК, чтобы вы могли выбрать материал прямо у себя дома!</div>
+        <form>
+            <div class="form-row">
+                <input type="text" name="popup-call-spec_name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+                <input class="phone-mask" type="tel" name="popup-call-spec_phone" placeholder="Телефон*">
+            </div>
+            <div class="form-row">
+                <input type="email" name="popup-call-spec_email" placeholder="E-mail">
+            </div>
+            <div class="form-action">
+                <button class="btn btn--yellow" type="submit">Отправить</button>
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+            </div>
+        </form>
+    </div>
+    <!-- ПОПАП "ОТПРАВИТЬ РЕЗЮМЕ"-->
+    <div class="popup" id="popup-send-cv">
+        <div class="popup-title">Отправить резюме</div>
+        <form>
+            <div class="form-row">
+                <input type="text" name="popup-send-cv_name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+                <input class="phone-mask" type="tel" name="popup-send-cv_phone" placeholder="Телефон*">
+            </div>
+            <div class="form-row">
+                <input type="email" name="popup-send-cv_email" placeholder="E-mail">
+            </div>
+            <div class="form-row">
+                <input type="text" name="popup-send-cv_job" placeholder="Желаемая должность*">
+            </div>
+            <div class="form-row">
+                <textarea placeholder="Дополнительная информация"></textarea>
+            </div>
+            <div class="form-row upload-file">
+                <input class="inputfile" id="upload-photo" type="file" name="file">
+                <label for="upload-photo">
+                    <div class="upload-icon"><img src="assets/images/icon_paper-clip.svg" alt="">
+                    </div><span class="upload">Загрузить резюме</span><span class="format">pdf, doc, docx, txt</span>
+                </label>
+            </div>
+            <div class="form-action">
+                <button class="btn btn--yellow" type="submit" data-src="#popup-success-cv" data-fancybox>Отправить</button>
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+            </div>
+        </form>
+    </div>
+    <!-- ПОПАП "ОТПРАВИТЬ ОТЗЫВ"-->
+    <div class="popup" id="popup-leave-review">
+        <div class="popup-title">Оставить отзыв</div>
+        <form>
+            <div class="form-row">
+                <input type="text" name="popup-leave-review_name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+                <input type="email" name="popup-leave-review_email" placeholder="E-mail">
+            </div>
+            <div class="form-row">
+                <textarea placeholder="Отзыв*"></textarea>
+            </div>
+            <div class="form-action">
+                <button class="btn btn--yellow" type="submit" data-src="#popup-success-review" data-fancybox>Отправить</button>
+                <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</p>
+            </div>
+        </form>
+    </div>
+    <!-- ПОПАП "УСПЕШНО"-->
+    <div class="popup popup-success" id="popup-success">
+        <div class="popup-image"><img src="assets/images/icon_star-shape.svg" alt="">
+        </div>
+        <div class="popup-title">Заявка успешно отправлена!</div>
+        <div class="popup-subtitle">Спасибо, что оставили заявку, Мы свяжемся с вами в ближайшее время</div>
+    </div>
+    <!-- ПОПАП "УСПЕШНО ПОДПИСКА"-->
+    <div class="popup popup-success" id="popup-success-subscribe">
+        <div class="popup-image"><img src="assets/images/icon_star-shape.svg" alt="">
+        </div>
+        <div class="popup-title">Вы успешно подписались на обновления!</div>
+        <!--.popup-subtitle Спасибо, что оставили заявку,-->
+    </div>
+    <!-- ПОПАП "УСПЕШНО ОТЗЫВ"-->
+    <div class="popup popup-success" id="popup-success-review">
+        <div class="popup-image"><img src="assets/images/icon_star-shape.svg" alt="">
+        </div>
+        <div class="popup-title">Отзыв отправлен</div>
+        <div class="popup-subtitle">Благодарим за ваш отклик. Ваше мнение помогает нам становиться лучше.</div>
+    </div>
+    <!-- ПОПАП "УСПЕШНО РЕЗЮМЕ"-->
+    <div class="popup popup-success" id="popup-success-cv">
+        <div class="popup-image"><img src="assets/images/icon_star-shape.svg" alt="">
+        </div>
+        <div class="popup-title">Резюме успешно отправлено</div>
+        <div class="popup-subtitle">Спасибо за проявленный интерес к нашей вакансии. Мы рассмотрим вашу кандидатуру и свяжемся с вами для дальнейшего обсуждения.</div>
+    </div>
+    <!--ПЛАШКА ПРИ ДОБАВЛЕНИИ ТОВАРА В КОРЗИНУ-->
+    <div class="product-in-cart">
+        <div class="product-in-cart__content">
+            <div class="content__image"><img src="assets/images/product-1.png" alt="">
+            </div>
+            <div class="content__title">Товар добавлен в корзину</div>
+            <div class="content__product-name">Террасная доска из ДПК POLYWOOD™ UNO графит 3 метра</div>
+        </div>
+    </div>
+    <!-- Scripts::Start-->
+    <script src="assets/js/plugins/plugins.min.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/sliders.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <!-- Scripts::End-->
+</body>
+
+</html>
