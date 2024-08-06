@@ -14,6 +14,11 @@
 
     border-radius: 0 0 25px 25px;
     background-color: $white;
+    transition: $transition-style;
+
+    &.border-change {
+      border-bottom-left-radius: 0;
+    }
 
     @include breakpoint(md) {
       padding: 15px;
@@ -24,11 +29,12 @@
     @include breakpoint(lg) {
       display: grid;
       grid-template-columns: 1fr 268px;
-      gap: 20px;
+      gap: 24px 20px;
     }
     @include breakpoint(xl) {
       grid-template-columns: 1fr 350px;
     }
+
 
     .header__content {
       display: grid;
@@ -45,11 +51,26 @@
         grid-template-columns: auto auto auto 49px;
         grid-column: span 2;
         column-gap: 0;
+
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 1px;
+          top: 92px;
+          background-color: $stroke;
+        }
       }
       @include breakpoint(xl) {
         grid-template-columns: auto auto auto 49px;
         grid-column: span 2;
         column-gap: 0;
+
+        &::after {
+          top: 102px;
+        }
       }
 
       .header__logo {
@@ -84,6 +105,12 @@
             line-height: normal;
             color: $gray-dark;
             @include flexAlignCenter;
+            //align-self: end;
+            padding-top: 25px;
+          }
+
+          @include breakpoint(xl) {
+            font-size: 12px;
           }
         }
 
@@ -97,7 +124,7 @@
         justify-self: end;
 
         @include breakpoint(md) {
-          grid-row: 1/2;
+          grid-row: 1/3;
           grid-column: 3/4;
         }
         @include breakpoint(lg) {
@@ -170,7 +197,7 @@
 
         @include breakpoint(lg) {
           grid-column: 3/4;
-          grid-row: 1/2;
+          grid-row: 1/3;
           gap: 16px;
         }
 
@@ -186,19 +213,36 @@
             &::after {
               display: block;
               content: "";
-              //background: url("../images/icon_chevron-down.svg") center no-repeat;
+              background: url("../images/icon_chevron-down.svg") center no-repeat;
               background-size: contain;
               width: 16px;
               height: 16px;
+              transition: $transition-style;
+
               @include breakpoint(md) {
                 display: none;
+              }
+
+
+            }
+
+            &.active {
+              &::after {
+                transform: rotate(-180deg);
               }
             }
           }
 
           &.rus {
             @include breakpointMax(md) {
+              width: 140px;
+              padding: 10px 0 0 10px;
               display: none;
+              position: absolute;
+              top: 110px;
+              left: 10px;
+              background-color: $white;
+              border-radius: 10px;
             }
 
           }
@@ -241,7 +285,7 @@
         }
 
         position: relative;
-        grid-row: 1/2;
+        grid-row: 1/3;
         grid-column: 4/5;
         @include flexAlignCenter;
 
@@ -267,8 +311,12 @@
           text-align: center;
           background-color: $yellow-light;
           border-radius: 50%;
-          bottom: 7px;
+          bottom: 15px;
           right: 0;
+
+          @include breakpoint(xl) {
+            bottom: 20px;
+          }
         }
       }
     }
@@ -276,6 +324,7 @@
 
     .header__bar {
       @include flexCenterBetween;
+      height: 62px;
       padding: 10px;
       position: fixed;
       bottom: 0;
@@ -362,6 +411,151 @@
 
     }
 
+    .header__bar-item {
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+
+    &.scroll {
+
+      .header__content {
+
+        .header__service {
+          display: none;
+        }
+
+        @include breakpoint(md) {
+          grid-template-columns: 150px auto;
+          column-gap: 14px;
+
+
+          .header__slogan, .header__location, .header__service, .header__contacts .header-contact.dealers {
+            display: none;
+          }
+
+          .header__logo {
+            grid-template-columns: unset;
+          }
+
+          .header__contacts {
+
+            border-top: 0;
+            padding-top: 0;
+            grid-column: 2 / 3;
+
+            .header-contact.rus {
+              margin: 0 30px 0 16px;
+            }
+
+
+          }
+        }
+
+        @include breakpoint(lg) {
+          order: 3;
+          grid-template-columns: repeat(2, auto);
+          column-gap: 28px;
+          grid-column: 3/4;
+
+          &::after {
+            display: none;
+          }
+
+
+          .header__logo {
+            display: none;
+          }
+          .header__contacts {
+            grid-column: 1/2;
+
+            .header-contact {
+              &.rus, &.mos {
+                display: none;
+              }
+            }
+          }
+
+          .header__cart {
+            grid-column: 2/3;
+
+            .cart-count {
+              bottom: -3px;
+              right: -5px;
+            }
+          }
+        }
+
+        @include breakpoint(xl) {
+          column-gap: 58px;
+        }
+      }
+
+      .header__search-block {
+        top: 100px;
+      }
+
+      @include breakpoint(md) {
+        .header__search-block {
+          top: 80px;
+        }
+      }
+
+      @include breakpoint(lg) {
+
+        grid-template-columns: 1fr repeat(2, auto);
+        justify-content: space-between;
+        align-items: center;
+
+        .header__menu-nav {
+          order: 1;
+        }
+
+        .header__search-block {
+          width: 30%;
+          top: 90px;
+          position: fixed;
+          right: -100%;
+
+          transition: $transition-style;
+
+          &.active {
+            right: var(--container);
+          }
+
+
+        }
+
+        .header__bar-item {
+          display: block;
+          width: fit-content;
+          order: 2;
+
+          img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) saturate(100%) invert(49%) sepia(37%) saturate(617%) hue-rotate(56deg) brightness(98%) contrast(102%);
+          }
+
+          span {
+            display: none;
+          }
+        }
+
+
+      }
+
+      @include breakpoint(xl) {
+        grid-template-columns: 72% repeat(2, auto);
+
+        .header__search-block {
+          &.active {
+            right: calc((100vw - 1400px) / 2);
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -373,6 +567,7 @@
   }
 
 }
+
 .header__menu {
   &.active {
     .header__menu-nav.main-catalog .menu-nav__list {
@@ -397,15 +592,6 @@
 
   @include breakpoint(lg) {
     display: none;
-  }
-}
-
-.wrapper {
-  @include breakpoint(lg) {
-    //display: grid;
-    //z-index: 99;
-    //gap: 30px;
-    //grid-template-columns: 25% 1fr;
   }
 }
 
@@ -626,7 +812,6 @@
   }
 
 }
-
 
 .menu-nav__catalog {
   order: 2;

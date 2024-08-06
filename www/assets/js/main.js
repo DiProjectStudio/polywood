@@ -194,4 +194,25 @@ $(document).ready(function () {
     }, 5000);
   })
 
+
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 700) {
+      $('.scroll-to-top').fadeIn().css('display','flex');
+    } else {
+      $('.scroll-to-top').fadeOut().css('display','none');
+    }
+
+
+
+    $(window).resize(function() {
+      // adjustHeader();
+    });
+  });
+
+  $('.scroll-to-top').click(function(){
+    $('html, body').animate({scrollTop : 0},600);
+    return false;
+  });
+
 });

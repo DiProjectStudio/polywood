@@ -40,6 +40,9 @@ $(document).ready(function () {
   const menuToMove = $('#menu');
   const listItemCatalogEl = $('.list-item.catalog');
 
+  const headerBarSearchEl = $('.header__bar-item#search');
+  const headerBarEl = $('.header__bar');
+
   let leaveTimer;
   let resizeTimer;
   let submenuTimeout, hideTimeout;
@@ -64,6 +67,8 @@ $(document).ready(function () {
       headerInnerElement.append(menuCatalogToMove); // перемещение меню
       // headerInnerElement.append(menuToMove); // перемещение меню
       listItemCatalogEl.addClass('btn btn--yellow');
+      // headerBarEl
+      headerInnerElement.append(headerBarSearchEl);
 
       // Перемещение элементов в #catalog
       $('#category ul.menu-nav__list.category-list').each(function () {
@@ -138,6 +143,8 @@ $(document).ready(function () {
           $(this).appendTo(targetList);
         }
       });
+
+      headerBarEl.append(headerBarSearchEl);
     }
   }
 
@@ -146,6 +153,8 @@ $(document).ready(function () {
   $(window).resize(function () {
     moveNavElement();
     clickFunc();
+
+    collapseHeaderContact();
     /*clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
       windowWidth = $(window).width();
@@ -236,20 +245,17 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     let st = $(this).scrollTop();
-    if ($(window).width() < 744) {
-      if (st > lastScrollTop) {
-        // Скролл вниз
-        if (st > toggleHeight + hysteresis) {
-          $('.header__service').hide();
-        }
-      } else {
-        // Скролл вверх
-        if (st < toggleHeight - hysteresis) {
-          $('.header__service').show();
-        }
+    if (st > lastScrollTop) {
+      // Скролл вниз
+      if (st > toggleHeight + hysteresis) {
+        headerInnerElement.addClass('scroll');
+      }
+    } else {
+      // Скролл вверх
+      if (st < toggleHeight - hysteresis) {
+        headerInnerElement.removeClass('scroll');
       }
     }
-
     lastScrollTop = st <= 0 ? 0 : st; // Не позволяет lastScrollTop быть отрицательным
 
   });
@@ -259,8 +265,32 @@ $(document).ready(function () {
   $('#search').on('click', () => {
     $('.header__search-block').toggleClass('active');
     $('#page').addClass('bg-overlay');
-
   });
 
 
+  // РАСКРЫТИЕ КОНТАКТОВ НА ЭКРАНЕ < 744px
+  function collapseHeaderContact() {
+    if ($(window).width() < 744) {
+      // Отключаем стандартное поведение ссылки и показываем элемент .header-contact.rus
+      $('.header-contact.mos').on('click', function(event) {
+        event.preventDefault(); // Отключаем стандартное поведение ссылки
+        $(this).toggleClass('active');
+        $('.header-contact.rus').slideToggle();
+
+        if($('.header-contact.mos').hasClass('active')) {
+          $('.header__inner').toggleClass('border-change');
+        } else {
+          setTimeout(function() {
+            $('.header__inner').toggleClass('border-change');
+          }, 300);
+        }
+      });
+    } else {
+      // Восстанавливаем стандартное поведение ссылки и скрываем элемент .header-contact.rus
+      $('.header-contact.mos').off('click');
+      $('.header-contact.rus').css('display', '');
+    }
+  }
+
+  collapseHeaderContact();
 });
