@@ -236,25 +236,25 @@ $(document).ready(function () {
   // СКРЫТИЕ / ПОКАЗ БЛОКА ХЕДЕРА НА МОБ ВЕРСИИ
 
   function getToggleHeight() {
-    return $('.header__content').outerHeight();
+    // return $('.header__content').outerHeight();
   }
 
   let lastScrollTop = 0;
-  let toggleHeight = getToggleHeight();
-  let hysteresis = 50;
+  // let toggleHeight = getToggleHeight();
+  // let hysteresis = 52;
 
   $(window).scroll(function () {
     let st = $(this).scrollTop();
     if (st > lastScrollTop) {
       // Скролл вниз
-      if (st > toggleHeight + hysteresis) {
+      if (st > lastScrollTop) {
         headerInnerElement.addClass('scroll');
       }
     } else {
       // Скролл вверх
-      if (st < toggleHeight - hysteresis) {
-        headerInnerElement.removeClass('scroll');
-      }
+
+      headerInnerElement.removeClass('scroll');
+
     }
     lastScrollTop = st <= 0 ? 0 : st; // Не позволяет lastScrollTop быть отрицательным
 
@@ -272,15 +272,15 @@ $(document).ready(function () {
   function collapseHeaderContact() {
     if ($(window).width() < 744) {
       // Отключаем стандартное поведение ссылки и показываем элемент .header-contact.rus
-      $('.header-contact.mos').on('click', function(event) {
+      $('.header-contact.mos').on('click', function (event) {
         event.preventDefault(); // Отключаем стандартное поведение ссылки
         $(this).toggleClass('active');
         $('.header-contact.rus').slideToggle();
 
-        if($('.header-contact.mos').hasClass('active')) {
+        if ($('.header-contact.mos').hasClass('active')) {
           $('.header__inner').toggleClass('border-change');
         } else {
-          setTimeout(function() {
+          setTimeout(function () {
             $('.header__inner').toggleClass('border-change');
           }, 300);
         }
