@@ -234,30 +234,26 @@ $(document).ready(function () {
 
 
   // СКРЫТИЕ / ПОКАЗ БЛОКА ХЕДЕРА НА МОБ ВЕРСИИ
-
-  function getToggleHeight() {
-    // return $('.header__content').outerHeight();
-  }
-
   let lastScrollTop = 0;
-  // let toggleHeight = getToggleHeight();
-  // let hysteresis = 52;
+  const mediaQuery = window.matchMedia('(max-width: 1200px)');
 
   $(window).scroll(function () {
-    let st = $(this).scrollTop();
-    if (st > lastScrollTop) {
-      // Скролл вниз
-      if (st > lastScrollTop) {
-        headerInnerElement.addClass('scroll');
+    let scrolled = $(this).scrollTop();
+    let dY = scrolled - lastScrollTop;
+
+    if (dY < 0) {
+      if (mediaQuery.matches) {
+        setTimeout(() => {
+          headerInnerElement.removeClass('scroll');
+        }, 100); // задержка для предотвращения дерганий
+      } else {
+        headerInnerElement.removeClass('scroll');
       }
     } else {
-      // Скролл вверх
-
-      headerInnerElement.removeClass('scroll');
-
+      headerInnerElement.addClass('scroll');
     }
-    lastScrollTop = st <= 0 ? 0 : st; // Не позволяет lastScrollTop быть отрицательным
 
+    lastScrollTop = scrolled <= 0 ? 0 : scrolled;
   });
 
 
