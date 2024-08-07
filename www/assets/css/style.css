@@ -5969,13 +5969,13 @@ form .form-action p {
     }
 }
 
-.engineering-section .engineering-section__inner-items.general-cards-wrapper .general-card::after {
+.engineering-section .engineering-section__inner-items.general-cards-wrapper .general-card::after,.engineering-section .engineering-section__inner-items.general-cards-wrapper .general-card::before {
     top: 20px;
     right: 20px
 }
 
 @media(min-width: 1200px) {
-    .engineering-section .engineering-section__inner-items.general-cards-wrapper .general-card::after {
+    .engineering-section .engineering-section__inner-items.general-cards-wrapper .general-card::after,.engineering-section .engineering-section__inner-items.general-cards-wrapper .general-card::before {
         top: 30px;
         right: 30px
     }

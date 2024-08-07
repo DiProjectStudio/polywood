@@ -5,7 +5,7 @@
     }
 
     &.general-cards-wrapper {
-      .general-card::after  {
+      .general-card::after, .general-card::before {
         top: 20px;
         right: 20px;
 
