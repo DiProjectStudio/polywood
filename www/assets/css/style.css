@@ -5974,6 +5974,13 @@ form .form-action p {
     right: 20px
 }
 
+@media(min-width: 1200px) {
+    .engineering-section .engineering-section__inner-items.general-cards-wrapper .general-card::after {
+        top: 30px;
+        right: 30px
+    }
+}
+
 .engineering-benefits .engineering-benefits__inner .engineering-benefits__items.general-info-items {
     gap: 10px
 }

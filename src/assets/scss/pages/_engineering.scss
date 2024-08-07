@@ -8,6 +8,11 @@
       .general-card::after  {
         top: 20px;
         right: 20px;
+
+        @include breakpoint(lg) {
+          top: 30px;
+          right: 30px;
+        }
       }
     }
   }
