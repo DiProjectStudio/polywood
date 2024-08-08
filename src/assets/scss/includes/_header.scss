@@ -59,7 +59,7 @@
           content: '';
           width: 100%;
           height: 1px;
-          top: 92px;
+          top: 83px;
           background-color: $stroke;
         }
       }
@@ -69,7 +69,7 @@
         column-gap: 0;
 
         &::after {
-          top: 102px;
+          top: 93px;
         }
       }
 
@@ -80,11 +80,11 @@
         grid-template-columns: 100%;
 
         @include breakpoint(md) {
-          grid-template-columns: 224px 148px;
+          grid-template-columns: 98px 1fr 148px;
           column-gap: 14px;
         }
         @include breakpoint(lg) {
-          //grid-template-columns: 224px 203px;
+          grid-template-columns: 221px 148px;
         }
         @include breakpoint(xl) {
           grid-template-columns: 250px 203px;
@@ -92,6 +92,16 @@
 
         img {
           object-fit: contain;
+
+          @include breakpoint(md) {
+          //width: 98px;
+          }
+          @include breakpoint(lg) {
+          //width: 221px;
+          }
+          @include breakpoint(xl) {
+          //width: 250px;
+          }
         }
 
         .header__slogan {
@@ -106,7 +116,13 @@
             color: $gray-dark;
             @include flexAlignCenter;
             //align-self: end;
-            padding-top: 25px;
+            //padding-top: 25px;
+            grid-column: 3/4;
+          }
+          @include breakpoint(lg) {
+            //font-size: 12px;
+          grid-column: 2/3;
+            grid-row: 1/3;
           }
 
           @include breakpoint(xl) {
@@ -124,7 +140,7 @@
         justify-self: end;
 
         @include breakpoint(md) {
-          grid-row: 1/3;
+          grid-row: 1/2;
           grid-column: 3/4;
         }
         @include breakpoint(lg) {
@@ -152,16 +168,19 @@
           padding-top: 8px;
           border-top: 1px solid $stroke;
           grid-column: 1/3;
+          grid-row: 2/3;
           justify-content: space-between;
         }
 
         @include breakpoint(md) {
-          grid-row: 2/3;
+          grid-column: 2/3;
+          grid-row: 1/2;
         }
 
         @include breakpoint(lg) {
           gap: 5px;
           grid-column: 1/2;
+          grid-row: 2/3;
         }
 
         span {
@@ -197,7 +216,7 @@
 
         @include breakpoint(lg) {
           grid-column: 3/4;
-          grid-row: 1/3;
+          grid-row: 1/2;
           gap: 16px;
         }
 
@@ -285,7 +304,7 @@
         }
 
         position: relative;
-        grid-row: 1/3;
+        grid-row: 1/2;
         grid-column: 4/5;
         @include flexAlignCenter;
 
@@ -435,6 +454,10 @@
 
           .header__logo {
             grid-template-columns: unset;
+
+            @include breakpoint(md) {
+              width: 98px;
+            }
           }
 
           .header__contacts {

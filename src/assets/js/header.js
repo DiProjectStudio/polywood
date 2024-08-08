@@ -264,6 +264,23 @@ $(document).ready(function () {
   });
 
 
+  // перемещение элемента сервиса
+  function moveHeaderServiceEl() {
+
+    const headerLogoElement = $('.header__logo');
+    const headerServiceElement = $('.header__service');
+    const headerContentEl = $('.header__content');
+
+
+    if ($(window).width() >= 744) {
+      headerLogoElement.append(headerServiceElement);
+    } else {
+      headerContentEl.append(headerServiceElement);
+    }
+  }
+
+  moveHeaderServiceEl();
+
   // РАСКРЫТИЕ КОНТАКТОВ НА ЭКРАНЕ < 744px
   function collapseHeaderContact() {
     if ($(window).width() < 744) {
@@ -289,4 +306,18 @@ $(document).ready(function () {
   }
 
   collapseHeaderContact();
+
+  function debounce(func, wait) {
+    let timeout;
+    return function () {
+      const context = this, args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        func.apply(context, args);
+      }, wait);
+    };
+  }
+
+  $(window).resize(debounce(moveHeaderServiceEl, 100));
+
 });
