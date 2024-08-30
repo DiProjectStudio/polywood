@@ -1,0 +1,164 @@
+---
+title: Polywood | Оформление заказа
+bodyClass: cart-page
+---
+
+extends includes/_page
+
+block main
+    include components/_breadcrumbs
+    +breadcrumbs('Оформление заказа', 'Корзина', ['Оформление заказа'])
+
+    section.cart.create-order
+        .container
+            .cart__inner
+                .cart__inner-content
+                    .cart__inner-order.create-order
+                        .create-order__step.region.collapsed.step-complete
+                            .step-head
+                                .title  <span>1</span> Регион доставки
+                                .edit
+                                    a(href='javascript:void(0)').link.link--black Изменить
+
+                            .step-info
+                                .info-title Тип плательщика
+                                .info-item.checkboxes
+                                    .input.checkbox-style
+                                        input(type="checkbox" checked style="display:none")
+                                        label Физ. лицо
+                                    .input.checkbox-style
+                                        input(type="checkbox" style="display:none")
+                                        label Юр. лицо
+                                .info-item.text-inputs
+                                    .input
+                                        input(type="text" placeholder="*Местоположение")
+                                    .input
+                                        input(type="text" placeholder="*Индекс")
+                                .filled-items
+                                    .wrapper
+                                        .filled-item
+                                            .title Тип плательщика:
+                                            .value Физ. лицо
+                                        .filled-item
+                                            .title Местоположение:
+                                            .value Москва, Центр, Россия
+
+                            .step-actions
+                                a(href='javascript:void(0)').btn.btn--yellow Далее
+
+                        .create-order__step.delivery.collapsed
+                            .step-head
+                                .title  <span>2</span> Доставка
+                                .edit
+                                    a(href='javascript:void(0)').link.link--black Изменить
+                            .step-info
+
+                                .info-item.active
+                                    .item-title Самовывоз
+                                    .item-details
+                                        p Бесплатно
+                                        p Московская обл., г. Химки, мкр. Сходня, ул. Некрасова д. 2
+                                        p 9:00 - 19:00
+
+                                .info-item
+                                    .item-title Доставка курьером
+                                    .item-details
+                                        p Служба доставки с настраиваемой ценой и сроками доставки
+                                .filled-items
+                                    .wrapper
+                                        .filled-item
+                                            .title Доставка:
+                                            .value Самовывоз
+
+
+                            .step-actions
+                                a(href='javascript:void(0)').btn.btn--bordered Назад
+                                a(href='javascript:void(0)').btn.btn--yellow Далее
+
+
+
+                        .create-order__step.payment
+                            .step-head
+                                .title <span>3</span> Оплата
+                                .edit
+                                    a(href='javascript:void(0)').link.link--black Изменить
+                            .step-info
+                                .info-item.active
+                                    .item-icon
+                                        +img('icon_credit-card.svg')
+                                    .item-title Банковской картой в офисе
+
+                                .info-item
+                                    .item-icon
+                                        +img('icon_invoice.svg')
+                                    .item-title По счёту
+                                .filled-items
+                                    .wrapper
+                                        .filled-item
+                                            .title Оплата:
+                                            .value Банковская карта
+
+                            .step-actions
+                                a(href='javascript:void(0)').btn.btn--bordered Назад
+                                a(href='javascript:void(0)').btn.btn--yellow Далее
+
+
+                        .create-order__step.customer
+                            .step-head
+                                .title <span>4</span> Покупатель
+                                .edit
+                                    a(href='javascript:void(0)').link.link--black Изменить
+                            .step-form
+                                form
+                                    .form-row
+                                        input(type="text" name="order-form_name" placeholder="*ФИО")
+                                    .form-row
+                                        input(type="email" name="order-form_email" placeholder="*E-mail")
+                                    .form-row
+                                        input(type="tel" name="order-form_phone" placeholder="*Телефон")
+                                    .form-row
+                                        input(type="text" name="order-form_address" placeholder="*Адрес доставки")
+                                    .form-row
+                                        textarea(placeholder='Комментарий')
+                                .filled-items
+                                    .wrapper
+                                        .filled-item
+                                            .title ФИО:
+                                            .value Иван Иванович Иванов
+                                        .filled-item
+                                            .title Е-mail:
+                                            .value ivan@mail.ru
+                                        .filled-item
+                                            .title Телефон:
+                                            .value +7 (999) 990-99-88
+                                        .filled-item
+                                            .title Адрес:
+                                            .value г. Москва, ул. Мясницкая, д. 1
+                                        .filled-item
+                                            .title Комментарий к заказу:
+                                            .value положите в разные коробки
+
+
+                            .step-actions
+                                a(href='javascript:void(0)').btn.btn--bordered Назад
+
+                    .cart__inner-total(data-entity='basket-total-block')
+                        .total-sum
+                            .total-sum-rows
+                                .total-sum-row.total-products
+                                    span.title Товары (<span>2</span>) на
+                                    span.value 2 000 000 ₽
+                                .total-sum-row.total-discount
+                                    span.title Cкидка
+                                    span.value -200 ₽
+                                    span.label.label-green -10%
+
+                            .total-sum-promo
+                                input(type="text" placeholder="Промокод")
+                                include assets/images/icon_arrow-left.svg
+
+                            .total-sum-row.total
+                                span.title Итого
+                                span.value 4 000 000 ₽
+
+                            a(href='create-order.html').btn.btn--yellow.total-order Перейти к оформлению

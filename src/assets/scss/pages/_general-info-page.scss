@@ -84,6 +84,8 @@
       }
 
       .extra__title {
+        @include titleGeneral;
+        @include heading3;
         @include breakpoint(lg) {
           font-size: 30px;
         }

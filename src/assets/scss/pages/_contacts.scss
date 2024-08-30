@@ -140,6 +140,11 @@
 
   .contacts-section__inner-head {
     margin-top: 40px;
+
+    .section-head__title {
+      @include titleGeneral;
+      @include heading4;
+    }
   }
 }
 

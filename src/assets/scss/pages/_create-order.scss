@@ -1,0 +1,292 @@
+// ОФОРМЛЕНИЕ ЗАКАЗА
+
+.cart.create-order {
+  .cart__inner-content {
+    @include breakpoint(lg) {
+      grid-template-columns: 57% 32%;
+    }
+  }
+
+  .cart__inner-total {
+
+    @include breakpoint(lg) {
+      grid-row: 1/2;
+    }
+  }
+}
+
+.create-order__step {
+  padding: 20px 12px;
+  background-color: $white;
+  border-radius: 10px;
+  max-height: 64px;
+  transition: $transition-style;
+  overflow: hidden;
+
+  @include breakpoint(md) {
+    padding: 20px;
+    max-height: 72px;
+  }
+
+
+  .step-head {
+    @include flexCenterBetween;
+    @include titleGeneral;
+
+    .title {
+      @include flexAlignCenter;
+      gap: 12px;
+
+      span {
+        @include flexCenterCenter;
+        color: $white;
+        background-color: $green-light;
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+      }
+    }
+
+    .edit {
+      display: none;
+      align-items: centerr;
+      gap: 10px;
+
+      @include breakpointMax(md) {
+        font-size: 14px;
+      }
+
+      &::after {
+        content: url("../images/icon_check-circle.svg");
+        width: 20px;
+        height: 20px;
+      }
+
+      .icon {
+        @include flexCenterCenter;
+      }
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+  }
+
+  .step-info {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 24px 12px;
+
+
+    .info-title {
+      @include titleGeneral;
+    }
+
+
+    .info-item {
+      cursor: pointer;
+      transition: $transition-style;
+
+      &.checkboxes {
+        @include flexColumn;
+        gap: 10px;
+      }
+
+      &.text-inputs {
+        display: grid;
+        gap: 12px;
+        @include breakpoint(md) {
+          grid-template-columns: repeat(2, 1fr);
+
+        }
+      }
+
+      &.filled-items {
+        display: none;
+      }
+    }
+
+    .input {
+      input {
+        color: $black;
+      }
+
+      &.checkbox-style label {
+        @include flexAlignCenter;
+        gap: 12px;
+      }
+    }
+
+    .filled-items {
+      display: none;
+    }
+  }
+
+  .step-form {
+    margin-top: 24px;
+
+    .form-row {
+      input {
+        height: 48px;
+
+      }
+
+      input, textarea {
+        border: 1px solid $stroke;
+        color: $black;
+        font-weight: 500;
+
+        &::placeholder {
+          color: $black;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .filled-items {
+      display: none;
+    }
+  }
+
+  .step-actions {
+
+    @include flexCenterBetween;
+    margin-top: 30px;
+
+    .btn {
+      width: 111px;
+      height: 48px;
+
+      &.btn--yellow {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &.collapsed {
+    max-height: 1000px;
+  }
+
+  &.step-complete {
+
+    .step-head .edit {
+      display: flex;
+    }
+
+    .step-info {
+      .info-title, .info-item {
+        display: none;
+      }
+
+      .filled-items {
+        display: block;
+      }
+    }
+
+    &:not(:last-child) {
+      .step-actions {
+        display: none;
+      }
+    }
+
+
+    .step-form {
+
+      form {
+        display: none;
+      }
+
+      .filled-items {
+        display: block;
+      }
+    }
+
+
+    .filled-items {
+      .wrapper {
+        .filled-item ~ .filled-item {
+          margin-top: 12px;
+        }
+        .filled-item {
+          .title {
+            @include titleGeneral;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  &.delivery {
+    .step-info {
+      .info-item {
+        gap: 10px;
+        grid-template-rows: 1fr auto;
+      }
+    }
+
+  }
+
+  &.payment {
+    .step-info {
+      .info-item {
+        gap: 12px;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+
+        .item-icon {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  &.payment, &.delivery {
+
+    .step-info {
+      display: grid;
+
+      @include breakpointMax(md) {
+        gap: 10px;
+      }
+
+      @include breakpoint(md) {
+        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+
+      .info-item {
+        height: 100%;
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid $stroke;
+        display: grid;
+
+        .item-title {
+          @include titleGeneral;
+        }
+
+        &.active {
+          border-color: $green-light;
+        }
+      }
+    }
+
+    &.step-complete {
+      .step-info {
+        .info-item {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.create-order__step ~ .create-order__step {
+  margin-top: 10px;
+}

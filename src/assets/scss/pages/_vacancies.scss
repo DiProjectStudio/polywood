@@ -22,6 +22,10 @@
       .block-title + .block-items {
         margin-top: 20px;
       }
+      .block-title {
+        @include titleGeneral;
+        @include heading3;
+      }
 
       .accordion__item {
         border-radius: 20px;

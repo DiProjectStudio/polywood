@@ -41,6 +41,8 @@
 
     .page404__inner-subtitle {
       margin-top: -10px;
+      @include titleGeneral;
+      @include heading3;
     }
 
     .page404__inner-actions {

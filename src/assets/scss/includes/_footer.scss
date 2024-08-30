@@ -35,6 +35,11 @@
         grid-row: 1/2;
       }
 
+      .nav-block__title {
+        @include titleGeneral;
+        @include heading4;
+      }
+
       .nav-block__list {
         margin-top: 16px;
 
@@ -56,6 +61,8 @@
 
       .contacts-title {
         color: $gray;
+        @include titleGeneral;
+        @include heading4;
       }
 
       .contacts-items {
@@ -259,7 +266,7 @@
         grid-row: 3/4;
         display: grid;
         gap: 10px;
-        justify-self: end;
+        justify-self: flex-end;
       }
     }
 

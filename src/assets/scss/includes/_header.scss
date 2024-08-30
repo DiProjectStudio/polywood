@@ -137,7 +137,7 @@
         gap: 8px;
         grid-column: 2/3;
         font-size: 14px;
-        justify-self: end;
+        justify-self: flex-end;
 
         @include breakpoint(md) {
           grid-row: 1/2;

@@ -96,6 +96,8 @@
         }
 
         .card-text {
+          @include titleGeneral;
+          @include heading3;
           margin-top: 10px;
 
           @include breakpoint(md) {

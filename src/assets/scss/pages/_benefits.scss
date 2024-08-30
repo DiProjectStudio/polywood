@@ -71,6 +71,8 @@
           background-color: $green-light;
           border-radius: 50%;
           color: $white;
+          @include titleGeneral;
+          @include heading6;
           @include flexCenterCenter;
         }
       }
@@ -89,6 +91,11 @@
       @include breakpoint(lg) {
         width: 50%;
       }
+    }
+
+    .general-benefits-wrapper__title {
+      @include titleGeneral;
+      @include heading3;
     }
 
   }
