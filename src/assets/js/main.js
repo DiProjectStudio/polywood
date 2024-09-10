@@ -215,4 +215,25 @@ $(document).ready(function () {
     return false;
   });
 
+
+
+  let $elements = $('.catalog-section__filter, .reviews__action');
+  let lastScrollTop = 0;
+
+  $(window).on('scroll', function() {
+    let scrollTop = $(this).scrollTop();
+
+    $elements.each(function() {
+      if (scrollTop > lastScrollTop) {
+        // Скролл вниз
+        $(this).css('top', '100px');
+      } else {
+        // Скролл вверх
+        $(this).css('top', '210px');
+      }
+    });
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Для мобильных или отрицательных значений
+  });
+
 });

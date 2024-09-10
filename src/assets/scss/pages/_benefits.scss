@@ -16,6 +16,11 @@
 }
 
 .products-benefits {
+  .section-head__title {
+    @include heading3;
+    @include titleGeneral;
+  }
+
   .general-benefits-wrapper {
     &.ten-benefits, &.difference {
       .general-benefits-wrapper__items {

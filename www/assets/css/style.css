@@ -1487,6 +1487,30 @@ a {
     margin-top: 20px
 }
 
+.section-head .section-head__title {
+    font-weight: 700;
+    line-height: 120%;
+    font-size: 30px
+}
+
+@media(min-width: 744px) {
+    .section-head .section-head__title {
+        font-size: 35px
+    }
+}
+
+@media(min-width: 1200px) {
+    .section-head .section-head__title {
+        font-size: 40px
+    }
+}
+
+@media(min-width: 1440px) {
+    .section-head .section-head__title {
+        font-size: 50px
+    }
+}
+
 .section-head .yellow-sticker {
     -webkit-transform: rotate(25deg);
     -ms-transform: rotate(25deg);
@@ -7525,6 +7549,30 @@ form .form-action p {
     }
 }
 
+.licenses .section-head .section-head__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%
+}
+
+@media(min-width: 744px) {
+    .licenses .section-head .section-head__title {
+        font-size: 30px
+    }
+}
+
+@media(min-width: 1200px) {
+    .licenses .section-head .section-head__title {
+        font-size: 35px
+    }
+}
+
+@media(min-width: 1440px) {
+    .licenses .section-head .section-head__title {
+        font-size: 40px
+    }
+}
+
 .licenses .general-items {
     display: grid;
     gap: 10px
@@ -7943,6 +7991,30 @@ form .form-action p {
     .products-benefits__inner-head.section-head {
         grid-template-columns: 100%;
         width: 45%
+    }
+}
+
+.products-benefits .section-head__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%
+}
+
+@media(min-width: 744px) {
+    .products-benefits .section-head__title {
+        font-size: 30px
+    }
+}
+
+@media(min-width: 1200px) {
+    .products-benefits .section-head__title {
+        font-size: 35px
+    }
+}
+
+@media(min-width: 1440px) {
+    .products-benefits .section-head__title {
+        font-size: 40px
     }
 }
 
@@ -8492,6 +8564,30 @@ form .form-action p {
     }
 }
 
+.location-map .section-head__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%
+}
+
+@media(min-width: 744px) {
+    .location-map .section-head__title {
+        font-size: 30px
+    }
+}
+
+@media(min-width: 1200px) {
+    .location-map .section-head__title {
+        font-size: 35px
+    }
+}
+
+@media(min-width: 1440px) {
+    .location-map .section-head__title {
+        font-size: 40px
+    }
+}
+
 .location-map .location-map__inner .location-map__inner-addresses {
     display: grid;
     gap: 20px
@@ -8792,7 +8888,7 @@ form .form-action p {
 @media(min-width: 1200px) {
     .reviews .reviews__inner .reviews__action {
         position: sticky;
-        top: 212px
+        top: 210px
     }
 }
 
@@ -10988,7 +11084,7 @@ form .form-action p {
         grid-column: 1/2;
         grid-row: 1/5;
         position: sticky;
-        top: 212px;
+        top: 210px;
         left: 0;
         height: -webkit-fit-content;
         height: -moz-fit-content;

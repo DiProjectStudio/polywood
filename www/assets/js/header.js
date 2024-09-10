@@ -235,7 +235,7 @@ $(document).ready(function () {
 
   // СКРЫТИЕ / ПОКАЗ БЛОКА ХЕДЕРА НА МОБ ВЕРСИИ
   let lastScrollTop = 0;
-  const mediaQuery = window.matchMedia('(max-width: 1200px)');
+  const mediaQuery = window.matchMedia('(min-width: 1200px)');
 
   $(window).scroll(function () {
     let scrolled = $(this).scrollTop();

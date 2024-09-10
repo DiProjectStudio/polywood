@@ -149,6 +149,12 @@
 }
 
 .location-map {
+
+  .section-head__title {
+    @include heading3;
+    @include titleGeneral;
+  }
+
   .location-map__inner {
     .location-map__inner-addresses {
       display: grid;

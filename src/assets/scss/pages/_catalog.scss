@@ -173,11 +173,10 @@
       }
 
       @include breakpoint(lg) {
-        //position: relative;
         grid-column: 1/2;
         grid-row: 1/5;
         position: sticky;
-        top: 212px;
+        top: 210px;
         left: 0;
         height: fit-content;
       }

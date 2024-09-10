@@ -135,6 +135,11 @@
       grid-template-columns: 100%;
       width: 68%;
     }
+
+    .section-head__title {
+      @include heading3;
+      @include titleGeneral;
+    }
   }
 
   .general-items {

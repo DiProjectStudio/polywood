@@ -1040,6 +1040,11 @@ a {
     }
   }
 
+  .section-head__title {
+    @include titleGeneral;
+    @include heading2;
+  }
+
   .yellow-sticker {
     transform: rotate(25deg);
     top: -140px;
