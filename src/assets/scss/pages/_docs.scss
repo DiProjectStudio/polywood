@@ -228,6 +228,11 @@
 .instructions {
   .docs-items {
     width: 100%;
+    display: grid;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 

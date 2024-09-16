@@ -236,24 +236,39 @@ $(document).ready(function () {
   // СКРЫТИЕ / ПОКАЗ БЛОКА ХЕДЕРА НА МОБ ВЕРСИИ
   let lastScrollTop = 0;
   const mediaQuery = window.matchMedia('(min-width: 1200px)');
+  // const headerInnerElement = $('.header-inner'); // Предполагаю, что у вас есть такой элемент
 
-  $(window).scroll(function () {
-    let scrolled = $(this).scrollTop();
+  function handleScroll() {
+    let scrolled = $(window).scrollTop();
     let dY = scrolled - lastScrollTop;
 
     if (dY < 0) {
       if (mediaQuery.matches) {
         setTimeout(() => {
           headerInnerElement.removeClass('scroll');
+          $(".catalog-section__filter").css('top', '97px');
         }, 100); // задержка для предотвращения дерганий
       } else {
         headerInnerElement.removeClass('scroll');
+        $(".catalog-section__filter").css('top', '210px');
       }
     } else {
       headerInnerElement.addClass('scroll');
     }
 
     lastScrollTop = scrolled <= 0 ? 0 : scrolled;
+  }
+
+  let ticking = false;
+
+  $(window).scroll(function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        handleScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
 
 

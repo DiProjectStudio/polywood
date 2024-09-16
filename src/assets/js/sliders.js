@@ -94,6 +94,7 @@ $(document).ready(function() {
         spaceBetween: 10,
         loop: true,
         grabCursor: true,
+        autoHeight: true,
 
         pagination: {
             el: '.category-head .swiper-pagination',

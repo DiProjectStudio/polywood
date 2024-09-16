@@ -1028,6 +1028,88 @@
   }
 }
 
+// ВСПЛЫВАШКА ЛОКАЦИЯ
+
+.location-question {
+  position: absolute;
+  top: 90%;
+  //left: 50%;
+  //transform: translateX(-50%);
+  z-index: 1;
+
+  .question-box {
+    padding: 25px 18px 14px;
+    background-color: #fff;
+    width: 276px;
+    box-shadow: 3px 5px 15px rgba(0,0,0,.15);
+    border-radius: 15px;
+
+    .question-title {
+      margin-bottom: 22px;
+      font-size: 16px;
+      font-weight: 600;
+      white-space: normal;
+
+
+      span {
+        color: $green-light;
+        margin-left: 5px;
+      }
+    }
+    .question-actions {
+      padding-bottom: 12px;
+      display: flex;
+      gap: 15px;
+      justify-content: space-between;
+
+      .action-button {
+        width: 50%;
+        height: 50px;
+      }
+    }
+
+    .question-note {
+      line-height: normal;
+    }
+
+  }
+}
+
+.header__location {
+  position: relative;
+
+  .header__location-current {
+    cursor: pointer;
+  }
+
+  .header__location-list {
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--color-bg);
+    gap: 10px;
+    position: absolute;
+    bottom: -285px;
+    left: 0;
+    border-radius: 20px;
+    width: 100%;
+    z-index: 1;
+
+    @include breakpoint(lg) {
+      min-width: 175px;
+    }
+
+    &.active {
+      display: flex;
+    }
+
+    .header__location-list-item {
+      cursor: pointer;
+    }
+  }
+}
+
+
 // ANIMATIONS
 @keyframes fadeOut {
   from {
